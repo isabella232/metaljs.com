@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([15],[
+webpackJsonppageComponent([17],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9932,23 +9932,12 @@ exports.default = parseFromAnchor;
 /* 83 */,
 /* 84 */,
 /* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HlMJM", function() { return HlMJM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "qfJVJ", function() { return qfJVJ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9960,15 +9949,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from inline-events.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace HlMJM.
+ * @fileoverview Templates in namespace qfJVJ.
  * @public
  */
 
-goog.module('HlMJM.incrementaldom');
+goog.module('qfJVJ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10002,132 +9991,262 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param441 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('Another feature Metal.js has that can be very useful is the ability to declare events inside templates, directly on the desired element. Besides being simple and intuitive, this feature allows Metal.js to handle attaching events itself, and so this can be done in the best way possible, with ');
-        ie_open('a', null, null,
-            'href', 'https://learn.jquery.com/events/event-delegation/');
-          itext('delegates');
-        ie_close('a');
-        itext(' for example, without the user having worry about that at all. These events are also automatically detached when the component is disposed.');
-      ie_close('p');
-    ie_close('article');
+  var param158 = function() {
     ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_name');
+        'id', 'getting_started');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_name');
-          itext('Inline Listeners - via Function Name');
+            'href', '#getting_started');
+          itext('Getting Started');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('You can add DOM event listeners easily through your templates, like this:');
-      ie_close('p');
-      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
-      ie_open('p');
-        itext('The above code declares that whenever the ');
+        itext('There are many different ways to build components using Metal.js. You can use the built-in integrations with ');
+        ie_open('a', null, null,
+            'href', 'http://developers.google.com/closure/templates/');
+          itext('Soy');
+        ie_close('a');
+        itext(' or ');
+        ie_open('a', null, null,
+            'href', 'https://facebook.github.io/jsx/');
+          itext('JSX');
+        ie_close('a');
+        itext(' templates, or even build your own template abstraction on top of Metal.js and use it instead. You can build the ES6 code using ');
         ie_open('strong');
-          itext('x');
+          itext('Babel');
         ie_close('strong');
-        itext(' button is clicked, the ');
-        ie_open('code');
-          itext('close');
-        ie_close('code');
-        itext(' function from the component should be called.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_reference');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_reference');
-          itext('Inline Listeners - via Function Reference');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n  {@param close: any}\n\n  // ...\n  <button onClick="{$close}" type="button" class="close">\n  // ...\n&#123;/template}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('That will work exactly the same way as the previous example.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_nested_components');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_nested_components');
-          itext('Inline Listeners - Nested Components');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('When using ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/nested-components.html');
-          itext('nested components');
-        ie_close('a');
-        itext(' it\'s also possible to inline events by using the ');
+        itext(', ');
         ie_open('strong');
-          itext('events');
+          itext('Traceur');
         ie_close('strong');
-        itext(' property:');
+        itext(' or any other transpiler. You can test using ');
+        ie_open('strong');
+          itext('Karma');
+        ie_close('strong');
+        itext(', ');
+        ie_open('strong');
+          itext('Jasmine');
+        ie_close('strong');
+        itext(' or any other test framework, and can use any directory structure for your project. To sum it up, you can customize everything to your own needs. The world is your oyster.');
       ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{call Button.render}\n  {param events: [\'click\': [\'selector\': \'button\', \'fn\': \'close\']] /}\n  {param label: \'Ok\' /}\n{/call}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar events = {click: {\n  selector: \'button\',\n  fn: \'close\'\n}};\n\n<Button events={events} label="Ok" />', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('This will cause the ');
-        ie_open('code');
-          itext('close');
-        ie_close('code');
-        itext(' function from the sub component to be called whenever a click event triggers for the elements that match the given selector.');
+        itext('This guide will focus on a quick and easy way to get started with Metal.js. But if you are excited to try it out as soon as possible you can just play around with this ');
+        ie_open('a', null, null,
+            'href', 'https://jsfiddle.net/metaljs/y1tqa7vz/');
+          itext('JSFiddle');
+        ie_close('a');
+        itext('.');
       ie_close('p');
-      ie_open('p');
-        itext('In case you want to listen to the event with a function from the parent component, just pass the function reference instead of a string, like this:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{call Button.render}\n  {param events: [\'click\': [\'selector\': \'button\', \'fn\': $close]] /}\n  {param label: \'Ok\' /}\n{/call}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar events = {click: {\n  selector: \'button\',\n  fn: this.close.bind(this)\n}};\n\n<Button events={events} label="Ok" />', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Besides DOM events, you can also listen to custom events from the sub component in this same way:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{call Button.render}\n  {param events: [\'labelChanged\': $handleLabelChanged] /}\n  {param label: \'Ok\' /}\n{/call}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar events = {labelChanged: this.handleLabelChanged.bind(this)};\n\n<Button events={events} label="Ok" />', mode: 'jsx'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'inline_listeners_alternative_usage');
+        'id', 'boilerplate');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#inline_listeners_alternative_usage');
-          itext('Inline Listeners - Alternative Usage');
+            'href', '#boilerplate');
+          itext('Boilerplate');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Besides the ');
-        ie_open('code');
-          itext('on[EventName]');
-        ie_close('code');
-        itext(' format you can also use ');
-        ie_open('code');
-          itext('data-on[eventname]');
-        ie_close('code');
-        itext(' for adding inline listeners. For example:');
-      ie_close('p');
-      $templateAlias2({code: '<button data-onclick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
-      ie_open('p');
-        itext('Note that this format is supported mainly to enable doing ');
+        itext('You can organize your ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' project in any way you want, but to start out we recommend using the ');
         ie_open('a', null, null,
-            'href', '/docs/guides/progressive-enhancement.html');
-          itext('progressive enhancement');
+            'href', '/docs/guides/yeoman-generator.html');
+          itext('Yeoman Generator');
         ie_close('a');
-        itext(', when running Soy templates via Java for example. When templates using the ');
-        ie_open('code');
-          itext('on[EventName]');
-        ie_close('code');
-        itext(' format run in Java they will output elements with these as actual attributes, which can cause errors in the browser. In JavaScript these are used as element properties instead, so this problem doesn\'t occur.');
+        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
       ie_close('p');
       ie_open('p');
-        itext('So feel free to use the format you like best, or that better fits your needs.');
+        itext('You can use it if you wish, but to makes things even simpler we\'re providing a zip with the boilerplate that the generator would create for this tutorial, so you can just download it here:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('a', null, null,
+            'href', '/downloads/boilerplate.zip',
+            'class', 'btn btn-accent',
+            'data-senna-off', 'true');
+          itext('Download Metal.js Boilerplate (with Soy)');
+        ie_close('a');
+      ie_close('p');
+      ie_open('p');
+        ie_open('a', null, null,
+            'href', '/downloads/boilerplate-jsx.zip',
+            'class', 'btn btn-accent',
+            'data-senna-off', 'true');
+          itext('Download Metal.js Boilerplate (with JSX)');
+        ie_close('a');
+      ie_close('p');
+      ie_open('p');
+        itext('Note that this zip you\'ve downloaded contains not only the starting boilerplate, but also a folder for each step of this tutorial guide, so that you can either code along with us or just check out the final code for each step.');
+      ie_close('p');
+      ie_open('p');
+        itext('Now that you have the boilerplate, you just need to:');
+      ie_close('p');
+      ie_open('ol');
+        ie_open('li');
+          ie_open('p');
+            itext('Install ');
+            ie_open('a', null, null,
+                'href', 'https://nodejs.org');
+              itext('npm');
+            ie_close('a');
+            itext(' v3.0.0 or newer (if you don\'t have it yet).');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('strong');
+              itext('For Soy users only');
+            ie_close('strong');
+            itext(': Install ');
+            ie_open('a', null, null,
+                'href', 'http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html');
+              itext('Java');
+            ie_close('a');
+            itext(' version 8 or newer (if you don\'t have it yet).');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            itext('Enter the ');
+            ie_open('code');
+              itext('1. Hello World/');
+            ie_close('code');
+            itext(' folder in your terminal and install its npm dependencies, by typing:');
+          ie_close('p');
+          $templateAlias2({code: '[sudo] npm install', mode: 'shell'}, null, opt_ijData);
+        ie_close('li');
+      ie_close('ol');
+      ie_open('p');
+        itext('Once the dependency installation ends, you\'ll get a directory tree similar to this:');
+      ie_close('p');
+      $templateAlias2({code: '\u251C\u2500\u2500 demos\n\u2502   \u2514\u2500\u2500 index.html\n\u251C\u2500\u2500 node_modules\n\u251C\u2500\u2500 package.json\n\u251C\u2500\u2500 src\n\u2502   \u251C\u2500\u2500 Modal.js\n\u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n\u2502   \u2514\u2500\u2500 modal.scss\n\u2514\u2500\u2500 test\n    \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'build');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#build');
+          itext('Build');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('If you open the generated ');
+        ie_open('strong');
+          itext('src/Modal.js');
+        ie_close('strong');
+        itext(' file you may notice that it\'s using ');
+        ie_open('a', null, null,
+            'href', 'https://babeljs.io/docs/learn-es2015/');
+          itext(' ES6');
+        ie_close('a');
+        itext(' syntax:');
+      ie_close('p');
+      $templateAlias2({code: 'class Modal extends ...', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('That means that it\'ll need to go through a build process, since browsers haven\'t fully implemented all ES6 features yet.');
+      ie_close('p');
+      ie_open('p');
+        ie_open('strong');
+          itext('generator-metal');
+        ie_close('strong');
+        itext(' already prepares some useful scripts that you can use, including a build script. By default, this script will build everything into global variables. To use it, simply type:');
+      ie_close('p');
+      $templateAlias2({code: 'npm run build', mode: 'shell'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'demo_page');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#demo_page');
+          itext('Demo Page');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('Now that the code was built, just open the generated ');
+        ie_open('code');
+          itext('demos/index.html');
+        ie_close('code');
+        itext(' file on your browser. It should display a nice ');
+        ie_open('strong');
+          itext('Hello World');
+        ie_close('strong');
+        itext(' message, like this:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('img', null, null,
+            'src', '../../images/docs/hello_world.png',
+            'alt', 'Hello World screenshot');
+        ie_close('img');
+      ie_close('p');
+      ie_open('p');
+        itext('If you look at the contents of ');
+        ie_open('code');
+          itext('demos/index.html');
+        ie_close('code');
+        itext(', you\'ll see how the component is being rendered. In this example, it\'s simply being instantiated directly by calling ');
+        ie_open('code');
+          itext('new metal.Modal();');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('By default this will append the component to the document\'s body. If you want though, you can specify where it should be rendered. Check the guide about ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/rendering-components.html');
+          itext('rendering components');
+        ie_close('a');
+        itext(' to find out how.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'hello_world');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#hello_world');
+          itext('Hello World');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('As you\'ve noticed, the generated project automatically renders ');
+        ie_open('strong');
+          itext('Hello World');
+        ie_close('strong');
+        itext(' for you. Curious to see how that\'s done? It\'s simple, just take a look at the generated template:');
+      ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n&#123;namespace Modal&#125;\n\n/**\n * This renders the component\'s whole content.\n * Note: has to be called ".render".\n */\n&#123;template .render&#125;\n    <div>Hello World</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass Modal extends JSXComponent {\n    render() {\n        return <div>Hello World</div>;\n    }\n}\n\nexport default Modal;', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('You can replace the default content with any other to change what your component renders. Just make sure to build the code again after making your changes.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'next_steps');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#next_steps');
+          itext('Next Steps');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('Now that you have gone through running a simple ');
+        ie_open('strong');
+          itext('Hello World');
+        ie_close('strong');
+        itext(' component, let\'s actually turn it into a ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        ie_open('strong');
+          ie_open('a', null, null,
+              'href', '/docs/getting-started/modal.html');
+            itext('\u21AA Tutorial: Modal');
+          ie_close('a');
+        ie_close('strong');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10139,11 +10258,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param441}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param158}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'HlMJM.render';
+  $render.soyTemplateName = 'qfJVJ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10153,14 +10272,25 @@ return exports;
 
 });
 
-class HlMJM extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HlMJM, templates);
+class qfJVJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(qfJVJ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
 /* 98 */,
 /* 99 */,
 /* 100 */,
@@ -10177,9 +10307,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HlMJM, templates);
 /* 111 */,
 /* 112 */,
 /* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10207,9 +10335,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _inlineEventsSoy = __webpack_require__(97);
+var _indexSoy = __webpack_require__(86);
 
-var _inlineEventsSoy2 = _interopRequireDefault(_inlineEventsSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10219,23 +10347,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HlMJM = function (_Component) {
-  _inherits(HlMJM, _Component);
+var qfJVJ = function (_Component) {
+  _inherits(qfJVJ, _Component);
 
-  function HlMJM() {
-    _classCallCheck(this, HlMJM);
+  function qfJVJ() {
+    _classCallCheck(this, qfJVJ);
 
-    return _possibleConstructorReturn(this, (HlMJM.__proto__ || Object.getPrototypeOf(HlMJM)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (qfJVJ.__proto__ || Object.getPrototypeOf(qfJVJ)).apply(this, arguments));
   }
 
-  return HlMJM;
+  return qfJVJ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(HlMJM, _inlineEventsSoy2.default);
+_metalSoy2.default.register(qfJVJ, _indexSoy2.default);
 
-exports.default = HlMJM;
+exports.default = qfJVJ;
 
 /***/ })
-],[116]);
+],[114]);

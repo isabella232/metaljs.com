@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9940,12 +9940,23 @@ exports.default = parseFromAnchor;
 /* 91 */,
 /* 92 */,
 /* 93 */,
-/* 94 */
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pfjgG", function() { return pfjgG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zgNhS", function() { return zgNhS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9957,15 +9968,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from component-lifecycle.soy.
+// This file was automatically generated from yeoman-generator.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pfjgG.
+ * @fileoverview Templates in namespace zgNhS.
  * @public
  */
 
-goog.module('pfjgG.incrementaldom');
+goog.module('zgNhS.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9999,19 +10010,97 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param377 = function() {
+  var param687 = function() {
     ie_open('article', null, null,
-        'id', 'component_lifecycle');
+        'id', 'yeoman_generator');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#component_lifecycle');
-          itext('Component Lifecycle');
+            'href', '#yeoman_generator');
+          itext('Yeoman Generator');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Components built with Metal.js provide lifecycle methods that can be called when needed. The following example lists all available lifecycle methods, in the order in which they\'re called');
+        itext('You can organize your ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' project in any way you want, but to start out we recommend using the ');
+        ie_open('a', null, null,
+            'href', 'http://npmjs.com/package/generator-metal');
+          itext('Yeoman generator');
+        ie_close('a');
+        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
       ie_close('p');
-      $templateAlias2({code: 'class MyComponent extends Component {\n    /**\n     * Called when the component is first created,\n     * but before it\'s first rendered.\n     */\n    created() {\n    }\n\n    /**\n     * Called whenever the component is rendered.\n     */\n    rendered() {\n    }\n\n    /**\n     * Called when the component is attached to the\n     * DOM. The component will automatically be\n     * attached when first rendered, but can also\n     * be attached (without rerendering the\n     * component) by calling the `attach` method\n     * directly. This is a good place to attach event\n     * listeners, since the component is available\n     * in the page.\n     */\n    attached() {\n    }\n\n    /**\n     * Called when the component is detached from the\n     * DOM. The component will automatically be\n     * detached when disposed, but can also be\n     * detached (without disposing the component)\n     * by calling the `detach` method directly. This\n     * is a good place to detach event listeners,\n     * since the component is not available in the\n     * page anymore.\n     */\n    detached() {\n    }\n\n    /**\n     * Called when the component is disposed. This\n     * should contain any necessary cleanup, like\n     * detaching any remaining events and disposing\n     * of sub components and local variables.\n     */\n    disposed() {\n    }\n\n    /**\n     * Called when the component is about to render.\n     * It takes the component state as an argument\n     * and you can massage the data before it is passed\n     * down to the template.\n     * This is only available for Soy Components.\n     */\n    prepareStateForRender(states) {\n        return Object.assign({}, states);\n    }\n}', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('To use it:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Install ');
+          ie_open('a', null, null,
+              'href', 'https://nodejs.org');
+            itext('npm');
+          ie_close('a');
+          itext(' v3.0.0 or newer (if you don\'t have it yet)');
+        ie_close('li');
+        ie_open('li');
+          itext('Install ');
+          ie_open('strong');
+            itext('Yeoman');
+          ie_close('strong');
+          itext(' and ');
+          ie_open('strong');
+            itext('generator-metal');
+          ie_close('strong');
+          itext(': ');
+          ie_open('code');
+            itext('[sudo] npm i -g yo generator-metal');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Open the folder that you want to use on your terminal and type: ');
+          ie_open('code');
+            itext('yo metal');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Answer the generator prompts: ');
+          ie_open('img', null, null,
+              'src', '../../images/docs/prompts.png',
+              'alt', 'Generator prompts');
+          ie_close('img');
+        ie_close('li');
+        ie_open('li');
+          itext('Wait for the generator to finish fetching dependencies');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('After those steps you\'ll get a directory tree similar to this:');
+      ie_close('p');
+      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('generator-metal');
+        ie_close('code');
+        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/building.html#gulp_metal');
+          itext('gulp-metal');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('By the way, the boilerplate zip provided by the ');
+        ie_open('a', null, null,
+            'href', '/docs/getting-started/#boilerplate');
+          itext('getting started guide');
+        ie_close('a');
+        itext(' was created using ');
+        ie_open('strong');
+          itext('generator-metal');
+        ie_close('strong');
+        itext('.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10022,11 +10111,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param377}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param687}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pfjgG.render';
+  $render.soyTemplateName = 'zgNhS.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10036,25 +10125,14 @@ return exports;
 
 });
 
-class pfjgG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pfjgG, templates);
+class zgNhS extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zgNhS, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -10072,7 +10150,12 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pfjgG, templates);
 /* 120 */,
 /* 121 */,
 /* 122 */,
-/* 123 */
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10100,9 +10183,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _componentLifecycleSoy = __webpack_require__(94);
+var _yeomanGeneratorSoy = __webpack_require__(105);
 
-var _componentLifecycleSoy2 = _interopRequireDefault(_componentLifecycleSoy);
+var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10112,23 +10195,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pfjgG = function (_Component) {
-  _inherits(pfjgG, _Component);
+var zgNhS = function (_Component) {
+  _inherits(zgNhS, _Component);
 
-  function pfjgG() {
-    _classCallCheck(this, pfjgG);
+  function zgNhS() {
+    _classCallCheck(this, zgNhS);
 
-    return _possibleConstructorReturn(this, (pfjgG.__proto__ || Object.getPrototypeOf(pfjgG)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (zgNhS.__proto__ || Object.getPrototypeOf(zgNhS)).apply(this, arguments));
   }
 
-  return pfjgG;
+  return zgNhS;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pfjgG, _componentLifecycleSoy2.default);
+_metalSoy2.default.register(zgNhS, _yeomanGeneratorSoy2.default);
 
-exports.default = pfjgG;
+exports.default = zgNhS;
 
 /***/ })
-],[123]);
+],[128]);

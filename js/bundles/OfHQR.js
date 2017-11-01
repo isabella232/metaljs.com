@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([21],[
+webpackJsonppageComponent([20],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9934,12 +9934,14 @@ exports.default = parseFromAnchor;
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */
+/* 88 */,
+/* 89 */,
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEBIb", function() { return SEBIb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OfHQR", function() { return OfHQR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9951,15 +9953,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal_events.soy.
+// This file was automatically generated from modal_testing.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace SEBIb.
+ * @fileoverview Templates in namespace OfHQR.
  * @public
  */
 
-goog.module('SEBIb.incrementaldom');
+goog.module('OfHQR.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9993,121 +9995,136 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param219 = function() {
+  var param283 = function() {
     ie_open('article');
       ie_open('p');
         itext('In the ');
         ie_open('a', null, null,
-            'href', '/docs/getting-started/modal.html');
+            'href', '/docs/getting-started/modal_nested.html');
           itext('previous section');
         ie_close('a');
-        itext(' we\'ve created a component that renders a ');
+        itext(' we\'ve completed our ');
         ie_open('strong');
           itext('Modal');
         ie_close('strong');
-        itext('. Its close button doesn\'t do anything yet though. This section will teach you how to handle DOM events on your components.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_name');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_name');
-          itext('Inline Listeners - via Function Name');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('You can add DOM event listeners easily through your templates, like this:');
-      ie_close('p');
-      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
-      ie_open('p');
-        itext('The above code declares that whenever the ');
+        itext(' component. The last thing we\'d like to show is how to use the tools that ');
         ie_open('strong');
-          itext('x');
+          itext('Metal.js');
         ie_close('strong');
-        itext(' button is clicked, the ');
-        ie_open('code');
-          itext('close');
-        ie_close('code');
-        itext(' function from the component should be called.');
+        itext(' offers to help you test your code.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_reference');
+        'id', 'test_script');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_reference');
-          itext('Inline Listeners - via Function Reference');
+            'href', '#test_script');
+          itext('Test Script');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, Soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n    {@param close: any}\n\n    // ...\n    <button onClick="{$close}" type="button" class="close">\n    // ...\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('That will work exactly the same way as the previous example.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'listener_implementation');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#listener_implementation');
-          itext('Listener Implementation');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('All you need to do now is to implement the ');
+        itext('If you look at your ');
         ie_open('code');
-          itext('close');
+          itext('package.json');
         ie_close('code');
-        itext(' function in your ');
-        ie_open('code');
-          itext('src/Modal.js');
-        ie_close('code');
-        itext(' file:');
+        itext(' file you\'ll notice that it already contains a test script that you can use:');
       ie_close('p');
-      $templateAlias2({code: 'close() {\n    this.dispose();\n}', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '{\n    "scripts": {\n        "test": "gulp test"\n    }\n}', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('All components have this ');
-        ie_open('code');
-          itext('dispose');
-        ie_close('code');
-        itext(' function, which basically destroys it and removes its content from the DOM. Check the guide about ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/component-lifecycle.html');
-          itext('Lifecycle functions');
-        ie_close('a');
-        itext(' for more details.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'run_the_demo');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#run_the_demo');
-          itext('Run the Demo');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now compile your code with ');
-        ie_open('code');
-          itext('npm run build');
-        ie_close('code');
-        itext(' and open the demo on a browser. Clicking the ');
+        itext('If you\'re building a project without the generator, you can still get ');
         ie_open('strong');
-          itext('x');
+          itext('Metal.js');
         ie_close('strong');
-        itext(' button will close the modal as expected.');
-      ie_close('p');
-      ie_open('p');
-        itext('For more details on inline listeners check ');
+        itext('\'s test tools by using ');
         ie_open('a', null, null,
-            'href', '/docs/guides/inline-events.html');
-          itext('this guide');
+            'href', '/docs/guides/building.html#gulp-metal');
+          itext('gulp-metal');
         ie_close('a');
         itext('.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'adding_a_test');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#adding_a_test');
+          itext('Adding a Test');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('Also note that your generated project directory also has a file called ');
+        ie_open('code');
+          itext('test/Modal.js');
+        ie_close('code');
+        itext(', with a failing assertion. As you can imagine, all you need to do is add your tests to this file.');
+      ie_close('p');
+      ie_open('p');
+        itext('To illustrate this let\'s start by replacing the existing test with one that checks that the given ');
+        ie_open('code');
+          itext('body');
+        ie_close('code');
+        itext(' data is being rendered correctly:');
+      ie_close('p');
+      $templateAlias2({code: 'import Modal from \'../src/Modal\';\n\ndescribe(\'Modal\', function() {\n    it(\'should render the body\', function() {\n        var component = new Modal({\n            body: \'Test Body\'\n        });\n\n        var bodyElement = component.element.querySelector(\'.modal-body\');\n\n        assert.ok(bodyElement);\n        assert.strictEqual(\'Test Body\', bodyElement.textContent);\n    });\n});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'running_the_tests');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#running_the_tests');
+          itext('Running the Tests');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('To run our tests all you need to do is type ');
+        ie_open('code');
+          itext('npm test');
+        ie_close('code');
+        itext(' on your terminal. You\'ll see something like this:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('img', null, null,
+            'src', '../../images/docs/test.png',
+            'alt', 'Terminal screenshot');
+        ie_close('img');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'test_environment');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#test_environment');
+          itext('Test Environment');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('This test file we wrote uses ');
+        ie_open('a', null, null,
+            'href', 'http://mochajs.org');
+          itext('Mocha');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', 'http://chaijs.com/');
+          itext('Chai');
+        ie_close('a');
+        itext(' for describing tests, and ');
+        ie_open('a', null, null,
+            'href', 'http://karma-runner.github.io/0.12/index.html');
+          itext('Karma');
+        ie_close('a');
+        itext(' as the test runner. That\'s the default setup used by ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('It\'s important to note that you don\'t have to use ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext(' for you tests though. It\'s just an easy way that\'s already provided for you, but you can certainly setup your own environment if you wish.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
@@ -10115,26 +10132,15 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_open('h2');
         ie_open('a', null, null,
             'href', '#next_steps');
-          itext('Next Steps');
+          itext('Next steps');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Our modal now properly closes itself when the ');
+        itext('You should now have a good knowledge of ');
         ie_open('strong');
-          itext('x');
+          itext('Metal.js');
         ie_close('strong');
-        itext(' button is clicked. To do this we\'re disposing of it completely though, so we\'ll need to create a new Modal instance whenever we need to show it again.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ideally, instead of disposing it, we should just hide it instead, while also having a way to show it back. The next section will explain how to do this by having data changes update the modal accordingly.');
-      ie_close('p');
-      ie_open('p');
-        ie_open('strong');
-          ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_updates.html');
-            itext('\u21AA Tutorial: Modal - Updates');
-          ie_close('a');
-        ie_close('strong');
+        itext(' basics. If you want to dive into more details and advanced topics, go ahead and check some of our guides.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10146,11 +10152,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param219}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param283}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'SEBIb.render';
+  $render.soyTemplateName = 'OfHQR.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10160,16 +10166,14 @@ return exports;
 
 });
 
-class SEBIb extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SEBIb, templates);
+class OfHQR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(OfHQR, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 89 */,
-/* 90 */,
 /* 91 */,
 /* 92 */,
 /* 93 */,
@@ -10189,7 +10193,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SEBIb, templates);
 /* 107 */,
 /* 108 */,
 /* 109 */,
-/* 110 */
+/* 110 */,
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10217,9 +10222,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modal_eventsSoy = __webpack_require__(88);
+var _modal_testingSoy = __webpack_require__(90);
 
-var _modal_eventsSoy2 = _interopRequireDefault(_modal_eventsSoy);
+var _modal_testingSoy2 = _interopRequireDefault(_modal_testingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10229,23 +10234,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SEBIb = function (_Component) {
-  _inherits(SEBIb, _Component);
+var OfHQR = function (_Component) {
+  _inherits(OfHQR, _Component);
 
-  function SEBIb() {
-    _classCallCheck(this, SEBIb);
+  function OfHQR() {
+    _classCallCheck(this, OfHQR);
 
-    return _possibleConstructorReturn(this, (SEBIb.__proto__ || Object.getPrototypeOf(SEBIb)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (OfHQR.__proto__ || Object.getPrototypeOf(OfHQR)).apply(this, arguments));
   }
 
-  return SEBIb;
+  return OfHQR;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(SEBIb, _modal_eventsSoy2.default);
+_metalSoy2.default.register(OfHQR, _modal_testingSoy2.default);
 
-exports.default = SEBIb;
+exports.default = OfHQR;
 
 /***/ })
-],[110]);
+],[111]);

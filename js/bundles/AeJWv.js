@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([10],[
+webpackJsonppageComponent([16],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9948,15 +9948,12 @@ exports.default = parseFromAnchor;
 /* 99 */,
 /* 100 */,
 /* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nusNq", function() { return nusNq; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AeJWv", function() { return AeJWv; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9968,15 +9965,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from yeoman-generator.soy.
+// This file was automatically generated from rendering-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace nusNq.
+ * @fileoverview Templates in namespace AeJWv.
  * @public
  */
 
-goog.module('nusNq.incrementaldom');
+goog.module('AeJWv.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10010,97 +10007,46 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param687 = function() {
+  var param610 = function() {
+    ie_open('article');
+      ie_open('p');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', '/docs');
+          itext('quick start tutorial');
+        ie_close('a');
+        itext(' explains how to create and render a new component. In its examples components are always being appended directly to the document\'s body though, but what\'s usually necessary is to render in a specific position.');
+      ie_close('p');
+    ie_close('article');
     ie_open('article', null, null,
-        'id', 'yeoman_generator');
+        'id', 'replacing_an_existing_element');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#yeoman_generator');
-          itext('Yeoman Generator');
+            'href', '#replacing_an_existing_element');
+          itext('Replacing an Existing Element');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('You can organize your ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' project in any way you want, but to start out we recommend using the ');
-        ie_open('a', null, null,
-            'href', 'http://npmjs.com/package/generator-metal');
-          itext('Yeoman generator');
-        ie_close('a');
-        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
-      ie_close('p');
-      ie_open('p');
-        itext('To use it:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Install ');
-          ie_open('a', null, null,
-              'href', 'https://nodejs.org');
-            itext('npm');
-          ie_close('a');
-          itext(' v3.0.0 or newer (if you don\'t have it yet)');
-        ie_close('li');
-        ie_open('li');
-          itext('Install ');
-          ie_open('strong');
-            itext('Yeoman');
-          ie_close('strong');
-          itext(' and ');
-          ie_open('strong');
-            itext('generator-metal');
-          ie_close('strong');
-          itext(': ');
-          ie_open('code');
-            itext('[sudo] npm i -g yo generator-metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Open the folder that you want to use on your terminal and type: ');
-          ie_open('code');
-            itext('yo metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Answer the generator prompts: ');
-          ie_open('img', null, null,
-              'src', '../../images/docs/prompts.png',
-              'alt', 'Generator prompts');
-          ie_close('img');
-        ie_close('li');
-        ie_open('li');
-          itext('Wait for the generator to finish fetching dependencies');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('After those steps you\'ll get a directory tree similar to this:');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
+        itext('If you wish your component to replace an existing element on the DOM, you just need to pass it (or a selector for it) as the ');
         ie_open('code');
-          itext('generator-metal');
+          itext('element');
         ie_close('code');
-        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/building.html#gulp_metal');
-          itext('gulp-metal');
-        ie_close('a');
-        itext('.');
+        itext(' property of the constructor configuration, like this:');
       ie_close('p');
+      $templateAlias2({code: '// Passsing the element itself\nnew Modal({element: elementToReplace});\n\n// Passing a selector to the element\nnew Modal({element: \'#elementToReplace\'});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'specifying_the_parent');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#specifying_the_parent');
+          itext('Specifying the Parent');
+        ie_close('a');
+      ie_close('h2');
       ie_open('p');
-        itext('By the way, the boilerplate zip provided by the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/#boilerplate');
-          itext('getting started guide');
-        ie_close('a');
-        itext(' was created using ');
-        ie_open('strong');
-          itext('generator-metal');
-        ie_close('strong');
-        itext('.');
+        itext('You can also specify the parent element that should receive the component\'s contents via the second constructor param, like this:');
       ie_close('p');
+      $templateAlias2({code: '// Passing the element itself\nnew Modal(data, parentElement);\n\n// Passing a selector to the element\nnew Modal(data, \'#parentElement\');', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10111,11 +10057,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param687}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param610}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'nusNq.render';
+  $render.soyTemplateName = 'AeJWv.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10125,14 +10071,17 @@ return exports;
 
 });
 
-class nusNq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nusNq, templates);
+class AeJWv extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AeJWv, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 103 */,
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -10142,13 +10091,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nusNq, templates);
 /* 112 */,
 /* 113 */,
 /* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10176,9 +10119,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _yeomanGeneratorSoy = __webpack_require__(105);
+var _renderingComponentsSoy = __webpack_require__(102);
 
-var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
+var _renderingComponentsSoy2 = _interopRequireDefault(_renderingComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10188,23 +10131,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var nusNq = function (_Component) {
-  _inherits(nusNq, _Component);
+var AeJWv = function (_Component) {
+  _inherits(AeJWv, _Component);
 
-  function nusNq() {
-    _classCallCheck(this, nusNq);
+  function AeJWv() {
+    _classCallCheck(this, AeJWv);
 
-    return _possibleConstructorReturn(this, (nusNq.__proto__ || Object.getPrototypeOf(nusNq)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AeJWv.__proto__ || Object.getPrototypeOf(AeJWv)).apply(this, arguments));
   }
 
-  return nusNq;
+  return AeJWv;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(nusNq, _yeomanGeneratorSoy2.default);
+_metalSoy2.default.register(AeJWv, _renderingComponentsSoy2.default);
 
-exports.default = nusNq;
+exports.default = AeJWv;
 
 /***/ })
-],[121]);
+],[115]);

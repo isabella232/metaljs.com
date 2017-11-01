@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([20],[
+webpackJsonppageComponent([21],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9934,13 +9934,12 @@ exports.default = parseFromAnchor;
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */,
-/* 89 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VOpvn", function() { return VOpvn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KPqLJ", function() { return KPqLJ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9952,15 +9951,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal_nested.soy.
+// This file was automatically generated from modal_events.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace VOpvn.
+ * @fileoverview Templates in namespace KPqLJ.
  * @public
  */
 
-goog.module('VOpvn.incrementaldom');
+goog.module('KPqLJ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9994,94 +9993,119 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param247 = function() {
+  var param219 = function() {
     ie_open('article');
       ie_open('p');
         itext('In the ');
         ie_open('a', null, null,
-            'href', '/docs/getting-started/modal_updates.html');
+            'href', '/docs/getting-started/modal.html');
           itext('previous section');
         ie_close('a');
-        itext(' we finished working on our component\'s behavior.');
-      ie_close('p');
-      ie_open('p');
-        itext('But what if our ');
+        itext(' we\'ve created a component that renders a ');
         ie_open('strong');
           itext('Modal');
         ie_close('strong');
-        itext(' header\'s markup was very similar to one that is used in other places though? Ideally we\'d move it into a separate component that can be reused. That\'s what we\'ll be doing in this section.');
+        itext('. Its close button doesn\'t do anything yet though. This section will teach you how to handle DOM events on your components.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'creating_closeheader');
+        'id', 'inline_listeners_via_function_name');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#creating_closeheader');
-          itext('Creating ');
-          ie_open('strong');
-            itext('CloseHeader');
-          ie_close('strong');
+            'href', '#inline_listeners_via_function_name');
+          itext('Inline Listeners - via Function Name');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('First let\'s create the new component. Add a ');
+        itext('You can add DOM event listeners easily through your templates, like this:');
+      ie_close('p');
+      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
+      ie_open('p');
+        itext('The above code declares that whenever the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button is clicked, the ');
         ie_open('code');
-          itext('src/CloseHeader.js');
+          itext('close');
         ie_close('code');
-        itext(' file to your project:');
-      ie_close('p');
-      $templateAlias2({code: '// src/CloseHeader.js\n\nimport templates from \'./CloseHeader.soy\';\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nclass CloseHeader extends Component {\n}\n\nSoy.register(CloseHeader, templates);\n\nexport default CloseHeader;', mode: 'javascript'}, null, opt_ijData);
-      $templateAlias2({code: '// src/CloseHeader.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass CloseHeader extends JSXComponent {\n    render() {\n    }\n}\n\nexport default CloseHeader;', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now let\'s prepare the template to be similar to the one used by ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(':');
-      ie_close('p');
-      $templateAlias2({code: '// src/CloseHeader.soy\n\n&#123;namespace CloseHeader&#125;\n\n&#123;template .render&#125;\n    {@param cssClass: string}\n    {@param onClick: any}\n    {@param title: string}\n\n    <header class="{$cssClass}">\n        <button onClick="{$onClick}" type="button" class="close">\n            <span>\u00D7</span>\n        </button>\n        <h4>{$title}</h4>\n    </header>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/CloseHeader.js\n\nrender() {\n    return <header class={this.props.cssClass}>\n        <button onClick={this.props.onClick} type="button" class="close">\n            <span>\u00D7</span>\n        </button>\n        <h4>{this.props.title}</h4>\n    </header>;\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Done! Our new component is ready to be used by ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('.');
+        itext(' function from the component should be called.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'using_closeheader');
+        'id', 'inline_listeners_via_function_reference');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#using_closeheader');
-          itext('Using ');
-          ie_open('strong');
-            itext('CloseHeader');
-          ie_close('strong');
+            'href', '#inline_listeners_via_function_reference');
+          itext('Inline Listeners - via Function Reference');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('All we have to do is to replace the header markup from ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('\'s template with a call to ');
-        ie_open('strong');
-          itext('CloseHeader');
-        ie_close('strong');
-        itext(':');
+        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
       ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n&#123;template .render&#125;\n    {@param body: string}\n    {@param close: string}\n    {@param header: string}\n    {@param shown: bool}\n\n    <div class="modal {$shown ? \'show\': \'\'}">\n        <div class="modal-dialog">\n            <div class="modal-content">\n                {call CloseHeader.render}\n                    {param cssClass: \'modal-header\' /}\n                    {param onClick: $close /}\n                    {param title: $header /}\n                {/call}\n                <section class="modal-body">\n                    {$body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nrender() {\n    var cssClass = \'modal\';\n    if (this.props.shown) {\n        cssClass += \'show\';\n    }\n    return <div class={cssClass}>\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <CloseHeader\n                    cssClass="modal-header"\n                    onClick={this.close.bind(this)}\n                    title={this.props.header}\n                />\n                <section class="modal-body">\n                    {this.props.body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>;\n}', mode: 'jsx'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, Soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n    {@param close: any}\n\n    // ...\n    <button onClick="{$close}" type="button" class="close">\n    // ...\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('This will not only render ');
-        ie_open('strong');
-          itext('CloseHeader');
-        ie_close('strong');
-        itext(' at the right position, but also instantiate it for you. For more details on nested components, check out the ');
+        itext('That will work exactly the same way as the previous example.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'listener_implementation');
+      ie_open('h2');
         ie_open('a', null, null,
-            'href', '/docs/guides/nested-components.html');
-          itext('guide about it');
+            'href', '#listener_implementation');
+          itext('Listener Implementation');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('All you need to do now is to implement the ');
+        ie_open('code');
+          itext('close');
+        ie_close('code');
+        itext(' function in your ');
+        ie_open('code');
+          itext('src/Modal.js');
+        ie_close('code');
+        itext(' file:');
+      ie_close('p');
+      $templateAlias2({code: 'close() {\n    this.dispose();\n}', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('All components have this ');
+        ie_open('code');
+          itext('dispose');
+        ie_close('code');
+        itext(' function, which basically destroys it and removes its content from the DOM. Check the guide about ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/component-lifecycle.html');
+          itext('Lifecycle functions');
+        ie_close('a');
+        itext(' for more details.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'run_the_demo');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#run_the_demo');
+          itext('Run the Demo');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('Now compile your code with ');
+        ie_open('code');
+          itext('npm run build');
+        ie_close('code');
+        itext(' and open the demo on a browser. Clicking the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button will close the modal as expected.');
+      ie_close('p');
+      ie_open('p');
+        itext('For more details on inline listeners check ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/inline-events.html');
+          itext('this guide');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -10095,13 +10119,20 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Now that we have learned how to properly create a new component, it\'d good to also know how to test it. The next section will focus on that.');
+        itext('Our modal now properly closes itself when the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button is clicked. To do this we\'re disposing of it completely though, so we\'ll need to create a new Modal instance whenever we need to show it again.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ideally, instead of disposing it, we should just hide it instead, while also having a way to show it back. The next section will explain how to do this by having data changes update the modal accordingly.');
       ie_close('p');
       ie_open('p');
         ie_open('strong');
           ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_testing.html');
-            itext('\u21AA Tutorial: Modal - Testing');
+              'href', '/docs/getting-started/modal_updates.html');
+            itext('\u21AA Tutorial: Modal - Updates');
           ie_close('a');
         ie_close('strong');
       ie_close('p');
@@ -10115,28 +10146,29 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param247}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param219}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'VOpvn.render';
+  $render.soyTemplateName = 'KPqLJ.render';
 }
 
-exports.render.params = ["cssClass","onClick","title","body","close","header","shown","page","site"];
-exports.render.types = {"cssClass":"string","onClick":"any","title":"string","body":"string","close":"string","header":"string","shown":"bool","page":"any","site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class VOpvn extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VOpvn, templates);
+class KPqLJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(KPqLJ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 89 */,
 /* 90 */,
 /* 91 */,
 /* 92 */,
@@ -10157,8 +10189,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VOpvn, templates);
 /* 107 */,
 /* 108 */,
 /* 109 */,
-/* 110 */,
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10186,9 +10217,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modal_nestedSoy = __webpack_require__(89);
+var _modal_eventsSoy = __webpack_require__(88);
 
-var _modal_nestedSoy2 = _interopRequireDefault(_modal_nestedSoy);
+var _modal_eventsSoy2 = _interopRequireDefault(_modal_eventsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10198,23 +10229,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VOpvn = function (_Component) {
-  _inherits(VOpvn, _Component);
+var KPqLJ = function (_Component) {
+  _inherits(KPqLJ, _Component);
 
-  function VOpvn() {
-    _classCallCheck(this, VOpvn);
+  function KPqLJ() {
+    _classCallCheck(this, KPqLJ);
 
-    return _possibleConstructorReturn(this, (VOpvn.__proto__ || Object.getPrototypeOf(VOpvn)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (KPqLJ.__proto__ || Object.getPrototypeOf(KPqLJ)).apply(this, arguments));
   }
 
-  return VOpvn;
+  return KPqLJ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(VOpvn, _modal_nestedSoy2.default);
+_metalSoy2.default.register(KPqLJ, _modal_eventsSoy2.default);
 
-exports.default = VOpvn;
+exports.default = KPqLJ;
 
 /***/ })
-],[111]);
+],[110]);

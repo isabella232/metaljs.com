@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([14],[
+webpackJsonppageComponent([11],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9939,14 +9939,12 @@ exports.default = parseFromAnchor;
 /* 90 */,
 /* 91 */,
 /* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LcVax", function() { return LcVax; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VVfWR", function() { return VVfWR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9958,15 +9956,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from importing.soy.
+// This file was automatically generated from building.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace LcVax.
+ * @fileoverview Templates in namespace VVfWR.
  * @public
  */
 
-goog.module('LcVax.incrementaldom');
+goog.module('VVfWR.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9987,8 +9985,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -10000,121 +9996,122 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param391 = function() {
+  var param368 = function() {
     ie_open('article');
       ie_open('p');
-        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
+        itext('As we mentioned before, ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' components are written in ES6, which means that we need a transpiling process before using it on a website.');
       ie_close('p');
       ie_open('p');
-        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lets get started!');
+        itext('This can be done via any tools that you prefer, like ');
+        ie_open('a', null, null,
+            'href', 'http://webpack.github.io/');
+          itext('webpack');
+        ie_close('a');
+        itext(' or ');
+        ie_open('a', null, null,
+            'href', 'http://browserify.org/');
+          itext('browserify');
+        ie_close('a');
+        itext(', but we\'ve also published a few tools of our own, which focuses on ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' projects, which we\'ll talk about here.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'installing_node_js_npm');
+        'id', 'gulp_metal');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_node_js_npm');
-          itext('Installing Node.js/NPM');
+            'href', '#gulp_metal');
+          itext('gulp-metal');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('If you don\'t already have Node.js or npm installed, head over to the ');
+        itext('What this package offers is a a bunch of ');
         ie_open('a', null, null,
-            'href', 'https://nodejs.org/en/download/');
-          itext('Node.js');
+            'href', 'http://gulpjs.com/');
+          itext('gulp');
         ie_close('a');
-        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
+        itext(' tasks. There are tasks that can handle not only building JavaScript, as well as Soy compilation, testing, linting and many other things.');
       ie_close('p');
       ie_open('p');
-        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', '/docs/getting-started/');
+          itext('tutorials');
+        ie_close('a');
+        itext(' we\'ve provided are all using it, though indirectly, through some npm scripts. To learn how to use ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext(' directly take a look at its ');
+        ie_open('a', null, null,
+            'href', 'http://www.npmjs.com/package/gulp-metal');
+          itext('npm page');
+        ie_close('a');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'finding_components');
+        'id', 'metal_cli');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#finding_components');
-          itext('Finding components');
+            'href', '#metal_cli');
+          itext('metal-cli');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
-      ie_close('p');
-      ie_open('p');
-        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
-      ie_close('p');
-      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
-      ie_close('p');
-      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
+        itext('If you\'re not a fan of ');
+        ie_open('strong');
+          itext('gulp');
+        ie_close('strong');
+        itext(' you can still use ');
+        ie_open('a', null, null,
+            'href', 'http://www.npmjs.com/package/metal-cli');
+          itext('metal-cli');
+        ie_close('a');
+        itext(', which offers almost the same tools, but through the command line.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'installing_components');
+        'id', 'examples_using_other_tools');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_components');
-          itext('Installing Components');
+            'href', '#examples_using_other_tools');
+          itext('Examples Using Other Tools');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
+        itext('As was mentioned before, using ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext(' or ');
+        ie_open('strong');
+          itext('metal-cli');
+        ie_close('strong');
+        itext(' is not required. You can use your favorite build tool with ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' as well.');
       ie_close('p');
-      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('In this example, we\'re going to install the ');
-        ie_open('code');
-          itext('metal-position');
-        ie_close('code');
-        itext(' component.');
-      ie_close('p');
-      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('Installed packages will be placed in a ');
-        ie_open('code');
-          itext('node_modules');
-        ie_close('code');
-        itext(' directory. This is created in the folder which the bower program was executed.');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'importing_a_component');
-      ie_open('h2');
+        itext('We\'ve created a Github repository full of different examples on how to work with ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(', and among other things it has a bunch of examples showing how to use different build tools. ');
         ie_open('a', null, null,
-            'href', '#importing_a_component');
-          itext('Importing a Component');
+            'href', 'http://github.com/metal/metal-examples');
+          itext('Check it out');
         ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('With the code already available, let\'s create a ');
-        ie_open('code');
-          itext('main.js');
-        ie_close('code');
-        itext(' file that will import the ');
-        ie_open('code');
-          itext('metal-position');
-        ie_close('code');
-        itext(' module. Note that we\'re using an ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/alias.html');
-          itext('alias');
-        ie_close('a');
-        itext(' to easily import npm files.');
-      ie_close('p');
-      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
-      ie_close('p');
-      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
+        itext(', and feel free to create an issue or send a pull request for other tools that it may be missing.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10126,11 +10123,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param391}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param368}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'LcVax.render';
+  $render.soyTemplateName = 'VVfWR.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10140,14 +10137,16 @@ return exports;
 
 });
 
-class LcVax extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LcVax, templates);
+class VVfWR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VVfWR, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 94 */,
+/* 95 */,
 /* 96 */,
 /* 97 */,
 /* 98 */,
@@ -10169,7 +10168,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LcVax, templates);
 /* 114 */,
 /* 115 */,
 /* 116 */,
-/* 117 */
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10197,9 +10199,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _importingSoy = __webpack_require__(95);
+var _buildingSoy = __webpack_require__(93);
 
-var _importingSoy2 = _interopRequireDefault(_importingSoy);
+var _buildingSoy2 = _interopRequireDefault(_buildingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10209,23 +10211,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LcVax = function (_Component) {
-  _inherits(LcVax, _Component);
+var VVfWR = function (_Component) {
+  _inherits(VVfWR, _Component);
 
-  function LcVax() {
-    _classCallCheck(this, LcVax);
+  function VVfWR() {
+    _classCallCheck(this, VVfWR);
 
-    return _possibleConstructorReturn(this, (LcVax.__proto__ || Object.getPrototypeOf(LcVax)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (VVfWR.__proto__ || Object.getPrototypeOf(VVfWR)).apply(this, arguments));
   }
 
-  return LcVax;
+  return VVfWR;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(LcVax, _importingSoy2.default);
+_metalSoy2.default.register(VVfWR, _buildingSoy2.default);
 
-exports.default = LcVax;
+exports.default = VVfWR;
 
 /***/ })
-],[117]);
+],[120]);
