@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([18],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2478,7 +2478,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('a', null, null,
             'class', 'topbar-icon',
             'target', '_blank',
-            'href', 'http://metaljs-chat.wedeploy.io/');
+            'href', 'https://community-chat.liferay.com/');
           ie_void('span', null, null,
               'class', 'icon-16-hash');
         ie_close('a');
@@ -9933,12 +9933,24 @@ exports.default = parseFromAnchor;
 /* 84 */,
 /* 85 */,
 /* 86 */,
-/* 87 */
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ZgEue", function() { return ZgEue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KgWoN", function() { return KgWoN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9950,15 +9962,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal.soy.
+// This file was automatically generated from nested-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ZgEue.
+ * @fileoverview Templates in namespace KgWoN.
  * @public
  */
 
-goog.module('ZgEue.incrementaldom');
+goog.module('KgWoN.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9992,109 +10004,68 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param196 = function() {
+  var param560 = function() {
     ie_open('article');
       ie_open('p');
-        itext('In the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/');
-          itext('previous section');
-        ie_close('a');
-        itext(' you learned how to build a simple project using Metal.js that just renders ');
+        itext('The ability to reference components inside templates can be very useful. It enables the developer to correctly place the child component at the right position inside the parent in an intuitive way.');
+      ie_close('p');
+      ie_open('p');
+        itext('This can certainly be done with ');
         ie_open('strong');
-          itext('Hello World');
+          itext('Metal.js');
         ie_close('strong');
-        itext(' on the screen. Let\'s enhance what we already have to render a modal dialog instead.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'rendering');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#rendering');
-          itext('Rendering');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Our generated project already includes ');
-        ie_open('a', null, null,
-            'href', 'http://getbootstrap.com/');
-          itext('Bootstrap\'s CSS');
-        ie_close('a');
-        itext(', so let\'s use its markup for our modal. Let\'s update the component\'s template to do that then:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n&#123;namespace Modal&#125;\n\n/**\n * This renders the component\'s whole content.\n * Note: has to be called ".render".\n */\n&#123;template .render&#125;\n    {@param body: string}\n    {@param header: string}\n\n    <div class="modal show">\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <header class="modal-header">\n                    <button type="button" class="close">\n                        <span>\u00D7</span>\n                    </button>\n                    <h4>{$header}</h4>\n                </header>\n                <section class="modal-body">\n                    {$body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass Modal extends JSXComponent {\n    /**\n     * Renders the component\'s content.\n     * Note that data can be accessed via the `props` property.\n     */\n    render() {\n        return <div class="modal show">\n            <div class="modal-dialog">\n                <div class="modal-content">\n                    <header class="modal-header">\n                        <button type="button" class="close">\n                            <span>\u00D7</span>\n                        </button>\n                        <h4>{this.props.header}</h4>\n                    </header>\n                    <section class="modal-body">\n                        {this.props.body}\n                    </section>\n                    <footer class="modal-footer">\n                        <button type="button" class="btn btn-primary">OK</button>\n                    </footer>\n                </div>\n            </div>\n        </div>;\n    }\n}\n\nexport default Modal;', mode: 'jsx'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'passing_data');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#passing_data');
-          itext('Passing Data');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Note that the template is accessing data to determine the content of the modal\'s ');
-        ie_open('code');
-          itext('header');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('body');
-        ie_close('code');
-        itext('. How can the component receive this data though?');
-      ie_close('p');
-      ie_open('p');
-        itext('One way is through the component\'s constructor. When creating component instances directly, you can pass them a data object as its first param. So let\'s update our demo to pass it some data:');
-      ie_close('p');
-      $templateAlias2({code: 'new metal.Modal({\n    header: \'My Modal\',\n    body: \'Built using Metal.js\'\n});', mode: 'javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'run_the_demo');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#run_the_demo');
-          itext('Run the Demo');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now compile your code with ');
-        ie_open('code');
-          itext('npm run build');
-        ie_close('code');
-        itext(' and open the demo on a browser, and you should be seeing this:');
-      ie_close('p');
-      ie_open('p');
-        ie_open('img', null, null,
-            'src', '../../images/docs/modal.png',
-            'alt', 'Modal screenshot');
-        ie_close('img');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'next_steps');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#next_steps');
-          itext('Next Steps');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('We\'ve taken care of the rendering, but you\'ll notice that clicking the ');
+        itext(' components. For example, let\'s say we\'ve already built a simple component called ');
         ie_open('strong');
-          itext('x');
+          itext('Button');
         ie_close('strong');
-        itext(' button doesn\'t do anything yet though. Let\'s make that work.');
+        itext('.');
       ie_close('p');
       ie_open('p');
+        itext('Now we\'re building a ');
         ie_open('strong');
-          ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_events.html');
-            itext('\u21AA Tutorial: Modal - Events');
-          ie_close('a');
+          itext('Modal');
         ie_close('strong');
+        itext(' component, and we want it to render some buttons inside the footer. In ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext('\'s template file we could do the following:');
       ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n<div class="footer">\n    {foreach $button in $buttons}\n        {call Button.render}\n            {param label: $button /}\n        {/call}\n    {/foreach}\n</div>', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map(button => {\n  return <Button label={button} />;\n});\n\nreturn <div class="footer">{buttons}</div>;', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('When Modal is rendered, the buttons also will be, at the specified position. Besides this, ');
+        ie_open('strong');
+          itext('Button');
+        ie_close('strong');
+        itext(' components will be automatically instantiated for these elements.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'accessing_sub_component_instances');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#accessing_sub_component_instances');
+          itext('Accessing Sub Component Instances');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('But what if we need to access the created instances? That\'s possible by using ');
+        ie_open('strong');
+          itext('ref');
+        ie_close('strong');
+        itext('. Let\'s add one to the previous example and see what happens:');
+      ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n{foreach $button as $buttons}\n    {call Button.render}\n        {param label: $button /}\n        {param ref: \'button\' + index($button) /}\n    {/call}\n{/foreach}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map((button, index) => {\n    return <Button label={button} ref={\'button\' + index} />;\n});', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now you\'ll be able to access your sub components through your instance\'s ');
+        ie_open('code');
+          itext('refs');
+        ie_close('code');
+        itext(' property, like this:');
+      ie_close('p');
+      $templateAlias2({code: 'modal.refs.button0 // The instance for first button\nmodal.refs.button1 // The instance for second button', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10105,11 +10076,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param196}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param560}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ZgEue.render';
+  $render.soyTemplateName = 'KgWoN.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10119,26 +10090,14 @@ return exports;
 
 });
 
-class ZgEue extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZgEue, templates);
+class KgWoN extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(KgWoN, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -10152,7 +10111,44 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ZgEue, templates);
 /* 110 */,
 /* 111 */,
 /* 112 */,
-/* 113 */
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10180,9 +10176,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modalSoy = __webpack_require__(87);
+var _nestedComponentsSoy = __webpack_require__(99);
 
-var _modalSoy2 = _interopRequireDefault(_modalSoy);
+var _nestedComponentsSoy2 = _interopRequireDefault(_nestedComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10192,23 +10188,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ZgEue = function (_Component) {
-  _inherits(ZgEue, _Component);
+var KgWoN = function (_Component) {
+  _inherits(KgWoN, _Component);
 
-  function ZgEue() {
-    _classCallCheck(this, ZgEue);
+  function KgWoN() {
+    _classCallCheck(this, KgWoN);
 
-    return _possibleConstructorReturn(this, (ZgEue.__proto__ || Object.getPrototypeOf(ZgEue)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (KgWoN.__proto__ || Object.getPrototypeOf(KgWoN)).apply(this, arguments));
   }
 
-  return ZgEue;
+  return KgWoN;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ZgEue, _modalSoy2.default);
+_metalSoy2.default.register(KgWoN, _nestedComponentsSoy2.default);
 
-exports.default = ZgEue;
+exports.default = KgWoN;
 
 /***/ })
-],[113]);
+],[150]);

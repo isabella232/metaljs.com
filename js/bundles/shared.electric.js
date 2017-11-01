@@ -174,7 +174,7 @@ Object.keys(_events).forEach(function (key) {
   });
 });
 
-var _Component = __webpack_require__(141);
+var _Component = __webpack_require__(115);
 
 var _Component2 = _interopRequireDefault(_Component);
 
@@ -182,7 +182,7 @@ var _ComponentDataManager = __webpack_require__(72);
 
 var _ComponentDataManager2 = _interopRequireDefault(_ComponentDataManager);
 
-var _ComponentRegistry = __webpack_require__(142);
+var _ComponentRegistry = __webpack_require__(116);
 
 var _ComponentRegistry2 = _interopRequireDefault(_ComponentRegistry);
 
@@ -214,7 +214,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-__webpack_require__(156);
+__webpack_require__(130);
 
 var _metalComponent = __webpack_require__(0);
 
@@ -222,7 +222,7 @@ var _metal = __webpack_require__(2);
 
 var _metalState = __webpack_require__(8);
 
-var _html2incdom = __webpack_require__(138);
+var _html2incdom = __webpack_require__(112);
 
 var _html2incdom2 = _interopRequireDefault(_html2incdom);
 
@@ -230,7 +230,7 @@ var _metalIncrementalDom = __webpack_require__(78);
 
 var _metalIncrementalDom2 = _interopRequireDefault(_metalIncrementalDom);
 
-var _SoyAop = __webpack_require__(157);
+var _SoyAop = __webpack_require__(131);
 
 var _SoyAop2 = _interopRequireDefault(_SoyAop);
 
@@ -536,23 +536,23 @@ Object.keys(_core).forEach(function (key) {
 
 var _core2 = _interopRequireDefault(_core);
 
-var _array = __webpack_require__(161);
+var _array = __webpack_require__(135);
 
 var _array2 = _interopRequireDefault(_array);
 
-var _async = __webpack_require__(162);
+var _async = __webpack_require__(136);
 
 var _async2 = _interopRequireDefault(_async);
 
-var _Disposable = __webpack_require__(164);
+var _Disposable = __webpack_require__(138);
 
 var _Disposable2 = _interopRequireDefault(_Disposable);
 
-var _object = __webpack_require__(165);
+var _object = __webpack_require__(139);
 
 var _object2 = _interopRequireDefault(_object);
 
-var _string = __webpack_require__(166);
+var _string = __webpack_require__(140);
 
 var _string2 = _interopRequireDefault(_string);
 
@@ -591,11 +591,11 @@ Object.keys(_dom).forEach(function (key) {
 
 var _dom2 = _interopRequireDefault(_dom);
 
-var _domData = __webpack_require__(70);
+var _domData = __webpack_require__(68);
 
 var _domData2 = _interopRequireDefault(_domData);
 
-var _DomEventEmitterProxy = __webpack_require__(145);
+var _DomEventEmitterProxy = __webpack_require__(119);
 
 var _DomEventEmitterProxy2 = _interopRequireDefault(_DomEventEmitterProxy);
 
@@ -607,15 +607,15 @@ var _features = __webpack_require__(76);
 
 var _features2 = _interopRequireDefault(_features);
 
-var _globalEval = __webpack_require__(148);
+var _globalEval = __webpack_require__(122);
 
 var _globalEval2 = _interopRequireDefault(_globalEval);
 
-var _globalEvalStyles = __webpack_require__(149);
+var _globalEvalStyles = __webpack_require__(123);
 
 var _globalEvalStyles2 = _interopRequireDefault(_globalEvalStyles);
 
-__webpack_require__(147);
+__webpack_require__(121);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -642,11 +642,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.EventHandler = exports.EventHandle = exports.EventEmitterProxy = exports.EventEmitter = undefined;
 
-var _EventEmitter = __webpack_require__(150);
+var _EventEmitter = __webpack_require__(124);
 
 var _EventEmitter2 = _interopRequireDefault(_EventEmitter);
 
-var _EventEmitterProxy = __webpack_require__(151);
+var _EventEmitterProxy = __webpack_require__(125);
 
 var _EventEmitterProxy2 = _interopRequireDefault(_EventEmitterProxy);
 
@@ -654,7 +654,7 @@ var _EventHandle = __webpack_require__(77);
 
 var _EventHandle2 = _interopRequireDefault(_EventHandle);
 
-var _EventHandler = __webpack_require__(152);
+var _EventHandler = __webpack_require__(126);
 
 var _EventHandler2 = _interopRequireDefault(_EventHandler);
 
@@ -682,11 +682,11 @@ var _validators = __webpack_require__(84);
 
 var _validators2 = _interopRequireDefault(_validators);
 
-var _Config = __webpack_require__(158);
+var _Config = __webpack_require__(132);
 
 var _Config2 = _interopRequireDefault(_Config);
 
-var _State = __webpack_require__(159);
+var _State = __webpack_require__(133);
 
 var _State2 = _interopRequireDefault(_State);
 
@@ -728,11 +728,11 @@ var _metalSoy = __webpack_require__(1);
 
 var _metalSoy2 = _interopRequireDefault(_metalSoy);
 
-var _metalToggler = __webpack_require__(160);
+var _metalToggler = __webpack_require__(134);
 
 var _metalToggler2 = _interopRequireDefault(_metalToggler);
 
-var _Sidebar = __webpack_require__(132);
+var _Sidebar = __webpack_require__(164);
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
@@ -840,7 +840,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.dom = undefined;
 
-var _domNamed = __webpack_require__(146);
+var _domNamed = __webpack_require__(120);
 
 Object.keys(_domNamed).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -896,6 +896,197 @@ function getData(component) {
 
 /***/ }),
 /* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var METAL_DATA = '__metal_data__';
+
+var domData = function () {
+	function domData() {
+		_classCallCheck(this, domData);
+	}
+
+	_createClass(domData, null, [{
+		key: 'get',
+
+		/**
+   * Gets Metal.js's data for the given element.
+   * @param {!Element} element
+   * @param {string=} opt_name Optional property from the data to be returned.
+   * @param {*} opt_initialVal Optinal value to the set the requested property
+   *     to if it doesn't exist yet in the data.
+   * @return {!Object}
+   */
+		value: function get(element, opt_name, opt_initialVal) {
+			if (!element[METAL_DATA]) {
+				element[METAL_DATA] = {};
+			}
+			if (!opt_name) {
+				return element[METAL_DATA];
+			}
+			if (!element[METAL_DATA][opt_name] && opt_initialVal) {
+				element[METAL_DATA][opt_name] = opt_initialVal;
+			}
+			return element[METAL_DATA][opt_name];
+		}
+
+		/**
+   * Checks if the given element has data stored in it.
+   * @param {!Element} element
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'has',
+		value: function has(element) {
+			return !!element[METAL_DATA];
+		}
+	}]);
+
+	return domData;
+}();
+
+exports.default = domData;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.getOriginalFns = getOriginalFns;
+exports.getOriginalFn = getOriginalFn;
+exports.startInterception = startInterception;
+exports.stopInterception = stopInterception;
+
+__webpack_require__(82);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+/**
+ * Gets the original incremental dom functions.
+ * @return {!Object}
+ */
+function getOriginalFns() {
+	return originalFns;
+}
+
+/**
+ * Gets the original incremental dom function with the given name.
+ * @param {string} name
+ * @return {!Object}
+ */
+function getOriginalFn(name) {
+	return originalFns[name];
+}
+
+/**
+ * Starts intercepting calls to incremental dom, replacing them with the given
+ * functions. Note that `elementVoid`, `elementOpenStart`, `elementOpenEnd`
+ * and `attr` are the only ones that can't be intercepted, since they'll
+ * automatically be converted into equivalent calls to `elementOpen` and
+ * `elementClose`.
+ * @param {!Object} fns Functions to be called instead of the original ones
+ *     from incremental DOM. Should be given as a map from the function name
+ *     to the function that should intercept it. All interceptors will receive
+ *     the original function as the first argument, the actual arguments from
+ *     from the original call following it.
+ */
+function startInterception(fns) {
+	fns.attr = fnAttr;
+	fns.elementOpenEnd = fnOpenEnd;
+	fns.elementOpenStart = fnOpenStart;
+	fns.elementVoid = fnVoid;
+	fnStack.push(fns);
+}
+
+/**
+ * Restores the original `elementOpen` function from incremental dom to the
+ * implementation it used before the last call to `startInterception`.
+ */
+function stopInterception() {
+	fnStack.pop();
+}
+
+var originalFns = {
+	attr: IncrementalDOM.attr,
+	attributes: IncrementalDOM.attributes[IncrementalDOM.symbols.default],
+	elementClose: IncrementalDOM.elementClose,
+	elementOpen: IncrementalDOM.elementOpen,
+	elementOpenEnd: IncrementalDOM.elementOpenEnd,
+	elementOpenStart: IncrementalDOM.elementOpenStart,
+	elementVoid: IncrementalDOM.elementVoid,
+	text: IncrementalDOM.text
+};
+
+var fnStack = [];
+
+var collectedArgs = [];
+
+function fnAttr(name, value) {
+	collectedArgs.push(name, value);
+}
+
+function fnOpenStart(tag, key, statics) {
+	collectedArgs = [tag, key, statics];
+}
+
+function fnOpenEnd() {
+	var _IncrementalDOM;
+
+	return (_IncrementalDOM = IncrementalDOM).elementOpen.apply(_IncrementalDOM, _toConsumableArray(collectedArgs));
+}
+
+function fnVoid() {
+	IncrementalDOM.elementOpen.apply(null, arguments);
+	return IncrementalDOM.elementClose.apply(null, arguments);
+}
+
+function getStack() {
+	return fnStack.length > 0 ? fnStack[fnStack.length - 1] : null;
+}
+
+function buildHandleCall(name) {
+	var data = {
+		name: name
+	};
+	var fn = handleCall.bind(data);
+	return fn;
+}
+
+function handleCall() {
+	var name = this.name; // eslint-disable-line
+	var stack = getStack();
+	var fn = stack && stack[name] || originalFns[name];
+	return fn.apply(null, arguments);
+}
+
+IncrementalDOM.attr = buildHandleCall('attr');
+IncrementalDOM.elementClose = buildHandleCall('elementClose');
+IncrementalDOM.elementOpen = buildHandleCall('elementOpen');
+IncrementalDOM.elementOpenEnd = buildHandleCall('elementOpenEnd');
+IncrementalDOM.elementOpenStart = buildHandleCall('elementOpenStart');
+IncrementalDOM.elementVoid = buildHandleCall('elementVoid');
+IncrementalDOM.text = buildHandleCall('text');
+
+IncrementalDOM.attributes[IncrementalDOM.symbols.default] = buildHandleCall('attributes');
+
+/***/ }),
+/* 70 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1085,7 +1276,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1110,197 +1301,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var METAL_DATA = '__metal_data__';
-
-var domData = function () {
-	function domData() {
-		_classCallCheck(this, domData);
-	}
-
-	_createClass(domData, null, [{
-		key: 'get',
-
-		/**
-   * Gets Metal.js's data for the given element.
-   * @param {!Element} element
-   * @param {string=} opt_name Optional property from the data to be returned.
-   * @param {*} opt_initialVal Optinal value to the set the requested property
-   *     to if it doesn't exist yet in the data.
-   * @return {!Object}
-   */
-		value: function get(element, opt_name, opt_initialVal) {
-			if (!element[METAL_DATA]) {
-				element[METAL_DATA] = {};
-			}
-			if (!opt_name) {
-				return element[METAL_DATA];
-			}
-			if (!element[METAL_DATA][opt_name] && opt_initialVal) {
-				element[METAL_DATA][opt_name] = opt_initialVal;
-			}
-			return element[METAL_DATA][opt_name];
-		}
-
-		/**
-   * Checks if the given element has data stored in it.
-   * @param {!Element} element
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'has',
-		value: function has(element) {
-			return !!element[METAL_DATA];
-		}
-	}]);
-
-	return domData;
-}();
-
-exports.default = domData;
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.getOriginalFns = getOriginalFns;
-exports.getOriginalFn = getOriginalFn;
-exports.startInterception = startInterception;
-exports.stopInterception = stopInterception;
-
-__webpack_require__(82);
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-/**
- * Gets the original incremental dom functions.
- * @return {!Object}
- */
-function getOriginalFns() {
-	return originalFns;
-}
-
-/**
- * Gets the original incremental dom function with the given name.
- * @param {string} name
- * @return {!Object}
- */
-function getOriginalFn(name) {
-	return originalFns[name];
-}
-
-/**
- * Starts intercepting calls to incremental dom, replacing them with the given
- * functions. Note that `elementVoid`, `elementOpenStart`, `elementOpenEnd`
- * and `attr` are the only ones that can't be intercepted, since they'll
- * automatically be converted into equivalent calls to `elementOpen` and
- * `elementClose`.
- * @param {!Object} fns Functions to be called instead of the original ones
- *     from incremental DOM. Should be given as a map from the function name
- *     to the function that should intercept it. All interceptors will receive
- *     the original function as the first argument, the actual arguments from
- *     from the original call following it.
- */
-function startInterception(fns) {
-	fns.attr = fnAttr;
-	fns.elementOpenEnd = fnOpenEnd;
-	fns.elementOpenStart = fnOpenStart;
-	fns.elementVoid = fnVoid;
-	fnStack.push(fns);
-}
-
-/**
- * Restores the original `elementOpen` function from incremental dom to the
- * implementation it used before the last call to `startInterception`.
- */
-function stopInterception() {
-	fnStack.pop();
-}
-
-var originalFns = {
-	attr: IncrementalDOM.attr,
-	attributes: IncrementalDOM.attributes[IncrementalDOM.symbols.default],
-	elementClose: IncrementalDOM.elementClose,
-	elementOpen: IncrementalDOM.elementOpen,
-	elementOpenEnd: IncrementalDOM.elementOpenEnd,
-	elementOpenStart: IncrementalDOM.elementOpenStart,
-	elementVoid: IncrementalDOM.elementVoid,
-	text: IncrementalDOM.text
-};
-
-var fnStack = [];
-
-var collectedArgs = [];
-
-function fnAttr(name, value) {
-	collectedArgs.push(name, value);
-}
-
-function fnOpenStart(tag, key, statics) {
-	collectedArgs = [tag, key, statics];
-}
-
-function fnOpenEnd() {
-	var _IncrementalDOM;
-
-	return (_IncrementalDOM = IncrementalDOM).elementOpen.apply(_IncrementalDOM, _toConsumableArray(collectedArgs));
-}
-
-function fnVoid() {
-	IncrementalDOM.elementOpen.apply(null, arguments);
-	return IncrementalDOM.elementClose.apply(null, arguments);
-}
-
-function getStack() {
-	return fnStack.length > 0 ? fnStack[fnStack.length - 1] : null;
-}
-
-function buildHandleCall(name) {
-	var data = {
-		name: name
-	};
-	var fn = handleCall.bind(data);
-	return fn;
-}
-
-function handleCall() {
-	var name = this.name; // eslint-disable-line
-	var stack = getStack();
-	var fn = stack && stack[name] || originalFns[name];
-	return fn.apply(null, arguments);
-}
-
-IncrementalDOM.attr = buildHandleCall('attr');
-IncrementalDOM.elementClose = buildHandleCall('elementClose');
-IncrementalDOM.elementOpen = buildHandleCall('elementOpen');
-IncrementalDOM.elementOpenEnd = buildHandleCall('elementOpenEnd');
-IncrementalDOM.elementOpenStart = buildHandleCall('elementOpenStart');
-IncrementalDOM.elementVoid = buildHandleCall('elementVoid');
-IncrementalDOM.text = buildHandleCall('text');
-
-IncrementalDOM.attributes[IncrementalDOM.symbols.default] = buildHandleCall('attributes');
 
 /***/ }),
 /* 72 */
@@ -1948,7 +1948,7 @@ var _data = __webpack_require__(67);
 
 var _children = __webpack_require__(81);
 
-var _patch2 = __webpack_require__(155);
+var _patch2 = __webpack_require__(129);
 
 var _render = __webpack_require__(83);
 
@@ -2374,7 +2374,7 @@ var _callArgs = __webpack_require__(79);
 
 var _metal = __webpack_require__(2);
 
-var _incrementalDomAop = __webpack_require__(71);
+var _incrementalDomAop = __webpack_require__(69);
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2562,11 +2562,11 @@ function handleInterceptedTextCall_() {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var _incrementalDom = __webpack_require__(140);
+var _incrementalDom = __webpack_require__(114);
 
 var IncrementalDOM = _interopRequireWildcard(_incrementalDom);
 
-var _incrementalDomString = __webpack_require__(139);
+var _incrementalDomString = __webpack_require__(113);
 
 var IncrementalDOMString = _interopRequireWildcard(_incrementalDomString);
 
@@ -2585,7 +2585,7 @@ if ((0, _metal.isServerSide)()) {
 
 	scope.IncrementalDOM = IncrementalDOM;
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(69)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71)))
 
 /***/ }),
 /* 83 */
@@ -2606,7 +2606,7 @@ exports.render = render;
 exports.renderChild = renderChild;
 exports.renderFunction = renderFunction;
 
-var _attributes = __webpack_require__(154);
+var _attributes = __webpack_require__(128);
 
 var _callArgs = __webpack_require__(79);
 
@@ -2620,9 +2620,9 @@ var _data = __webpack_require__(67);
 
 var _metal = __webpack_require__(2);
 
-var _unused = __webpack_require__(153);
+var _unused = __webpack_require__(127);
 
-var _incrementalDomAop = __webpack_require__(71);
+var _incrementalDomAop = __webpack_require__(69);
 
 var _metalComponent = __webpack_require__(0);
 
@@ -3484,7 +3484,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.core = undefined;
 
-var _coreNamed = __webpack_require__(163);
+var _coreNamed = __webpack_require__(137);
 
 Object.keys(_coreNamed).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -3527,417 +3527,7 @@ exports.core = core;
 /* 106 */,
 /* 107 */,
 /* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return Sidebar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
-/* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function(exports) {
-
-// This file was automatically generated from Sidebar.soy.
-// Please don't edit this file by hand.
-
-/**
- * @fileoverview Templates in namespace Sidebar.
- * @hassoydeltemplate {ElectricNavigation.anchor.idom}
- * @public
- */
-
-goog.module('Sidebar.incrementaldom');
-
-/** @suppress {extraRequire} */
-var soy = goog.require('soy');
-/** @suppress {extraRequire} */
-var soydata = goog.require('soydata');
-/** @suppress {extraRequire} */
-goog.require('goog.i18n.bidi');
-/** @suppress {extraRequire} */
-goog.require('goog.asserts');
-/** @suppress {extraRequire} */
-goog.require('goog.string');
-var IncrementalDom = goog.require('incrementaldom');
-var ie_open = IncrementalDom.elementOpen;
-var ie_close = IncrementalDom.elementClose;
-var ie_void = IncrementalDom.elementVoid;
-var ie_open_start = IncrementalDom.elementOpenStart;
-var ie_open_end = IncrementalDom.elementOpenEnd;
-var itext = IncrementalDom.text;
-var iattr = IncrementalDom.attr;
-
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricNavigation.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $render(opt_data, opt_ignored, opt_ijData) {
-  ie_open('nav', null, null,
-      'class', 'sidebar');
-    ie_open('a', null, null,
-        'class', 'sidebar-header toggler-header-collapsed');
-      ie_void('span', null, null,
-          'class', 'sidebar-icon icon-16-menu');
-      ie_open('span');
-        itext('Docs Menu');
-      ie_close('span');
-      ie_open('span', null, null,
-          'class', 'sidebar-icon-right');
-        ie_void('span', null, null,
-            'class', 'icon-12-arrow-down-short');
-        ie_void('span', null, null,
-            'class', 'icon-12-arrow-up-short');
-      ie_close('span');
-    ie_close('a');
-    ie_open('div', null, null,
-        'class', 'sidebar-toggler-content toggler-collapsed');
-      ie_open('div', null, null,
-          'class', 'sidebar-search');
-        $templateAlias1({maxResults: 3, path: '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
-      ie_close('div');
-      $templateAlias2({elementClasses: 'sidebar-list sidebar-list-1', listItemClasses: 'sidebar-item', anchorVariant: 'sidebar', section: opt_data.section}, null, opt_ijData);
-    ie_close('div');
-  ie_close('nav');
-}
-exports.render = $render;
-if (goog.DEBUG) {
-  $render.soyTemplateName = 'Sidebar.render';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function __deltemplate_s77_d34389eb(opt_data, opt_ignored, opt_ijData) {
-  ie_open('a', null, null,
-      'class', 'sidebar-link ' + (opt_data.page.active ? 'sidebar-link-selected' : ''),
-      'href', opt_data.page.url);
-    if (opt_data.page.icon) {
-      ie_void('span', null, null,
-          'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
-    }
-    ie_open('span');
-      var dyn5 = opt_data.page.title;
-      if (typeof dyn5 == 'function') dyn5(); else if (dyn5 != null) itext(dyn5);
-    ie_close('span');
-  ie_close('a');
-}
-exports.__deltemplate_s77_d34389eb = __deltemplate_s77_d34389eb;
-if (goog.DEBUG) {
-  __deltemplate_s77_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s77_d34389eb';
-}
-soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s77_d34389eb);
-
-exports.render.params = ["section"];
-exports.render.types = {"section":"any"};
-templates = exports;
-return exports;
-
-});
-
-class Sidebar extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Sidebar, templates);
-
-/* harmony default export */ __webpack_exports__["default"] = (templates);
-/* jshint ignore:end */
-
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
-    "use strict";
-
-    if (global.setImmediate) {
-        return;
-    }
-
-    var nextHandle = 1; // Spec says greater than zero
-    var tasksByHandle = {};
-    var currentlyRunningATask = false;
-    var doc = global.document;
-    var registerImmediate;
-
-    function setImmediate(callback) {
-      // Callback can either be a function or a string
-      if (typeof callback !== "function") {
-        callback = new Function("" + callback);
-      }
-      // Copy function arguments
-      var args = new Array(arguments.length - 1);
-      for (var i = 0; i < args.length; i++) {
-          args[i] = arguments[i + 1];
-      }
-      // Store and register the task
-      var task = { callback: callback, args: args };
-      tasksByHandle[nextHandle] = task;
-      registerImmediate(nextHandle);
-      return nextHandle++;
-    }
-
-    function clearImmediate(handle) {
-        delete tasksByHandle[handle];
-    }
-
-    function run(task) {
-        var callback = task.callback;
-        var args = task.args;
-        switch (args.length) {
-        case 0:
-            callback();
-            break;
-        case 1:
-            callback(args[0]);
-            break;
-        case 2:
-            callback(args[0], args[1]);
-            break;
-        case 3:
-            callback(args[0], args[1], args[2]);
-            break;
-        default:
-            callback.apply(undefined, args);
-            break;
-        }
-    }
-
-    function runIfPresent(handle) {
-        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
-        // So if we're currently running a task, we'll need to delay this invocation.
-        if (currentlyRunningATask) {
-            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
-            // "too much recursion" error.
-            setTimeout(runIfPresent, 0, handle);
-        } else {
-            var task = tasksByHandle[handle];
-            if (task) {
-                currentlyRunningATask = true;
-                try {
-                    run(task);
-                } finally {
-                    clearImmediate(handle);
-                    currentlyRunningATask = false;
-                }
-            }
-        }
-    }
-
-    function installNextTickImplementation() {
-        registerImmediate = function(handle) {
-            process.nextTick(function () { runIfPresent(handle); });
-        };
-    }
-
-    function canUsePostMessage() {
-        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
-        // where `global.postMessage` means something completely different and can't be used for this purpose.
-        if (global.postMessage && !global.importScripts) {
-            var postMessageIsAsynchronous = true;
-            var oldOnMessage = global.onmessage;
-            global.onmessage = function() {
-                postMessageIsAsynchronous = false;
-            };
-            global.postMessage("", "*");
-            global.onmessage = oldOnMessage;
-            return postMessageIsAsynchronous;
-        }
-    }
-
-    function installPostMessageImplementation() {
-        // Installs an event handler on `global` for the `message` event: see
-        // * https://developer.mozilla.org/en/DOM/window.postMessage
-        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
-
-        var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event) {
-            if (event.source === global &&
-                typeof event.data === "string" &&
-                event.data.indexOf(messagePrefix) === 0) {
-                runIfPresent(+event.data.slice(messagePrefix.length));
-            }
-        };
-
-        if (global.addEventListener) {
-            global.addEventListener("message", onGlobalMessage, false);
-        } else {
-            global.attachEvent("onmessage", onGlobalMessage);
-        }
-
-        registerImmediate = function(handle) {
-            global.postMessage(messagePrefix + handle, "*");
-        };
-    }
-
-    function installMessageChannelImplementation() {
-        var channel = new MessageChannel();
-        channel.port1.onmessage = function(event) {
-            var handle = event.data;
-            runIfPresent(handle);
-        };
-
-        registerImmediate = function(handle) {
-            channel.port2.postMessage(handle);
-        };
-    }
-
-    function installReadyStateChangeImplementation() {
-        var html = doc.documentElement;
-        registerImmediate = function(handle) {
-            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
-            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
-            var script = doc.createElement("script");
-            script.onreadystatechange = function () {
-                runIfPresent(handle);
-                script.onreadystatechange = null;
-                html.removeChild(script);
-                script = null;
-            };
-            html.appendChild(script);
-        };
-    }
-
-    function installSetTimeoutImplementation() {
-        registerImmediate = function(handle) {
-            setTimeout(runIfPresent, 0, handle);
-        };
-    }
-
-    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
-    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
-
-    // Don't get fooled by e.g. browserify environments.
-    if ({}.toString.call(global.process) === "[object process]") {
-        // For Node.js before 0.9
-        installNextTickImplementation();
-
-    } else if (canUsePostMessage()) {
-        // For non-IE10 modern browsers
-        installPostMessageImplementation();
-
-    } else if (global.MessageChannel) {
-        // For web workers, where supported
-        installMessageChannelImplementation();
-
-    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-        // For IE 6–8
-        installReadyStateChangeImplementation();
-
-    } else {
-        // For older browsers
-        installSetTimeoutImplementation();
-    }
-
-    attachTo.setImmediate = setImmediate;
-    attachTo.clearImmediate = clearImmediate;
-}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(69), __webpack_require__(68)))
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var apply = Function.prototype.apply;
-
-// DOM APIs, for completeness
-
-exports.setTimeout = function() {
-  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
-};
-exports.setInterval = function() {
-  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
-};
-exports.clearTimeout =
-exports.clearInterval = function(timeout) {
-  if (timeout) {
-    timeout.close();
-  }
-};
-
-function Timeout(id, clearFn) {
-  this._id = id;
-  this._clearFn = clearFn;
-}
-Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-Timeout.prototype.close = function() {
-  this._clearFn.call(window, this._id);
-};
-
-// Does not start the time, just sets up the members needed.
-exports.enroll = function(item, msecs) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = msecs;
-};
-
-exports.unenroll = function(item) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = -1;
-};
-
-exports._unrefActive = exports.active = function(item) {
-  clearTimeout(item._idleTimeoutId);
-
-  var msecs = item._idleTimeout;
-  if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout() {
-      if (item._onTimeout)
-        item._onTimeout();
-    }, msecs);
-  }
-};
-
-// setimmediate attaches itself to the global object
-__webpack_require__(133);
-exports.setImmediate = setImmediate;
-exports.clearImmediate = clearImmediate;
-
-
-/***/ }),
-/* 135 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3949,7 +3539,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _unescape = __webpack_require__(137);
+var _unescape = __webpack_require__(111);
 
 var _unescape2 = _interopRequireDefault(_unescape);
 
@@ -4042,7 +3632,7 @@ var HTML2IncDom = function () {
 exports.default = HTML2IncDom;
 
 /***/ }),
-/* 136 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4300,7 +3890,7 @@ exports.default = HTML2IncDom;
 /* jshint ignore:end */
 
 /***/ }),
-/* 137 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4379,7 +3969,7 @@ exports.default = unescape;
 var HTML_ENTITY_PATTERN_ = /&([^;\s<&]+);?/g;
 
 /***/ }),
-/* 138 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4389,9 +3979,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-__webpack_require__(136);
+__webpack_require__(110);
 
-var _HTML2IncDom = __webpack_require__(135);
+var _HTML2IncDom = __webpack_require__(109);
 
 var _HTML2IncDom2 = _interopRequireDefault(_HTML2IncDom);
 
@@ -4400,7 +3990,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _HTML2IncDom2.default;
 
 /***/ }),
-/* 139 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function (global, factory) {
@@ -4678,7 +4268,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 
 /***/ }),
-/* 140 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6101,10 +5691,10 @@ exports.notifications = notifications;
 exports.importNode = importNode;
 
 //# sourceMappingURL=incremental-dom-cjs.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(68)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 
 /***/ }),
-/* 141 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6122,7 +5712,7 @@ var _events = __webpack_require__(74);
 
 var _metal = __webpack_require__(2);
 
-var _sync = __webpack_require__(143);
+var _sync = __webpack_require__(117);
 
 var _metalDom = __webpack_require__(3);
 
@@ -6996,7 +6586,7 @@ var proxyBlackList_ = {
 exports.default = Component;
 
 /***/ }),
-/* 142 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7081,7 +6671,7 @@ ComponentRegistry.components_ = {};
 exports.default = ComponentRegistry;
 
 /***/ }),
-/* 143 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7150,7 +6740,7 @@ function syncState(component, opt_changes) {
 }
 
 /***/ }),
-/* 144 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7164,7 +6754,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _domData = __webpack_require__(70);
+var _domData = __webpack_require__(68);
 
 var _domData2 = _interopRequireDefault(_domData);
 
@@ -7231,7 +6821,7 @@ var DomDelegatedEventHandle = function (_EventHandle) {
 exports.default = DomDelegatedEventHandle;
 
 /***/ }),
-/* 145 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7344,7 +6934,7 @@ var DomEventEmitterProxy = function (_EventEmitterProxy) {
 exports.default = DomEventEmitterProxy;
 
 /***/ }),
-/* 146 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7380,11 +6970,11 @@ exports.triggerEvent = triggerEvent;
 
 var _metal = __webpack_require__(2);
 
-var _domData = __webpack_require__(70);
+var _domData = __webpack_require__(68);
 
 var _domData2 = _interopRequireDefault(_domData);
 
-var _DomDelegatedEventHandle = __webpack_require__(144);
+var _DomDelegatedEventHandle = __webpack_require__(118);
 
 var _DomDelegatedEventHandle2 = _interopRequireDefault(_DomDelegatedEventHandle);
 
@@ -8215,7 +7805,7 @@ function triggerSelectorListeners_(container, element, event, defaultFns) {
 }
 
 /***/ }),
-/* 147 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8268,7 +7858,7 @@ Object.keys(animationEventMap).forEach(function (eventType) {
 });
 
 /***/ }),
-/* 148 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8426,7 +8016,7 @@ var globalEval = function () {
 exports.default = globalEval;
 
 /***/ }),
-/* 149 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8566,7 +8156,7 @@ var globalEvalStyles = function () {
 exports.default = globalEvalStyles;
 
 /***/ }),
-/* 150 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9102,7 +8692,7 @@ function toArray(val) {
 exports.default = EventEmitter;
 
 /***/ }),
-/* 151 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9342,7 +8932,7 @@ var EventEmitterProxy = function (_Disposable) {
 exports.default = EventEmitterProxy;
 
 /***/ }),
-/* 152 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9433,7 +9023,7 @@ var EventHandler = function (_Disposable) {
 exports.default = EventHandler;
 
 /***/ }),
-/* 153 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9488,7 +9078,7 @@ function schedule(comps) {
 }
 
 /***/ }),
-/* 154 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9506,7 +9096,7 @@ var _metalDom = __webpack_require__(3);
 
 var _metalComponent = __webpack_require__(0);
 
-var _incrementalDomAop = __webpack_require__(71);
+var _incrementalDomAop = __webpack_require__(69);
 
 var HANDLE_SUFFIX = '__handle__';
 var LISTENER_REGEX = /^(?:on([A-Z].+))|(?:data-on(.+))$/;
@@ -9677,7 +9267,7 @@ function setValueAttrAsProperty_(element, name, value) {
 }
 
 /***/ }),
-/* 155 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9798,7 +9388,7 @@ function tryPatchWithNoParent_(component) {
 }
 
 /***/ }),
-/* 156 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14433,10 +14023,10 @@ __webpack_require__(78);
     return IncrementalDOM;
   });
 }).call(typeof exports !== 'undefined' && typeof global !== 'undefined' ? global : window);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(69)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71)))
 
 /***/ }),
-/* 157 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14526,7 +14116,7 @@ var SoyAop = {
 exports.default = SoyAop;
 
 /***/ }),
-/* 158 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14815,7 +14405,7 @@ function setPrimitiveValidators(name) {
 exports.default = Config;
 
 /***/ }),
-/* 159 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15637,7 +15227,7 @@ State.KeyStates = {
 exports.default = State;
 
 /***/ }),
-/* 160 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15940,7 +15530,7 @@ Toggler.STATE = {
 exports.default = Toggler;
 
 /***/ }),
-/* 161 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16083,7 +15673,7 @@ var array = function () {
 exports.default = array;
 
 /***/ }),
-/* 162 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16325,10 +15915,10 @@ async.nextTick.wrapCallback_ = function (opt_returnValue) {
 };
 
 exports.default = async;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(166).setImmediate))
 
 /***/ }),
-/* 163 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16660,10 +16250,10 @@ function isServerSide() {
  * @return {void} Nothing.
  */
 function nullFunction() {}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(68)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 
 /***/ }),
-/* 164 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16739,7 +16329,7 @@ var Disposable = function () {
 exports.default = Disposable;
 
 /***/ }),
-/* 165 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16850,7 +16440,7 @@ var object = function () {
 exports.default = object;
 
 /***/ }),
-/* 166 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16973,6 +16563,416 @@ var string = function () {
 }();
 
 exports.default = string;
+
+/***/ }),
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return Sidebar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from Sidebar.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace Sidebar.
+ * @hassoydeltemplate {ElectricNavigation.anchor.idom}
+ * @public
+ */
+
+goog.module('Sidebar.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricNavigation.incrementaldom', 'render');
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  ie_open('nav', null, null,
+      'class', 'sidebar');
+    ie_open('a', null, null,
+        'class', 'sidebar-header toggler-header-collapsed');
+      ie_void('span', null, null,
+          'class', 'sidebar-icon icon-16-menu');
+      ie_open('span');
+        itext('Docs Menu');
+      ie_close('span');
+      ie_open('span', null, null,
+          'class', 'sidebar-icon-right');
+        ie_void('span', null, null,
+            'class', 'icon-12-arrow-down-short');
+        ie_void('span', null, null,
+            'class', 'icon-12-arrow-up-short');
+      ie_close('span');
+    ie_close('a');
+    ie_open('div', null, null,
+        'class', 'sidebar-toggler-content toggler-collapsed');
+      ie_open('div', null, null,
+          'class', 'sidebar-search');
+        $templateAlias1({maxResults: 3, path: '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
+      ie_close('div');
+      $templateAlias2({elementClasses: 'sidebar-list sidebar-list-1', listItemClasses: 'sidebar-item', anchorVariant: 'sidebar', section: opt_data.section}, null, opt_ijData);
+    ie_close('div');
+  ie_close('nav');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'Sidebar.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function __deltemplate_s77_d34389eb(opt_data, opt_ignored, opt_ijData) {
+  ie_open('a', null, null,
+      'class', 'sidebar-link ' + (opt_data.page.active ? 'sidebar-link-selected' : ''),
+      'href', opt_data.page.url);
+    if (opt_data.page.icon) {
+      ie_void('span', null, null,
+          'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
+    }
+    ie_open('span');
+      var dyn5 = opt_data.page.title;
+      if (typeof dyn5 == 'function') dyn5(); else if (dyn5 != null) itext(dyn5);
+    ie_close('span');
+  ie_close('a');
+}
+exports.__deltemplate_s77_d34389eb = __deltemplate_s77_d34389eb;
+if (goog.DEBUG) {
+  __deltemplate_s77_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s77_d34389eb';
+}
+soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s77_d34389eb);
+
+exports.render.params = ["section"];
+exports.render.types = {"section":"any"};
+templates = exports;
+return exports;
+
+});
+
+class Sidebar extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Sidebar, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
+
+    if (global.setImmediate) {
+        return;
+    }
+
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
+
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
+
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
+
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
+
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
+
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71), __webpack_require__(70)))
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(165);
+exports.setImmediate = setImmediate;
+exports.clearImmediate = clearImmediate;
+
 
 /***/ })
 /******/ ]);

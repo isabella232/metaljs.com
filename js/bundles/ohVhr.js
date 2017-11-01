@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2478,7 +2478,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('a', null, null,
             'class', 'topbar-icon',
             'target', '_blank',
-            'href', 'http://metaljs-chat.wedeploy.io/');
+            'href', 'https://community-chat.liferay.com/');
           ie_void('span', null, null,
               'class', 'icon-16-hash');
         ie_close('a');
@@ -9947,16 +9947,12 @@ exports.default = parseFromAnchor;
 /* 98 */,
 /* 99 */,
 /* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "brSYs", function() { return brSYs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ohVhr", function() { return ohVhr; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9968,15 +9964,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from yeoman-generator.soy.
+// This file was automatically generated from progressive-enhancement.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace brSYs.
+ * @fileoverview Templates in namespace ohVhr.
  * @public
  */
 
-goog.module('brSYs.incrementaldom');
+goog.module('ohVhr.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9997,8 +9993,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -10010,96 +10004,33 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param687 = function() {
+  var param601 = function() {
     ie_open('article', null, null,
-        'id', 'yeoman_generator');
+        'id', 'progressive_enhancement');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#yeoman_generator');
-          itext('Yeoman Generator');
+            'href', '#progressive_enhancement');
+          itext('Progressive Enhancement');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('You can organize your ');
+        ie_open('a', null, null,
+            'href', 'http://en.wikipedia.org/wiki/Progressive_enhancement');
+          itext('Progressive enhancement');
+        ie_close('a');
+        itext(' is a feature that is very important for a lot of people. Knowing about this, ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' project in any way you want, but to start out we recommend using the ');
+        itext(' is prepared to deal with content that already comes rendered from the server. Since Metal.js components use ');
         ie_open('a', null, null,
-            'href', 'http://npmjs.com/package/generator-metal');
-          itext('Yeoman generator');
+            'href', 'http://google.github.io/incremental-dom');
+          itext('Incremental DOM');
         ie_close('a');
-        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
+        itext(' by default, rendering on an element with existing content will reuse it instead of repainting everything.');
       ie_close('p');
       ie_open('p');
-        itext('To use it:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Install ');
-          ie_open('a', null, null,
-              'href', 'https://nodejs.org');
-            itext('npm');
-          ie_close('a');
-          itext(' v3.0.0 or newer (if you don\'t have it yet)');
-        ie_close('li');
-        ie_open('li');
-          itext('Install ');
-          ie_open('strong');
-            itext('Yeoman');
-          ie_close('strong');
-          itext(' and ');
-          ie_open('strong');
-            itext('generator-metal');
-          ie_close('strong');
-          itext(': ');
-          ie_open('code');
-            itext('[sudo] npm i -g yo generator-metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Open the folder that you want to use on your terminal and type: ');
-          ie_open('code');
-            itext('yo metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Answer the generator prompts: ');
-          ie_open('img', null, null,
-              'src', '../../images/docs/prompts.png',
-              'alt', 'Generator prompts');
-          ie_close('img');
-        ie_close('li');
-        ie_open('li');
-          itext('Wait for the generator to finish fetching dependencies');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('After those steps you\'ll get a directory tree similar to this:');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        ie_open('code');
-          itext('generator-metal');
-        ie_close('code');
-        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/building.html#gulp_metal');
-          itext('gulp-metal');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('By the way, the boilerplate zip provided by the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/#boilerplate');
-          itext('getting started guide');
-        ie_close('a');
-        itext(' was created using ');
-        ie_open('strong');
-          itext('generator-metal');
-        ie_close('strong');
-        itext('.');
+        itext('It\'s important to note that building components with Soy also helps with progressive enhancement in another way: by providing a faithful template that can be run by the server without having to duplicate the rendering code or run JavaScript at all.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10111,11 +10042,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param687}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param601}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'brSYs.render';
+  $render.soyTemplateName = 'ohVhr.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10125,14 +10056,18 @@ return exports;
 
 });
 
-class brSYs extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(brSYs, templates);
+class ohVhr extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ohVhr, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -10150,7 +10085,41 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(brSYs, templates);
 /* 120 */,
 /* 121 */,
 /* 122 */,
-/* 123 */
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10178,9 +10147,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _yeomanGeneratorSoy = __webpack_require__(105);
+var _progressiveEnhancementSoy = __webpack_require__(101);
 
-var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
+var _progressiveEnhancementSoy2 = _interopRequireDefault(_progressiveEnhancementSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10190,23 +10159,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var brSYs = function (_Component) {
-  _inherits(brSYs, _Component);
+var ohVhr = function (_Component) {
+  _inherits(ohVhr, _Component);
 
-  function brSYs() {
-    _classCallCheck(this, brSYs);
+  function ohVhr() {
+    _classCallCheck(this, ohVhr);
 
-    return _possibleConstructorReturn(this, (brSYs.__proto__ || Object.getPrototypeOf(brSYs)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ohVhr.__proto__ || Object.getPrototypeOf(ohVhr)).apply(this, arguments));
   }
 
-  return brSYs;
+  return ohVhr;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(brSYs, _yeomanGeneratorSoy2.default);
+_metalSoy2.default.register(ohVhr, _progressiveEnhancementSoy2.default);
 
-exports.default = brSYs;
+exports.default = ohVhr;
 
 /***/ })
-],[123]);
+],[157]);
