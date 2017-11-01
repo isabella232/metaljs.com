@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9941,16 +9941,12 @@ exports.default = parseFromAnchor;
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MBuEk", function() { return MBuEk; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HxnsL", function() { return HxnsL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9962,15 +9958,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from nested-components.soy.
+// This file was automatically generated from importing.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace MBuEk.
+ * @fileoverview Templates in namespace HxnsL.
  * @public
  */
 
-goog.module('MBuEk.incrementaldom');
+goog.module('HxnsL.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10004,68 +10000,122 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param560 = function() {
+  var param391 = function() {
     ie_open('article');
       ie_open('p');
-        itext('The ability to reference components inside templates can be very useful. It enables the developer to correctly place the child component at the right position inside the parent in an intuitive way.');
+        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
       ie_close('p');
       ie_open('p');
-        itext('This can certainly be done with ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' components. For example, let\'s say we\'ve already built a simple component called ');
-        ie_open('strong');
-          itext('Button');
-        ie_close('strong');
-        itext('.');
+        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
       ie_close('p');
       ie_open('p');
-        itext('Now we\'re building a ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(' component, and we want it to render some buttons inside the footer. In ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('\'s template file we could do the following:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n<div class="footer">\n    {foreach $button in $buttons}\n        {call Button.render}\n            {param label: $button /}\n        {/call}\n    {/foreach}\n</div>', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map(button => {\n  return <Button label={button} />;\n});\n\nreturn <div class="footer">{buttons}</div>;', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('When Modal is rendered, the buttons also will be, at the specified position. Besides this, ');
-        ie_open('strong');
-          itext('Button');
-        ie_close('strong');
-        itext(' components will be automatically instantiated for these elements.');
+        itext('Lets get started!');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'accessing_sub_component_instances');
+        'id', 'installing_node_js_npm');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#accessing_sub_component_instances');
-          itext('Accessing Sub Component Instances');
+            'href', '#installing_node_js_npm');
+          itext('Installing Node.js/NPM');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('But what if we need to access the created instances? That\'s possible by using ');
-        ie_open('strong');
-          itext('ref');
-        ie_close('strong');
-        itext('. Let\'s add one to the previous example and see what happens:');
+        itext('If you don\'t already have Node.js or npm installed, head over to the ');
+        ie_open('a', null, null,
+            'href', 'https://nodejs.org/en/download/');
+          itext('Node.js');
+        ie_close('a');
+        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
       ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{foreach $button as $buttons}\n    {call Button.render}\n        {param label: $button /}\n        {param ref: \'button\' + index($button) /}\n    {/call}\n{/foreach}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map((button, index) => {\n    return <Button label={button} ref={\'button\' + index} />;\n});', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('Now you\'ll be able to access your sub components through your instance\'s ');
-        ie_open('code');
-          itext('refs');
-        ie_close('code');
-        itext(' property, like this:');
+        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
       ie_close('p');
-      $templateAlias2({code: 'modal.refs.button0 // The instance for first button\nmodal.refs.button1 // The instance for second button', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'finding_components');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#finding_components');
+          itext('Finding components');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
+      ie_close('p');
+      ie_open('p');
+        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
+      ie_close('p');
+      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
+      ie_close('p');
+      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'installing_components');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#installing_components');
+          itext('Installing Components');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
+      ie_close('p');
+      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this example, we\'re going to install the ');
+        ie_open('code');
+          itext('metal-position');
+        ie_close('code');
+        itext(' component.');
+      ie_close('p');
+      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('Installed packages will be placed in a ');
+        ie_open('code');
+          itext('node_modules');
+        ie_close('code');
+        itext(' directory. This is created in the folder which the bower program was executed.');
+      ie_close('p');
+      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'importing_a_component');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#importing_a_component');
+          itext('Importing a Component');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('With the code already available, let\'s create a ');
+        ie_open('code');
+          itext('main.js');
+        ie_close('code');
+        itext(' file that will import the ');
+        ie_open('code');
+          itext('metal-position');
+        ie_close('code');
+        itext(' module. Note that we\'re using an ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/alias.html');
+          itext('alias');
+        ie_close('a');
+        itext(' to easily import npm files.');
+      ie_close('p');
+      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
+      ie_close('p');
+      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10076,11 +10126,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param560}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param391}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'MBuEk.render';
+  $render.soyTemplateName = 'HxnsL.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10090,14 +10140,18 @@ return exports;
 
 });
 
-class MBuEk extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(MBuEk, templates);
+class HxnsL extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(HxnsL, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -10114,9 +10168,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(MBuEk, templates);
 /* 113 */,
 /* 114 */,
 /* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10144,9 +10196,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _nestedComponentsSoy = __webpack_require__(99);
+var _importingSoy = __webpack_require__(95);
 
-var _nestedComponentsSoy2 = _interopRequireDefault(_nestedComponentsSoy);
+var _importingSoy2 = _interopRequireDefault(_importingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10156,23 +10208,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MBuEk = function (_Component) {
-  _inherits(MBuEk, _Component);
+var HxnsL = function (_Component) {
+  _inherits(HxnsL, _Component);
 
-  function MBuEk() {
-    _classCallCheck(this, MBuEk);
+  function HxnsL() {
+    _classCallCheck(this, HxnsL);
 
-    return _possibleConstructorReturn(this, (MBuEk.__proto__ || Object.getPrototypeOf(MBuEk)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (HxnsL.__proto__ || Object.getPrototypeOf(HxnsL)).apply(this, arguments));
   }
 
-  return MBuEk;
+  return HxnsL;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(MBuEk, _nestedComponentsSoy2.default);
+_metalSoy2.default.register(HxnsL, _importingSoy2.default);
 
-exports.default = MBuEk;
+exports.default = HxnsL;
 
 /***/ })
-],[118]);
+],[116]);

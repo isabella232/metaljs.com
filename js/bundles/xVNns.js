@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([14],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9948,13 +9948,12 @@ exports.default = parseFromAnchor;
 /* 99 */,
 /* 100 */,
 /* 101 */,
-/* 102 */,
-/* 103 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GIlgh", function() { return GIlgh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xVNns", function() { return xVNns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9966,15 +9965,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from soy-components.soy.
+// This file was automatically generated from rendering-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace GIlgh.
+ * @fileoverview Templates in namespace xVNns.
  * @public
  */
 
-goog.module('GIlgh.incrementaldom');
+goog.module('xVNns.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10008,193 +10007,46 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param629 = function() {
+  var param610 = function() {
     ie_open('article');
       ie_open('p');
-        itext('For a full tutorial on how to build components using Soy templates, make sure to follow the ');
+        itext('The ');
         ie_open('a', null, null,
-            'href', '/docs/getting-started/modal.html');
-          itext('Modal tutorial');
+            'href', '/docs');
+          itext('quick start tutorial');
         ie_close('a');
-        itext(' section.');
-      ie_close('p');
-      ie_open('p');
-        itext('This guide will explain some details about the integration between ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' components and ');
-        ie_open('a', null, null,
-            'href', 'http://developers.google.com/closure/templates/');
-          itext('Soy templates');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('Note that ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' is template agnostic, so it\'s not necessary to use Soy at all. That said, we already provide a very good integration between Metal.js components and Soy, so if you like this template language you should give it a try.');
+        itext(' explains how to create and render a new component. In its examples components are always being appended directly to the document\'s body though, but what\'s usually necessary is to render in a specific position.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'soy_register');
+        'id', 'replacing_an_existing_element');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#soy_register');
-          itext('Soy.register');
+            'href', '#replacing_an_existing_element');
+          itext('Replacing an Existing Element');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('The only thing you need to do to use Soy templates in your ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' component is to call ');
+        itext('If you wish your component to replace an existing element on the DOM, you just need to pass it (or a selector for it) as the ');
         ie_open('code');
-          itext('Soy.register');
+          itext('element');
         ie_close('code');
-        itext(', passing it your component class and the Soy templates you\'re going to use, like this:');
+        itext(' property of the constructor configuration, like this:');
       ie_close('p');
-      $templateAlias2({code: 'import templates from \'./MyComponent.soy\';\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nclass MyComponent extends Component {\n}\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('By default, ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' will use the Soy template called ');
-        ie_open('strong');
-          itext('render');
-        ie_close('strong');
-        itext(' as the entry point for rendering. But you can tell us to use a different one if you prefer by passing the name as the last param to the ');
-        ie_open('code');
-          itext('Soy.register');
-        ie_close('code');
-        itext(' call, like this:');
-      ie_close('p');
-      $templateAlias2({code: 'Soy.register(MyComponent, templates, \'templateName\');', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '// Passsing the element itself\nnew Modal({element: elementToReplace});\n\n// Passing a selector to the element\nnew Modal({element: \'#elementToReplace\'});', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'template_file');
+        'id', 'specifying_the_parent');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#template_file');
-          itext('Template File');
+            'href', '#specifying_the_parent');
+          itext('Specifying the Parent');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Make sure that your Soy file has the entry point template (');
-        ie_open('strong');
-          itext('render');
-        ie_close('strong');
-        itext(' by default), otherwise nothing will be rendered.');
+        itext('You can also specify the parent element that should receive the component\'s contents via the second constructor param, like this:');
       ie_close('p');
-      ie_open('p');
-        itext('This main template will receive as data a combination of:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', '/docs/guides/state.html');
-            itext('State data');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', '/docs/guides/state.html#configuring_state');
-            itext('Configuration data');
-          ie_close('a');
-          itext(' (accessed through ');
-          ie_open('code');
-            itext('this.config');
-          ie_close('code');
-          itext(')');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', '/docs/guides/inline-events.html#inline_listeners_via_function_reference');
-            itext('Component functions');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Note that by default all params declared on the component\'s main Soy template are automatically configured as state properties as well, but without any special configurations (like initial value or validators). If they\'re ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/state.html');
-          itext('manually defined');
-        ie_close('a');
-        itext(' through the ');
-        ie_open('code');
-          itext('STATE');
-        ie_close('code');
-        itext(' property they will retain the setup specified there though.');
-      ie_close('p');
-      ie_open('p');
-        itext('Any params passed to the component but not directly declared on its main Soy template will be treated as basic configuration data, meaning that changes to them will not automatically rerender the component. They can still be passed down to other templates using ');
-        ie_open('code');
-          itext('data="all"');
-        ie_close('code');
-        itext(', as well be accessed via the');
-        ie_open('code');
-          itext('config');
-        ie_close('code');
-        itext(' property in the JavaScript file.');
-      ie_close('p');
-      $templateAlias2({code: '// Contains all the data received by the component.\nthis.config', mode: 'javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'soy_compilation');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#soy_compilation');
-          itext('Soy Compilation');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('For the integration between ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' and ');
-        ie_open('strong');
-          itext('soy');
-        ie_close('strong');
-        itext(' to work, the Soy files need to be compiled via one of our available build tools. That\'s because they don\'t just compile the code, but also add some information that help with the integration (like export declarations).');
-      ie_close('p');
-      ie_open('p');
-        itext('The available build tools that correctly compile Soy for ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' are:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://npmjs.com/package/gulp-metal');
-            itext('gulp-metal');
-          ie_close('a');
-          itext(' (already included when creating project via ');
-          ie_open('a', null, null,
-              'href', '/docs/guides/yeoman-generator.html');
-            itext('generator-metal');
-          ie_close('a');
-          itext(').');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://npmjs.com/package/metal-cli');
-            itext('metal-cli');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://npmjs.com/package/metal-tools-soy');
-            itext('metal-tools-soy');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '// Passing the element itself\nnew Modal(data, parentElement);\n\n// Passing a selector to the element\nnew Modal(data, \'#parentElement\');', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10205,11 +10057,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param629}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param610}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'GIlgh.render';
+  $render.soyTemplateName = 'xVNns.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10219,14 +10071,15 @@ return exports;
 
 });
 
-class GIlgh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GIlgh, templates);
+class xVNns extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xVNns, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -10240,7 +10093,18 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(GIlgh, templates);
 /* 114 */,
 /* 115 */,
 /* 116 */,
-/* 117 */
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10268,9 +10132,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _soyComponentsSoy = __webpack_require__(103);
+var _renderingComponentsSoy = __webpack_require__(102);
 
-var _soyComponentsSoy2 = _interopRequireDefault(_soyComponentsSoy);
+var _renderingComponentsSoy2 = _interopRequireDefault(_renderingComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10280,23 +10144,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var GIlgh = function (_Component) {
-  _inherits(GIlgh, _Component);
+var xVNns = function (_Component) {
+  _inherits(xVNns, _Component);
 
-  function GIlgh() {
-    _classCallCheck(this, GIlgh);
+  function xVNns() {
+    _classCallCheck(this, xVNns);
 
-    return _possibleConstructorReturn(this, (GIlgh.__proto__ || Object.getPrototypeOf(GIlgh)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (xVNns.__proto__ || Object.getPrototypeOf(xVNns)).apply(this, arguments));
   }
 
-  return GIlgh;
+  return xVNns;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(GIlgh, _soyComponentsSoy2.default);
+_metalSoy2.default.register(xVNns, _renderingComponentsSoy2.default);
 
-exports.default = GIlgh;
+exports.default = xVNns;
 
 /***/ })
-],[117]);
+],[128]);

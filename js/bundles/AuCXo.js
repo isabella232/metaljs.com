@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([16],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9938,12 +9938,19 @@ exports.default = parseFromAnchor;
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fdjEG", function() { return fdjEG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuCXo", function() { return AuCXo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9955,15 +9962,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from alias.soy.
+// This file was automatically generated from nested-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace fdjEG.
+ * @fileoverview Templates in namespace AuCXo.
  * @public
  */
 
-goog.module('fdjEG.incrementaldom');
+goog.module('AuCXo.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9997,39 +10004,68 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param349 = function() {
+  var param560 = function() {
+    ie_open('article');
+      ie_open('p');
+        itext('The ability to reference components inside templates can be very useful. It enables the developer to correctly place the child component at the right position inside the parent in an intuitive way.');
+      ie_close('p');
+      ie_open('p');
+        itext('This can certainly be done with ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' components. For example, let\'s say we\'ve already built a simple component called ');
+        ie_open('strong');
+          itext('Button');
+        ie_close('strong');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('Now we\'re building a ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext(' component, and we want it to render some buttons inside the footer. In ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext('\'s template file we could do the following:');
+      ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n<div class="footer">\n    {foreach $button in $buttons}\n        {call Button.render}\n            {param label: $button /}\n        {/call}\n    {/foreach}\n</div>', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map(button => {\n  return <Button label={button} />;\n});\n\nreturn <div class="footer">{buttons}</div>;', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('When Modal is rendered, the buttons also will be, at the specified position. Besides this, ');
+        ie_open('strong');
+          itext('Button');
+        ie_close('strong');
+        itext(' components will be automatically instantiated for these elements.');
+      ie_close('p');
+    ie_close('article');
     ie_open('article', null, null,
-        'id', 'alias');
+        'id', 'accessing_sub_component_instances');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#alias');
-          itext('Alias');
+            'href', '#accessing_sub_component_instances');
+          itext('Accessing Sub Component Instances');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('A straightforward way to import npm dependencies into your module is to use their relative paths, like we do for any other code. For example:');
+        itext('But what if we need to access the created instances? That\'s possible by using ');
+        ie_open('strong');
+          itext('ref');
+        ie_close('strong');
+        itext('. Let\'s add one to the previous example and see what happens:');
       ie_close('p');
-      $templateAlias2({code: 'import core from \'../node_modules/metal/src/core\';', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.soy\n\n{foreach $button as $buttons}\n    {call Button.render}\n        {param label: $button /}\n        {param ref: \'button\' + index($button) /}\n    {/call}\n{/foreach}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map((button, index) => {\n    return <Button label={button} ref={\'button\' + index} />;\n});', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('Having to supply the relative path to node_modules is not cool though and, besides that, it may cause problems when a module doing that is imported later as an npm dependency of another project, since the paths will change.');
+        itext('Now you\'ll be able to access your sub components through your instance\'s ');
+        ie_open('code');
+          itext('refs');
+        ie_close('code');
+        itext(' property, like this:');
       ie_close('p');
-      ie_open('p');
-        itext('Knowing that, Metal.js allows importing npm dependencies like you would from a regular node module, just by referencing their names. Note that this will only work when using Metal.js\'s ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/building.html');
-          itext('build tools');
-        ie_close('a');
-        itext(' or adding a similar logic to your build process yourself (though we provide a ');
-        ie_open('a', null, null,
-            'href', 'https://npmjs.com/package/babel-preset-metal');
-          itext('babel preset');
-        ie_close('a');
-        itext(' with this logic that you can use separately too).');
-      ie_close('p');
-      ie_open('p');
-        itext('With aliases, the previous example can be rewritten like this:');
-      ie_close('p');
-      $templateAlias2({code: 'import core from \'metal\';', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: 'modal.refs.button0 // The instance for first button\nmodal.refs.button1 // The instance for second button', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10040,11 +10076,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param349}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param560}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'fdjEG.render';
+  $render.soyTemplateName = 'AuCXo.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10054,21 +10090,14 @@ return exports;
 
 });
 
-class fdjEG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fdjEG, templates);
+class AuCXo extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AuCXo, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
@@ -10084,14 +10113,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fdjEG, templates);
 /* 112 */,
 /* 113 */,
 /* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10119,9 +10141,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _aliasSoy = __webpack_require__(92);
+var _nestedComponentsSoy = __webpack_require__(99);
 
-var _aliasSoy2 = _interopRequireDefault(_aliasSoy);
+var _nestedComponentsSoy2 = _interopRequireDefault(_nestedComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10131,23 +10153,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var fdjEG = function (_Component) {
-  _inherits(fdjEG, _Component);
+var AuCXo = function (_Component) {
+  _inherits(AuCXo, _Component);
 
-  function fdjEG() {
-    _classCallCheck(this, fdjEG);
+  function AuCXo() {
+    _classCallCheck(this, AuCXo);
 
-    return _possibleConstructorReturn(this, (fdjEG.__proto__ || Object.getPrototypeOf(fdjEG)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AuCXo.__proto__ || Object.getPrototypeOf(AuCXo)).apply(this, arguments));
   }
 
-  return fdjEG;
+  return AuCXo;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(fdjEG, _aliasSoy2.default);
+_metalSoy2.default.register(AuCXo, _nestedComponentsSoy2.default);
 
-exports.default = fdjEG;
+exports.default = AuCXo;
 
 /***/ })
-],[122]);
+],[115]);

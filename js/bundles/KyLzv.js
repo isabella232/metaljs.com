@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([22],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9933,12 +9933,19 @@ exports.default = parseFromAnchor;
 /* 84 */,
 /* 85 */,
 /* 86 */,
-/* 87 */
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EazAq", function() { return EazAq; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KyLzv", function() { return KyLzv; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9950,15 +9957,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal.soy.
+// This file was automatically generated from component-lifecycle.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace EazAq.
+ * @fileoverview Templates in namespace KyLzv.
  * @public
  */
 
-goog.module('EazAq.incrementaldom');
+goog.module('KyLzv.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9992,109 +9999,19 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param196 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('In the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/');
-          itext('previous section');
-        ie_close('a');
-        itext(' you learned how to build a simple project using Metal.js that just renders ');
-        ie_open('strong');
-          itext('Hello World');
-        ie_close('strong');
-        itext(' on the screen. Let\'s enhance what we already have to render a modal dialog instead.');
-      ie_close('p');
-    ie_close('article');
+  var param377 = function() {
     ie_open('article', null, null,
-        'id', 'rendering');
+        'id', 'component_lifecycle');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#rendering');
-          itext('Rendering');
+            'href', '#component_lifecycle');
+          itext('Component Lifecycle');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Our generated project already includes ');
-        ie_open('a', null, null,
-            'href', 'http://getbootstrap.com/');
-          itext('Bootstrap\'s CSS');
-        ie_close('a');
-        itext(', so let\'s use its markup for our modal. Let\'s update the component\'s template to do that then:');
+        itext('Components built with Metal.js provide lifecycle methods that can be called when needed. The following example lists all available lifecycle methods, in the order in which they\'re called');
       ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n&#123;namespace Modal&#125;\n\n/**\n * This renders the component\'s whole content.\n * Note: has to be called ".render".\n */\n&#123;template .render&#125;\n    {@param body: string}\n    {@param header: string}\n\n    <div class="modal show">\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <header class="modal-header">\n                    <button type="button" class="close">\n                        <span>\u00D7</span>\n                    </button>\n                    <h4>{$header}</h4>\n                </header>\n                <section class="modal-body">\n                    {$body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass Modal extends JSXComponent {\n    /**\n     * Renders the component\'s content.\n     * Note that data can be accessed via the `props` property.\n     */\n    render() {\n        return <div class="modal show">\n            <div class="modal-dialog">\n                <div class="modal-content">\n                    <header class="modal-header">\n                        <button type="button" class="close">\n                            <span>\u00D7</span>\n                        </button>\n                        <h4>{this.props.header}</h4>\n                    </header>\n                    <section class="modal-body">\n                        {this.props.body}\n                    </section>\n                    <footer class="modal-footer">\n                        <button type="button" class="btn btn-primary">OK</button>\n                    </footer>\n                </div>\n            </div>\n        </div>;\n    }\n}\n\nexport default Modal;', mode: 'jsx'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'passing_data');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#passing_data');
-          itext('Passing Data');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Note that the template is accessing data to determine the content of the modal\'s ');
-        ie_open('code');
-          itext('header');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('body');
-        ie_close('code');
-        itext('. How can the component receive this data though?');
-      ie_close('p');
-      ie_open('p');
-        itext('One way is through the component\'s constructor. When creating component instances directly, you can pass them a data object as its first param. So let\'s update our demo to pass it some data:');
-      ie_close('p');
-      $templateAlias2({code: 'new metal.Modal({\n    header: \'My Modal\',\n    body: \'Built using Metal.js\'\n});', mode: 'javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'run_the_demo');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#run_the_demo');
-          itext('Run the Demo');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now compile your code with ');
-        ie_open('code');
-          itext('npm run build');
-        ie_close('code');
-        itext(' and open the demo on a browser, and you should be seeing this:');
-      ie_close('p');
-      ie_open('p');
-        ie_open('img', null, null,
-            'src', '../../images/docs/modal.png',
-            'alt', 'Modal screenshot');
-        ie_close('img');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'next_steps');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#next_steps');
-          itext('Next Steps');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('We\'ve taken care of the rendering, but you\'ll notice that clicking the ');
-        ie_open('strong');
-          itext('x');
-        ie_close('strong');
-        itext(' button doesn\'t do anything yet though. Let\'s make that work.');
-      ie_close('p');
-      ie_open('p');
-        ie_open('strong');
-          ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_events.html');
-            itext('\u21AA Tutorial: Modal - Events');
-          ie_close('a');
-        ie_close('strong');
-      ie_close('p');
+      $templateAlias2({code: 'class MyComponent extends Component {\n    /**\n     * Called when the component is first created,\n     * but before it\'s first rendered.\n     */\n    created() {\n    }\n\n    /**\n     * Called whenever the component is rendered.\n     */\n    rendered() {\n    }\n\n    /**\n     * Called when the component is attached to the\n     * DOM. The component will automatically be\n     * attached when first rendered, but can also\n     * be attached (without rerendering the\n     * component) by calling the `attach` method\n     * directly. This is a good place to attach event\n     * listeners, since the component is available\n     * in the page.\n     */\n    attached() {\n    }\n\n    /**\n     * Called when the component is detached from the\n     * DOM. The component will automatically be\n     * detached when disposed, but can also be\n     * detached (without disposing the component)\n     * by calling the `detach` method directly. This\n     * is a good place to detach event listeners,\n     * since the component is not available in the\n     * page anymore.\n     */\n    detached() {\n    }\n\n    /**\n     * Called when the component is disposed. This\n     * should contain any necessary cleanup, like\n     * detaching any remaining events and disposing\n     * of sub components and local variables.\n     */\n    disposed() {\n    }\n\n    /**\n     * Called when the component is about to render.\n     * It takes the component state as an argument\n     * and you can massage the data before it is passed\n     * down to the template.\n     * This is only available for Soy Components.\n     */\n    prepareStateForRender(states) {\n        return Object.assign({}, states);\n    }\n}', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10105,11 +10022,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param196}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param377}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'EazAq.render';
+  $render.soyTemplateName = 'KyLzv.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10119,21 +10036,14 @@ return exports;
 
 });
 
-class EazAq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EazAq, templates);
+class KyLzv extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(KyLzv, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
 /* 95 */,
 /* 96 */,
 /* 97 */,
@@ -10148,7 +10058,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(EazAq, templates);
 /* 106 */,
 /* 107 */,
 /* 108 */,
-/* 109 */
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10176,9 +10096,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modalSoy = __webpack_require__(87);
+var _componentLifecycleSoy = __webpack_require__(94);
 
-var _modalSoy2 = _interopRequireDefault(_modalSoy);
+var _componentLifecycleSoy2 = _interopRequireDefault(_componentLifecycleSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10188,23 +10108,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EazAq = function (_Component) {
-  _inherits(EazAq, _Component);
+var KyLzv = function (_Component) {
+  _inherits(KyLzv, _Component);
 
-  function EazAq() {
-    _classCallCheck(this, EazAq);
+  function KyLzv() {
+    _classCallCheck(this, KyLzv);
 
-    return _possibleConstructorReturn(this, (EazAq.__proto__ || Object.getPrototypeOf(EazAq)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (KyLzv.__proto__ || Object.getPrototypeOf(KyLzv)).apply(this, arguments));
   }
 
-  return EazAq;
+  return KyLzv;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(EazAq, _modalSoy2.default);
+_metalSoy2.default.register(KyLzv, _componentLifecycleSoy2.default);
 
-exports.default = EazAq;
+exports.default = KyLzv;
 
 /***/ })
-],[109]);
+],[119]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([22],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9936,27 +9936,12 @@ exports.default = parseFromAnchor;
 /* 87 */,
 /* 88 */,
 /* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zgNhS", function() { return zgNhS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LbMZT", function() { return LbMZT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9968,15 +9953,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from yeoman-generator.soy.
+// This file was automatically generated from modal_testing.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace zgNhS.
+ * @fileoverview Templates in namespace LbMZT.
  * @public
  */
 
-goog.module('zgNhS.incrementaldom');
+goog.module('LbMZT.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10010,96 +9995,152 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param687 = function() {
-    ie_open('article', null, null,
-        'id', 'yeoman_generator');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#yeoman_generator');
-          itext('Yeoman Generator');
-        ie_close('a');
-      ie_close('h2');
+  var param283 = function() {
+    ie_open('article');
       ie_open('p');
-        itext('You can organize your ');
+        itext('In the ');
+        ie_open('a', null, null,
+            'href', '/docs/getting-started/modal_nested.html');
+          itext('previous section');
+        ie_close('a');
+        itext(' we\'ve completed our ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext(' component. The last thing we\'d like to show is how to use the tools that ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' project in any way you want, but to start out we recommend using the ');
+        itext(' offers to help you test your code.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'test_script');
+      ie_open('h2');
         ie_open('a', null, null,
-            'href', 'http://npmjs.com/package/generator-metal');
-          itext('Yeoman generator');
+            'href', '#test_script');
+          itext('Test Script');
         ie_close('a');
-        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
-      ie_close('p');
+      ie_close('h2');
       ie_open('p');
-        itext('To use it:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Install ');
-          ie_open('a', null, null,
-              'href', 'https://nodejs.org');
-            itext('npm');
-          ie_close('a');
-          itext(' v3.0.0 or newer (if you don\'t have it yet)');
-        ie_close('li');
-        ie_open('li');
-          itext('Install ');
-          ie_open('strong');
-            itext('Yeoman');
-          ie_close('strong');
-          itext(' and ');
-          ie_open('strong');
-            itext('generator-metal');
-          ie_close('strong');
-          itext(': ');
-          ie_open('code');
-            itext('[sudo] npm i -g yo generator-metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Open the folder that you want to use on your terminal and type: ');
-          ie_open('code');
-            itext('yo metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Answer the generator prompts: ');
-          ie_open('img', null, null,
-              'src', '../../images/docs/prompts.png',
-              'alt', 'Generator prompts');
-          ie_close('img');
-        ie_close('li');
-        ie_open('li');
-          itext('Wait for the generator to finish fetching dependencies');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('After those steps you\'ll get a directory tree similar to this:');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
+        itext('If you look at your ');
         ie_open('code');
-          itext('generator-metal');
+          itext('package.json');
         ie_close('code');
-        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
+        itext(' file you\'ll notice that it already contains a test script that you can use:');
+      ie_close('p');
+      $templateAlias2({code: '{\n    "scripts": {\n        "test": "gulp test"\n    }\n}', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('If you\'re building a project without the generator, you can still get ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext('\'s test tools by using ');
         ie_open('a', null, null,
-            'href', '/docs/guides/building.html#gulp_metal');
+            'href', '/docs/guides/building.html#gulp-metal');
           itext('gulp-metal');
         ie_close('a');
         itext('.');
       ie_close('p');
-      ie_open('p');
-        itext('By the way, the boilerplate zip provided by the ');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'adding_a_test');
+      ie_open('h2');
         ie_open('a', null, null,
-            'href', '/docs/getting-started/#boilerplate');
-          itext('getting started guide');
+            'href', '#adding_a_test');
+          itext('Adding a Test');
         ie_close('a');
-        itext(' was created using ');
+      ie_close('h2');
+      ie_open('p');
+        itext('Also note that your generated project directory also has a file called ');
+        ie_open('code');
+          itext('test/Modal.js');
+        ie_close('code');
+        itext(', with a failing assertion. As you can imagine, all you need to do is add your tests to this file.');
+      ie_close('p');
+      ie_open('p');
+        itext('To illustrate this let\'s start by replacing the existing test with one that checks that the given ');
+        ie_open('code');
+          itext('body');
+        ie_close('code');
+        itext(' data is being rendered correctly:');
+      ie_close('p');
+      $templateAlias2({code: 'import Modal from \'../src/Modal\';\n\ndescribe(\'Modal\', function() {\n    it(\'should render the body\', function() {\n        var component = new Modal({\n            body: \'Test Body\'\n        });\n\n        var bodyElement = component.element.querySelector(\'.modal-body\');\n\n        assert.ok(bodyElement);\n        assert.strictEqual(\'Test Body\', bodyElement.textContent);\n    });\n});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'running_the_tests');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#running_the_tests');
+          itext('Running the Tests');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('To run our tests all you need to do is type ');
+        ie_open('code');
+          itext('npm test');
+        ie_close('code');
+        itext(' on your terminal. You\'ll see something like this:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('img', null, null,
+            'src', '../../images/docs/test.png',
+            'alt', 'Terminal screenshot');
+        ie_close('img');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'test_environment');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#test_environment');
+          itext('Test Environment');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('This test file we wrote uses ');
+        ie_open('a', null, null,
+            'href', 'http://mochajs.org');
+          itext('Mocha');
+        ie_close('a');
+        itext(' and ');
+        ie_open('a', null, null,
+            'href', 'http://chaijs.com/');
+          itext('Chai');
+        ie_close('a');
+        itext(' for describing tests, and ');
+        ie_open('a', null, null,
+            'href', 'http://karma-runner.github.io/0.12/index.html');
+          itext('Karma');
+        ie_close('a');
+        itext(' as the test runner. That\'s the default setup used by ');
         ie_open('strong');
-          itext('generator-metal');
+          itext('gulp-metal');
         ie_close('strong');
         itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('It\'s important to note that you don\'t have to use ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext(' for you tests though. It\'s just an easy way that\'s already provided for you, but you can certainly setup your own environment if you wish.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'next_steps');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#next_steps');
+          itext('Next steps');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('You should now have a good knowledge of ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' basics. If you want to dive into more details and advanced topics, go ahead and check some of our guides.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10111,11 +10152,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param687}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param283}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'zgNhS.render';
+  $render.soyTemplateName = 'LbMZT.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10125,37 +10166,33 @@ return exports;
 
 });
 
-class zgNhS extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zgNhS, templates);
+class LbMZT extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LbMZT, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10183,9 +10220,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _yeomanGeneratorSoy = __webpack_require__(105);
+var _modal_testingSoy = __webpack_require__(90);
 
-var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
+var _modal_testingSoy2 = _interopRequireDefault(_modal_testingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10195,23 +10232,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var zgNhS = function (_Component) {
-  _inherits(zgNhS, _Component);
+var LbMZT = function (_Component) {
+  _inherits(LbMZT, _Component);
 
-  function zgNhS() {
-    _classCallCheck(this, zgNhS);
+  function LbMZT() {
+    _classCallCheck(this, LbMZT);
 
-    return _possibleConstructorReturn(this, (zgNhS.__proto__ || Object.getPrototypeOf(zgNhS)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (LbMZT.__proto__ || Object.getPrototypeOf(LbMZT)).apply(this, arguments));
   }
 
-  return zgNhS;
+  return LbMZT;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(zgNhS, _yeomanGeneratorSoy2.default);
+_metalSoy2.default.register(LbMZT, _modal_testingSoy2.default);
 
-exports.default = zgNhS;
+exports.default = LbMZT;
 
 /***/ })
-],[128]);
+],[109]);
