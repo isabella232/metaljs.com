@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([16],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9944,12 +9944,17 @@ exports.default = parseFromAnchor;
 /* 95 */,
 /* 96 */,
 /* 97 */,
-/* 98 */
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "doXNz", function() { return doXNz; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AItui", function() { return AItui; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9961,15 +9966,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from jsx-components.soy.
+// This file was automatically generated from soy-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace doXNz.
+ * @fileoverview Templates in namespace AItui.
  * @public
  */
 
-goog.module('doXNz.incrementaldom');
+goog.module('AItui.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10003,10 +10008,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param496 = function() {
+  var param629 = function() {
     ie_open('article');
       ie_open('p');
-        itext('For a practical tutorial on how to build components using JSX templates, make sure to follow the ');
+        itext('For a full tutorial on how to build components using Soy templates, make sure to follow the ');
         ie_open('a', null, null,
             'href', '/docs/getting-started/modal.html');
           itext('Modal tutorial');
@@ -10020,8 +10025,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('strong');
         itext(' components and ');
         ie_open('a', null, null,
-            'href', 'https://facebook.github.io/jsx/');
-          itext('JSX templates');
+            'href', 'http://developers.google.com/closure/templates/');
+          itext('Soy templates');
         ie_close('a');
         itext('.');
       ie_close('p');
@@ -10030,184 +10035,120 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' is template agnostic, so it\'s not necessary to use JSX at all. That said, we already provide a very good integration between metal components and JSX, so if you like using it you should give it a try.');
+        itext(' is template agnostic, so it\'s not necessary to use Soy at all. That said, we already provide a very good integration between Metal.js components and Soy, so if you like this template language you should give it a try.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'jsxcomponent');
+        'id', 'soy_register');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#jsxcomponent');
-          itext('JSXComponent');
+            'href', '#soy_register');
+          itext('Soy.register');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('The only thing you need to do to use JSX in your ');
+        itext('The only thing you need to do to use Soy templates in your ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' component is to extend from ');
-        ie_open('strong');
-          itext('JSXComponent');
-        ie_close('strong');
-        itext(', like this:');
-      ie_close('p');
-      $templateAlias2({code: 'import JSXComponent from \'metal-jsx\';\n\nclass MyComponent extends JSXComponent {\n}\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'render_function');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#render_function');
-          ie_open('code');
-            itext('render');
-          ie_close('code');
-          itext(' Function');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now that we\'ve extended from ');
-        ie_open('strong');
-          itext('JSXComponent');
-        ie_close('strong');
-        itext(' we can use jsx in the ');
+        itext(' component is to call ');
         ie_open('code');
+          itext('Soy.register');
+        ie_close('code');
+        itext(', passing it your component class and the Soy templates you\'re going to use, like this:');
+      ie_close('p');
+      $templateAlias2({code: 'import templates from \'./MyComponent.soy\';\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nclass MyComponent extends Component {\n}\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('By default, ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' will use the Soy template called ');
+        ie_open('strong');
           itext('render');
-        ie_close('code');
-        itext(' method to specify what our component should render.');
-      ie_close('p');
-      $templateAlias2({code: 'import JSXComponent from \'metal-jsx\';\n\nclass MyComponent extends JSXComponent {\n    render() {\n        return (\n            <div>\n                Hello {this.state.name}\n                Hello {this.props.location}\n            </div>;\n        );\n    }\n}\n\nMyComponent.PROPS = {\n    location: {\n        validator: core.isString,\n        value: \'Mars\'\n    }\n};\n\nMyComponent.STATE = {\n    name: {\n        validator: core.isString,\n        value: \'World\'\n    }\n};\n\nexport default MyComponent;', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Note that your component can have two different types of data: ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/state.html');
-          itext('state');
-        ie_close('a');
-        itext(' and ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/state.html#configuring_state');
-          itext('props');
-        ie_close('a');
-        itext('. The main difference is that props is accessed via ');
-        ie_open('code');
-          itext('this.props');
-        ie_close('code');
-        itext(' and will be the original data received from parent components or the constructor. State is accessed from ');
-        ie_open('code');
-          itext('this.state');
-        ie_close('code');
-        itext(' though, like ');
-        ie_open('code');
-          itext('this.state.name');
-        ie_close('code');
-        itext(' in the previous example, and can be configured to use validators, setters, initial values and other features. Check out the guide about ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/state.html');
-          itext('state');
-        ie_close('a');
-        itext(' to learn more about this.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'children_props');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#children_props');
-          itext('Children Props');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Whenever content is passed inside a component\'s jsx tag, it will be received through the ');
-        ie_open('code');
-          itext('children');
-        ie_close('code');
-        itext(' props property. That way the component can decide if this content will be rendered at all, and where exactly it should go.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, imagine a simple list component that receives its items as its content, like this:');
-      ie_close('p');
-      $templateAlias2({code: '<List>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n</List>', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('This could be implemented by using the ');
-        ie_open('code');
-          itext('children');
-        ie_close('code');
-        itext(' props:');
-      ie_close('p');
-      $templateAlias2({code: 'class List extends JSXComponent {\n    render() {\n        return <ul>{this.props.children}</ul>\n    }\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('If you inspect ');
-        ie_open('code');
-          itext('this.props.children');
-        ie_close('code');
-        itext(' you\'ll notice that it\'s an array of objects. That gives you a lot of power when handling your component\'s contents. For example, you can choose to render only part of your children, like this:');
-      ie_close('p');
-      $templateAlias2({code: '// Renders only the second item.\nreturn <ul>{this.props.children[1]}</ul>', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Or even change the data that they should receive before being rendered:');
-      ie_close('p');
-      $templateAlias2({code: '// Forces all items to use the \'my-list-item-class\' CSS class.\nthis.props.children.forEach(child => {\n    child.class = \'my-list-item-class\';\n};\n\nreturn <ul>{this.props.children}</ul>', mode: 'jsx'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'functional_components');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#functional_components');
-          itext('Functional Components');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Sometimes you\'ll create very simple components, that have no other behavior besides rendering their own contents. In this case you can drop using classes, and instead create simple functions that just render the contents instead.');
-      ie_close('p');
-      ie_open('p');
-        itext('For example, let\'s create a simple ');
-        ie_open('strong');
-          itext('Button');
         ie_close('strong');
-        itext(' component as a function:');
+        itext(' as the entry point for rendering. But you can tell us to use a different one if you prefer by passing the name as the last param to the ');
+        ie_open('code');
+          itext('Soy.register');
+        ie_close('code');
+        itext(' call, like this:');
       ie_close('p');
-      $templateAlias2({code: '/**\n * Functional components receive the configuration\n * object as the first param.\n */\nvar Button = ({ cssClass, label }) => {\n    return <button type="button" class={cssClass}>{label}</button>;\n};', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('You can then use it from parent components in the same way that you\'d use a component class, for example:');
-      ie_close('p');
-      $templateAlias2({code: '<Button class="btn btn-primary" label="OK" />', mode: 'jsx'}, null, opt_ijData);
+      $templateAlias2({code: 'Soy.register(MyComponent, templates, \'templateName\');', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'rendering_jsx_components');
+        'id', 'template_file');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#rendering_jsx_components');
-          itext('Rendering JSX Components');
+            'href', '#template_file');
+          itext('Template File');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('JSX components can either be rendered in the ');
+        itext('Make sure that your Soy file has the entry point template (');
+        ie_open('strong');
+          itext('render');
+        ie_close('strong');
+        itext(' by default), otherwise nothing will be rendered.');
+      ie_close('p');
+      ie_open('p');
+        itext('This main template will receive as data a combination of:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', '/docs/guides/state.html');
+            itext('State data');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', '/docs/guides/state.html#configuring_state');
+            itext('Configuration data');
+          ie_close('a');
+          itext(' (accessed through ');
+          ie_open('code');
+            itext('this.config');
+          ie_close('code');
+          itext(')');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', '/docs/guides/inline-events.html#inline_listeners_via_function_reference');
+            itext('Component functions');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Note that by default all params declared on the component\'s main Soy template are automatically configured as state properties as well, but without any special configurations (like initial value or validators). If they\'re ');
         ie_open('a', null, null,
-            'href', 'rendering-components.html');
-          itext('usual way');
+            'href', '/docs/guides/state.html');
+          itext('manually defined');
         ie_close('a');
-        itext(', or via the ');
+        itext(' through the ');
         ie_open('code');
-          itext('JSXComponent.render');
+          itext('STATE');
         ie_close('code');
-        itext(' function, like this:');
+        itext(' property they will retain the setup specified there though.');
       ie_close('p');
-      $templateAlias2({code: 'class Button extends JSXComponent {\n    render() {\n        // Your render logic\n    }\n}\n\nJSXComponent.render(Button, {label: \'OK\'}, parent);', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('You can also pass a functional component to it:');
+        itext('Any params passed to the component but not directly declared on its main Soy template will be treated as basic configuration data, meaning that changes to them will not automatically rerender the component. They can still be passed down to other templates using ');
+        ie_open('code');
+          itext('data="all"');
+        ie_close('code');
+        itext(', as well be accessed via the');
+        ie_open('code');
+          itext('config');
+        ie_close('code');
+        itext(' property in the JavaScript file.');
       ie_close('p');
-      $templateAlias2({code: 'var Button = props => {\n    // Your render logic\n};\n\nJSXComponent.render(Button, {label: \'OK\'}, parent);', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Or even render directly via JSX:');
-      ie_close('p');
-      $templateAlias2({code: 'JSXComponent.render(<Button label="OK" />, parent);', mode: 'jsx'}, null, opt_ijData);
+      $templateAlias2({code: '// Contains all the data received by the component.\nthis.config', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'jsx_compilation');
+        'id', 'soy_compilation');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#jsx_compilation');
-          itext('JSX Compilation');
+            'href', '#soy_compilation');
+          itext('Soy Compilation');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
@@ -10217,20 +10158,43 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('strong');
         itext(' and ');
         ie_open('strong');
-          itext('JSX');
+          itext('soy');
         ie_close('strong');
-        itext(' to work, the JSX code needs to be compiled via a babel plugin called ');
-        ie_open('a', null, null,
-            'href', 'http://npmjs.com/package/babel-plugin-incremental-dom');
-          itext('babel-plugin-incremental-dom');
-        ie_close('a');
-        itext('. Using it directly means you\'d need to configure it manually though, so we also provide a ');
-        ie_open('a', null, null,
-            'href', 'http://npmjs.com/package/babel-preset-metal-jsx');
-          itext('babel preset');
-        ie_close('a');
-        itext(' that you can use instead.');
+        itext(' to work, the Soy files need to be compiled via one of our available build tools. That\'s because they don\'t just compile the code, but also add some information that help with the integration (like export declarations).');
       ie_close('p');
+      ie_open('p');
+        itext('The available build tools that correctly compile Soy for ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' are:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://npmjs.com/package/gulp-metal');
+            itext('gulp-metal');
+          ie_close('a');
+          itext(' (already included when creating project via ');
+          ie_open('a', null, null,
+              'href', '/docs/guides/yeoman-generator.html');
+            itext('generator-metal');
+          ie_close('a');
+          itext(').');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://npmjs.com/package/metal-cli');
+            itext('metal-cli');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          ie_open('a', null, null,
+              'href', 'http://npmjs.com/package/metal-tools-soy');
+            itext('metal-tools-soy');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10241,11 +10205,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param496}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param629}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'doXNz.render';
+  $render.soyTemplateName = 'AItui.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10255,19 +10219,14 @@ return exports;
 
 });
 
-class doXNz extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(doXNz, templates);
+class AItui extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AItui, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -10279,13 +10238,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(doXNz, templates);
 /* 112 */,
 /* 113 */,
 /* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10313,9 +10266,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _jsxComponentsSoy = __webpack_require__(98);
+var _soyComponentsSoy = __webpack_require__(103);
 
-var _jsxComponentsSoy2 = _interopRequireDefault(_jsxComponentsSoy);
+var _soyComponentsSoy2 = _interopRequireDefault(_soyComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10325,23 +10278,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var doXNz = function (_Component) {
-  _inherits(doXNz, _Component);
+var AItui = function (_Component) {
+  _inherits(AItui, _Component);
 
-  function doXNz() {
-    _classCallCheck(this, doXNz);
+  function AItui() {
+    _classCallCheck(this, AItui);
 
-    return _possibleConstructorReturn(this, (doXNz.__proto__ || Object.getPrototypeOf(doXNz)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AItui.__proto__ || Object.getPrototypeOf(AItui)).apply(this, arguments));
   }
 
-  return doXNz;
+  return AItui;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(doXNz, _jsxComponentsSoy2.default);
+_metalSoy2.default.register(AItui, _soyComponentsSoy2.default);
 
-exports.default = doXNz;
+exports.default = AItui;
 
 /***/ })
-],[121]);
+],[115]);

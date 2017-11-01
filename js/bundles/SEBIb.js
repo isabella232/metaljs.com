@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([20],[
+webpackJsonppageComponent([21],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9933,12 +9933,13 @@ exports.default = parseFromAnchor;
 /* 84 */,
 /* 85 */,
 /* 86 */,
-/* 87 */
+/* 87 */,
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pwfsk", function() { return Pwfsk; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEBIb", function() { return SEBIb; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9950,15 +9951,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal.soy.
+// This file was automatically generated from modal_events.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace Pwfsk.
+ * @fileoverview Templates in namespace SEBIb.
  * @public
  */
 
-goog.module('Pwfsk.incrementaldom');
+goog.module('SEBIb.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9992,63 +9993,94 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param196 = function() {
+  var param219 = function() {
     ie_open('article');
       ie_open('p');
         itext('In the ');
         ie_open('a', null, null,
-            'href', '/docs/getting-started/');
+            'href', '/docs/getting-started/modal.html');
           itext('previous section');
         ie_close('a');
-        itext(' you learned how to build a simple project using Metal.js that just renders ');
+        itext(' we\'ve created a component that renders a ');
         ie_open('strong');
-          itext('Hello World');
+          itext('Modal');
         ie_close('strong');
-        itext(' on the screen. Let\'s enhance what we already have to render a modal dialog instead.');
+        itext('. Its close button doesn\'t do anything yet though. This section will teach you how to handle DOM events on your components.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'rendering');
+        'id', 'inline_listeners_via_function_name');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#rendering');
-          itext('Rendering');
+            'href', '#inline_listeners_via_function_name');
+          itext('Inline Listeners - via Function Name');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Our generated project already includes ');
-        ie_open('a', null, null,
-            'href', 'http://getbootstrap.com/');
-          itext('Bootstrap\'s CSS');
-        ie_close('a');
-        itext(', so let\'s use its markup for our modal. Let\'s update the component\'s template to do that then:');
+        itext('You can add DOM event listeners easily through your templates, like this:');
       ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n&#123;namespace Modal&#125;\n\n/**\n * This renders the component\'s whole content.\n * Note: has to be called ".render".\n */\n&#123;template .render&#125;\n    {@param body: string}\n    {@param header: string}\n\n    <div class="modal show">\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <header class="modal-header">\n                    <button type="button" class="close">\n                        <span>\u00D7</span>\n                    </button>\n                    <h4>{$header}</h4>\n                </header>\n                <section class="modal-body">\n                    {$body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass Modal extends JSXComponent {\n    /**\n     * Renders the component\'s content.\n     * Note that data can be accessed via the `props` property.\n     */\n    render() {\n        return <div class="modal show">\n            <div class="modal-dialog">\n                <div class="modal-content">\n                    <header class="modal-header">\n                        <button type="button" class="close">\n                            <span>\u00D7</span>\n                        </button>\n                        <h4>{this.props.header}</h4>\n                    </header>\n                    <section class="modal-body">\n                        {this.props.body}\n                    </section>\n                    <footer class="modal-footer">\n                        <button type="button" class="btn btn-primary">OK</button>\n                    </footer>\n                </div>\n            </div>\n        </div>;\n    }\n}\n\nexport default Modal;', mode: 'jsx'}, null, opt_ijData);
+      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
+      ie_open('p');
+        itext('The above code declares that whenever the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button is clicked, the ');
+        ie_open('code');
+          itext('close');
+        ie_close('code');
+        itext(' function from the component should be called.');
+      ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'passing_data');
+        'id', 'inline_listeners_via_function_reference');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#passing_data');
-          itext('Passing Data');
+            'href', '#inline_listeners_via_function_reference');
+          itext('Inline Listeners - via Function Reference');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Note that the template is accessing data to determine the content of the modal\'s ');
-        ie_open('code');
-          itext('header');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('body');
-        ie_close('code');
-        itext('. How can the component receive this data though?');
+        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
       ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, Soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n    {@param close: any}\n\n    // ...\n    <button onClick="{$close}" type="button" class="close">\n    // ...\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('One way is through the component\'s constructor. When creating component instances directly, you can pass them a data object as its first param. So let\'s update our demo to pass it some data:');
+        itext('That will work exactly the same way as the previous example.');
       ie_close('p');
-      $templateAlias2({code: 'new metal.Modal({\n    header: \'My Modal\',\n    body: \'Built using Metal.js\'\n});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'listener_implementation');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#listener_implementation');
+          itext('Listener Implementation');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('All you need to do now is to implement the ');
+        ie_open('code');
+          itext('close');
+        ie_close('code');
+        itext(' function in your ');
+        ie_open('code');
+          itext('src/Modal.js');
+        ie_close('code');
+        itext(' file:');
+      ie_close('p');
+      $templateAlias2({code: 'close() {\n    this.dispose();\n}', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('All components have this ');
+        ie_open('code');
+          itext('dispose');
+        ie_close('code');
+        itext(' function, which basically destroys it and removes its content from the DOM. Check the guide about ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/component-lifecycle.html');
+          itext('Lifecycle functions');
+        ie_close('a');
+        itext(' for more details.');
+      ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
         'id', 'run_the_demo');
@@ -10063,13 +10095,19 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_open('code');
           itext('npm run build');
         ie_close('code');
-        itext(' and open the demo on a browser, and you should be seeing this:');
+        itext(' and open the demo on a browser. Clicking the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button will close the modal as expected.');
       ie_close('p');
       ie_open('p');
-        ie_open('img', null, null,
-            'src', '../../images/docs/modal.png',
-            'alt', 'Modal screenshot');
-        ie_close('img');
+        itext('For more details on inline listeners check ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/inline-events.html');
+          itext('this guide');
+        ie_close('a');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
@@ -10081,17 +10119,20 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('We\'ve taken care of the rendering, but you\'ll notice that clicking the ');
+        itext('Our modal now properly closes itself when the ');
         ie_open('strong');
           itext('x');
         ie_close('strong');
-        itext(' button doesn\'t do anything yet though. Let\'s make that work.');
+        itext(' button is clicked. To do this we\'re disposing of it completely though, so we\'ll need to create a new Modal instance whenever we need to show it again.');
+      ie_close('p');
+      ie_open('p');
+        itext('Ideally, instead of disposing it, we should just hide it instead, while also having a way to show it back. The next section will explain how to do this by having data changes update the modal accordingly.');
       ie_close('p');
       ie_open('p');
         ie_open('strong');
           ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_events.html');
-            itext('\u21AA Tutorial: Modal - Events');
+              'href', '/docs/getting-started/modal_updates.html');
+            itext('\u21AA Tutorial: Modal - Updates');
           ie_close('a');
         ie_close('strong');
       ie_close('p');
@@ -10105,11 +10146,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param196}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param219}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'Pwfsk.render';
+  $render.soyTemplateName = 'SEBIb.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10119,15 +10160,14 @@ return exports;
 
 });
 
-class Pwfsk extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Pwfsk, templates);
+class SEBIb extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(SEBIb, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 88 */,
 /* 89 */,
 /* 90 */,
 /* 91 */,
@@ -10149,9 +10189,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Pwfsk, templates);
 /* 107 */,
 /* 108 */,
 /* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10179,9 +10217,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modalSoy = __webpack_require__(87);
+var _modal_eventsSoy = __webpack_require__(88);
 
-var _modalSoy2 = _interopRequireDefault(_modalSoy);
+var _modal_eventsSoy2 = _interopRequireDefault(_modal_eventsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10191,23 +10229,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Pwfsk = function (_Component) {
-  _inherits(Pwfsk, _Component);
+var SEBIb = function (_Component) {
+  _inherits(SEBIb, _Component);
 
-  function Pwfsk() {
-    _classCallCheck(this, Pwfsk);
+  function SEBIb() {
+    _classCallCheck(this, SEBIb);
 
-    return _possibleConstructorReturn(this, (Pwfsk.__proto__ || Object.getPrototypeOf(Pwfsk)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (SEBIb.__proto__ || Object.getPrototypeOf(SEBIb)).apply(this, arguments));
   }
 
-  return Pwfsk;
+  return SEBIb;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(Pwfsk, _modalSoy2.default);
+_metalSoy2.default.register(SEBIb, _modal_eventsSoy2.default);
 
-exports.default = Pwfsk;
+exports.default = SEBIb;
 
 /***/ })
-],[112]);
+],[110]);

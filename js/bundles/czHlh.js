@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9945,12 +9945,15 @@ exports.default = parseFromAnchor;
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jeBfo", function() { return jeBfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "czHlh", function() { return czHlh; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9962,15 +9965,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from nested-components.soy.
+// This file was automatically generated from rendering-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace jeBfo.
+ * @fileoverview Templates in namespace czHlh.
  * @public
  */
 
-goog.module('jeBfo.incrementaldom');
+goog.module('czHlh.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10004,68 +10007,46 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param560 = function() {
+  var param610 = function() {
     ie_open('article');
       ie_open('p');
-        itext('The ability to reference components inside templates can be very useful. It enables the developer to correctly place the child component at the right position inside the parent in an intuitive way.');
-      ie_close('p');
-      ie_open('p');
-        itext('This can certainly be done with ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' components. For example, let\'s say we\'ve already built a simple component called ');
-        ie_open('strong');
-          itext('Button');
-        ie_close('strong');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('Now we\'re building a ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(' component, and we want it to render some buttons inside the footer. In ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('\'s template file we could do the following:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n<div class="footer">\n    {foreach $button in $buttons}\n        {call Button.render}\n            {param label: $button /}\n        {/call}\n    {/foreach}\n</div>', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map(button => {\n  return <Button label={button} />;\n});\n\nreturn <div class="footer">{buttons}</div>;', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('When Modal is rendered, the buttons also will be, at the specified position. Besides this, ');
-        ie_open('strong');
-          itext('Button');
-        ie_close('strong');
-        itext(' components will be automatically instantiated for these elements.');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', '/docs');
+          itext('quick start tutorial');
+        ie_close('a');
+        itext(' explains how to create and render a new component. In its examples components are always being appended directly to the document\'s body though, but what\'s usually necessary is to render in a specific position.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'accessing_sub_component_instances');
+        'id', 'replacing_an_existing_element');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#accessing_sub_component_instances');
-          itext('Accessing Sub Component Instances');
+            'href', '#replacing_an_existing_element');
+          itext('Replacing an Existing Element');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('But what if we need to access the created instances? That\'s possible by using ');
-        ie_open('strong');
-          itext('ref');
-        ie_close('strong');
-        itext('. Let\'s add one to the previous example and see what happens:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{foreach $button as $buttons}\n    {call Button.render}\n        {param label: $button /}\n        {param ref: \'button\' + index($button) /}\n    {/call}\n{/foreach}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map((button, index) => {\n    return <Button label={button} ref={\'button\' + index} />;\n});', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now you\'ll be able to access your sub components through your instance\'s ');
+        itext('If you wish your component to replace an existing element on the DOM, you just need to pass it (or a selector for it) as the ');
         ie_open('code');
-          itext('refs');
+          itext('element');
         ie_close('code');
-        itext(' property, like this:');
+        itext(' property of the constructor configuration, like this:');
       ie_close('p');
-      $templateAlias2({code: 'modal.refs.button0 // The instance for first button\nmodal.refs.button1 // The instance for second button', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '// Passsing the element itself\nnew Modal({element: elementToReplace});\n\n// Passing a selector to the element\nnew Modal({element: \'#elementToReplace\'});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'specifying_the_parent');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#specifying_the_parent');
+          itext('Specifying the Parent');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('You can also specify the parent element that should receive the component\'s contents via the second constructor param, like this:');
+      ie_close('p');
+      $templateAlias2({code: '// Passing the element itself\nnew Modal(data, parentElement);\n\n// Passing a selector to the element\nnew Modal(data, \'#parentElement\');', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10076,11 +10057,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param560}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param610}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'jeBfo.render';
+  $render.soyTemplateName = 'czHlh.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10090,17 +10071,14 @@ return exports;
 
 });
 
-class jeBfo extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(jeBfo, templates);
+class czHlh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(czHlh, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 100 */,
-/* 101 */,
-/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -10117,11 +10095,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(jeBfo, templates);
 /* 116 */,
 /* 117 */,
 /* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10149,9 +10123,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _nestedComponentsSoy = __webpack_require__(99);
+var _renderingComponentsSoy = __webpack_require__(102);
 
-var _nestedComponentsSoy2 = _interopRequireDefault(_nestedComponentsSoy);
+var _renderingComponentsSoy2 = _interopRequireDefault(_renderingComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10161,23 +10135,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var jeBfo = function (_Component) {
-  _inherits(jeBfo, _Component);
+var czHlh = function (_Component) {
+  _inherits(czHlh, _Component);
 
-  function jeBfo() {
-    _classCallCheck(this, jeBfo);
+  function czHlh() {
+    _classCallCheck(this, czHlh);
 
-    return _possibleConstructorReturn(this, (jeBfo.__proto__ || Object.getPrototypeOf(jeBfo)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (czHlh.__proto__ || Object.getPrototypeOf(czHlh)).apply(this, arguments));
   }
 
-  return jeBfo;
+  return czHlh;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(jeBfo, _nestedComponentsSoy2.default);
+_metalSoy2.default.register(czHlh, _renderingComponentsSoy2.default);
 
-exports.default = jeBfo;
+exports.default = czHlh;
 
 /***/ })
-],[123]);
+],[119]);

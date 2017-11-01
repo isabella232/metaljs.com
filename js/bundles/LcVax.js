@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([17],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9935,12 +9935,18 @@ exports.default = parseFromAnchor;
 /* 86 */,
 /* 87 */,
 /* 88 */,
-/* 89 */
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "byJYY", function() { return byJYY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LcVax", function() { return LcVax; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9952,15 +9958,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal_nested.soy.
+// This file was automatically generated from importing.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace byJYY.
+ * @fileoverview Templates in namespace LcVax.
  * @public
  */
 
-goog.module('byJYY.incrementaldom');
+goog.module('LcVax.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9994,116 +10000,121 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param247 = function() {
+  var param391 = function() {
     ie_open('article');
       ie_open('p');
-        itext('In the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/modal_updates.html');
-          itext('previous section');
-        ie_close('a');
-        itext(' we finished working on our component\'s behavior.');
+        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
       ie_close('p');
       ie_open('p');
-        itext('But what if our ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(' header\'s markup was very similar to one that is used in other places though? Ideally we\'d move it into a separate component that can be reused. That\'s what we\'ll be doing in this section.');
+        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
+      ie_close('p');
+      ie_open('p');
+        itext('Lets get started!');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'creating_closeheader');
+        'id', 'installing_node_js_npm');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#creating_closeheader');
-          itext('Creating ');
-          ie_open('strong');
-            itext('CloseHeader');
-          ie_close('strong');
+            'href', '#installing_node_js_npm');
+          itext('Installing Node.js/NPM');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('First let\'s create the new component. Add a ');
+        itext('If you don\'t already have Node.js or npm installed, head over to the ');
+        ie_open('a', null, null,
+            'href', 'https://nodejs.org/en/download/');
+          itext('Node.js');
+        ie_close('a');
+        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
+      ie_close('p');
+      ie_open('p');
+        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'finding_components');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#finding_components');
+          itext('Finding components');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
+      ie_close('p');
+      ie_open('p');
+        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
+      ie_close('p');
+      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
+      ie_close('p');
+      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'installing_components');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#installing_components');
+          itext('Installing Components');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
+      ie_close('p');
+      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this example, we\'re going to install the ');
         ie_open('code');
-          itext('src/CloseHeader.js');
+          itext('metal-position');
         ie_close('code');
-        itext(' file to your project:');
+        itext(' component.');
       ie_close('p');
-      $templateAlias2({code: '// src/CloseHeader.js\n\nimport templates from \'./CloseHeader.soy\';\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nclass CloseHeader extends Component {\n}\n\nSoy.register(CloseHeader, templates);\n\nexport default CloseHeader;', mode: 'javascript'}, null, opt_ijData);
-      $templateAlias2({code: '// src/CloseHeader.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass CloseHeader extends JSXComponent {\n    render() {\n    }\n}\n\nexport default CloseHeader;', mode: 'jsx'}, null, opt_ijData);
+      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('Now let\'s prepare the template to be similar to the one used by ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(':');
+        itext('Installed packages will be placed in a ');
+        ie_open('code');
+          itext('node_modules');
+        ie_close('code');
+        itext(' directory. This is created in the folder which the bower program was executed.');
       ie_close('p');
-      $templateAlias2({code: '// src/CloseHeader.soy\n\n&#123;namespace CloseHeader&#125;\n\n&#123;template .render&#125;\n    {@param cssClass: string}\n    {@param onClick: any}\n    {@param title: string}\n\n    <header class="{$cssClass}">\n        <button onClick="{$onClick}" type="button" class="close">\n            <span>\u00D7</span>\n        </button>\n        <h4>{$title}</h4>\n    </header>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/CloseHeader.js\n\nrender() {\n    return <header class={this.props.cssClass}>\n        <button onClick={this.props.onClick} type="button" class="close">\n            <span>\u00D7</span>\n        </button>\n        <h4>{this.props.title}</h4>\n    </header>;\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Done! Our new component is ready to be used by ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('.');
-      ie_close('p');
+      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'using_closeheader');
+        'id', 'importing_a_component');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#using_closeheader');
-          itext('Using ');
-          ie_open('strong');
-            itext('CloseHeader');
-          ie_close('strong');
+            'href', '#importing_a_component');
+          itext('Importing a Component');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('All we have to do is to replace the header markup from ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('\'s template with a call to ');
-        ie_open('strong');
-          itext('CloseHeader');
-        ie_close('strong');
-        itext(':');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n&#123;template .render&#125;\n    {@param body: string}\n    {@param close: string}\n    {@param header: string}\n    {@param shown: bool}\n\n    <div class="modal {$shown ? \'show\': \'\'}">\n        <div class="modal-dialog">\n            <div class="modal-content">\n                {call CloseHeader.render}\n                    {param cssClass: \'modal-header\' /}\n                    {param onClick: $close /}\n                    {param title: $header /}\n                {/call}\n                <section class="modal-body">\n                    {$body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nrender() {\n    var cssClass = \'modal\';\n    if (this.props.shown) {\n        cssClass += \'show\';\n    }\n    return <div class={cssClass}>\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <CloseHeader\n                    cssClass="modal-header"\n                    onClick={this.close.bind(this)}\n                    title={this.props.header}\n                />\n                <section class="modal-body">\n                    {this.props.body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>;\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('This will not only render ');
-        ie_open('strong');
-          itext('CloseHeader');
-        ie_close('strong');
-        itext(' at the right position, but also instantiate it for you. For more details on nested components, check out the ');
+        itext('With the code already available, let\'s create a ');
+        ie_open('code');
+          itext('main.js');
+        ie_close('code');
+        itext(' file that will import the ');
+        ie_open('code');
+          itext('metal-position');
+        ie_close('code');
+        itext(' module. Note that we\'re using an ');
         ie_open('a', null, null,
-            'href', '/docs/guides/nested-components.html');
-          itext('guide about it');
+            'href', '/docs/guides/alias.html');
+          itext('alias');
         ie_close('a');
-        itext('.');
+        itext(' to easily import npm files.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'next_steps');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#next_steps');
-          itext('Next Steps');
-        ie_close('a');
-      ie_close('h2');
+      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('Now that we have learned how to properly create a new component, it\'d good to also know how to test it. The next section will focus on that.');
+        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
       ie_close('p');
+      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        ie_open('strong');
-          ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_testing.html');
-            itext('\u21AA Tutorial: Modal - Testing');
-          ie_close('a');
-        ie_close('strong');
+        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10115,34 +10126,28 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param247}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param391}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'byJYY.render';
+  $render.soyTemplateName = 'LcVax.render';
 }
 
-exports.render.params = ["cssClass","onClick","title","body","close","header","shown","page","site"];
-exports.render.types = {"cssClass":"string","onClick":"any","title":"string","body":"string","close":"string","header":"string","shown":"bool","page":"any","site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class byJYY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(byJYY, templates);
+class LcVax extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LcVax, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
 /* 96 */,
 /* 97 */,
 /* 98 */,
@@ -10162,7 +10167,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(byJYY, templates);
 /* 112 */,
 /* 113 */,
 /* 114 */,
-/* 115 */
+/* 115 */,
+/* 116 */,
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10190,9 +10197,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modal_nestedSoy = __webpack_require__(89);
+var _importingSoy = __webpack_require__(95);
 
-var _modal_nestedSoy2 = _interopRequireDefault(_modal_nestedSoy);
+var _importingSoy2 = _interopRequireDefault(_importingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10202,23 +10209,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var byJYY = function (_Component) {
-  _inherits(byJYY, _Component);
+var LcVax = function (_Component) {
+  _inherits(LcVax, _Component);
 
-  function byJYY() {
-    _classCallCheck(this, byJYY);
+  function LcVax() {
+    _classCallCheck(this, LcVax);
 
-    return _possibleConstructorReturn(this, (byJYY.__proto__ || Object.getPrototypeOf(byJYY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (LcVax.__proto__ || Object.getPrototypeOf(LcVax)).apply(this, arguments));
   }
 
-  return byJYY;
+  return LcVax;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(byJYY, _modal_nestedSoy2.default);
+_metalSoy2.default.register(LcVax, _importingSoy2.default);
 
-exports.default = byJYY;
+exports.default = LcVax;
 
 /***/ })
-],[115]);
+],[117]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9941,12 +9941,22 @@ exports.default = parseFromAnchor;
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wvdqH", function() { return wvdqH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nusNq", function() { return nusNq; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9958,15 +9968,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from importing.soy.
+// This file was automatically generated from yeoman-generator.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace wvdqH.
+ * @fileoverview Templates in namespace nusNq.
  * @public
  */
 
-goog.module('wvdqH.incrementaldom');
+goog.module('nusNq.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10000,121 +10010,96 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param391 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
-      ie_close('p');
-      ie_open('p');
-        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lets get started!');
-      ie_close('p');
-    ie_close('article');
+  var param687 = function() {
     ie_open('article', null, null,
-        'id', 'installing_node_js_npm');
+        'id', 'yeoman_generator');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_node_js_npm');
-          itext('Installing Node.js/NPM');
+            'href', '#yeoman_generator');
+          itext('Yeoman Generator');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('If you don\'t already have Node.js or npm installed, head over to the ');
+        itext('You can organize your ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' project in any way you want, but to start out we recommend using the ');
         ie_open('a', null, null,
-            'href', 'https://nodejs.org/en/download/');
-          itext('Node.js');
+            'href', 'http://npmjs.com/package/generator-metal');
+          itext('Yeoman generator');
         ie_close('a');
-        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
+        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
       ie_close('p');
       ie_open('p');
-        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
+        itext('To use it:');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'finding_components');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#finding_components');
-          itext('Finding components');
-        ie_close('a');
-      ie_close('h2');
+      ie_open('ul');
+        ie_open('li');
+          itext('Install ');
+          ie_open('a', null, null,
+              'href', 'https://nodejs.org');
+            itext('npm');
+          ie_close('a');
+          itext(' v3.0.0 or newer (if you don\'t have it yet)');
+        ie_close('li');
+        ie_open('li');
+          itext('Install ');
+          ie_open('strong');
+            itext('Yeoman');
+          ie_close('strong');
+          itext(' and ');
+          ie_open('strong');
+            itext('generator-metal');
+          ie_close('strong');
+          itext(': ');
+          ie_open('code');
+            itext('[sudo] npm i -g yo generator-metal');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Open the folder that you want to use on your terminal and type: ');
+          ie_open('code');
+            itext('yo metal');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Answer the generator prompts: ');
+          ie_open('img', null, null,
+              'src', '../../images/docs/prompts.png',
+              'alt', 'Generator prompts');
+          ie_close('img');
+        ie_close('li');
+        ie_open('li');
+          itext('Wait for the generator to finish fetching dependencies');
+        ie_close('li');
+      ie_close('ul');
       ie_open('p');
-        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
+        itext('After those steps you\'ll get a directory tree similar to this:');
       ie_close('p');
+      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
       ie_open('p');
-        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
-      ie_close('p');
-      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
-      ie_close('p');
-      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'installing_components');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#installing_components');
-          itext('Installing Components');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
-      ie_close('p');
-      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('In this example, we\'re going to install the ');
         ie_open('code');
-          itext('metal-position');
+          itext('generator-metal');
         ie_close('code');
-        itext(' component.');
-      ie_close('p');
-      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('Installed packages will be placed in a ');
-        ie_open('code');
-          itext('node_modules');
-        ie_close('code');
-        itext(' directory. This is created in the folder which the bower program was executed.');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'importing_a_component');
-      ie_open('h2');
+        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
         ie_open('a', null, null,
-            'href', '#importing_a_component');
-          itext('Importing a Component');
+            'href', '/docs/guides/building.html#gulp_metal');
+          itext('gulp-metal');
         ie_close('a');
-      ie_close('h2');
+        itext('.');
+      ie_close('p');
       ie_open('p');
-        itext('With the code already available, let\'s create a ');
-        ie_open('code');
-          itext('main.js');
-        ie_close('code');
-        itext(' file that will import the ');
-        ie_open('code');
-          itext('metal-position');
-        ie_close('code');
-        itext(' module. Note that we\'re using an ');
+        itext('By the way, the boilerplate zip provided by the ');
         ie_open('a', null, null,
-            'href', '/docs/guides/alias.html');
-          itext('alias');
+            'href', '/docs/getting-started/#boilerplate');
+          itext('getting started guide');
         ie_close('a');
-        itext(' to easily import npm files.');
-      ie_close('p');
-      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
-      ie_close('p');
-      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
+        itext(' was created using ');
+        ie_open('strong');
+          itext('generator-metal');
+        ie_close('strong');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10126,11 +10111,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param391}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param687}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'wvdqH.render';
+  $render.soyTemplateName = 'nusNq.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10140,24 +10125,14 @@ return exports;
 
 });
 
-class wvdqH extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(wvdqH, templates);
+class nusNq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nusNq, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -10173,15 +10148,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(wvdqH, templates);
 /* 118 */,
 /* 119 */,
 /* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10209,9 +10176,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _importingSoy = __webpack_require__(95);
+var _yeomanGeneratorSoy = __webpack_require__(105);
 
-var _importingSoy2 = _interopRequireDefault(_importingSoy);
+var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10221,23 +10188,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var wvdqH = function (_Component) {
-  _inherits(wvdqH, _Component);
+var nusNq = function (_Component) {
+  _inherits(nusNq, _Component);
 
-  function wvdqH() {
-    _classCallCheck(this, wvdqH);
+  function nusNq() {
+    _classCallCheck(this, nusNq);
 
-    return _possibleConstructorReturn(this, (wvdqH.__proto__ || Object.getPrototypeOf(wvdqH)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (nusNq.__proto__ || Object.getPrototypeOf(nusNq)).apply(this, arguments));
   }
 
-  return wvdqH;
+  return nusNq;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(wvdqH, _importingSoy2.default);
+_metalSoy2.default.register(nusNq, _yeomanGeneratorSoy2.default);
 
-exports.default = wvdqH;
+exports.default = nusNq;
 
 /***/ })
-],[129]);
+],[121]);

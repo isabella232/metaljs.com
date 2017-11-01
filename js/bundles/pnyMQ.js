@@ -9945,14 +9945,12 @@ exports.default = parseFromAnchor;
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "oJZoj", function() { return oJZoj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pnyMQ", function() { return pnyMQ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9964,15 +9962,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from progressive-enhancement.soy.
+// This file was automatically generated from nested-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace oJZoj.
+ * @fileoverview Templates in namespace pnyMQ.
  * @public
  */
 
-goog.module('oJZoj.incrementaldom');
+goog.module('pnyMQ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9993,6 +9991,8 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
+
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -10004,34 +10004,68 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param601 = function() {
-    ie_open('article', null, null,
-        'id', 'progressive_enhancement');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#progressive_enhancement');
-          itext('Progressive Enhancement');
-        ie_close('a');
-      ie_close('h2');
+  var param560 = function() {
+    ie_open('article');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'http://en.wikipedia.org/wiki/Progressive_enhancement');
-          itext('Progressive enhancement');
-        ie_close('a');
-        itext(' is a feature that is very important for a lot of people. Knowing about this, ');
+        itext('The ability to reference components inside templates can be very useful. It enables the developer to correctly place the child component at the right position inside the parent in an intuitive way.');
+      ie_close('p');
+      ie_open('p');
+        itext('This can certainly be done with ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' is prepared to deal with content that already comes rendered from the server. Since Metal.js components use ');
-        ie_open('a', null, null,
-            'href', 'http://google.github.io/incremental-dom');
-          itext('Incremental DOM');
-        ie_close('a');
-        itext(' by default, rendering on an element with existing content will reuse it instead of repainting everything.');
+        itext(' components. For example, let\'s say we\'ve already built a simple component called ');
+        ie_open('strong');
+          itext('Button');
+        ie_close('strong');
+        itext('.');
       ie_close('p');
       ie_open('p');
-        itext('It\'s important to note that building components with Soy also helps with progressive enhancement in another way: by providing a faithful template that can be run by the server without having to duplicate the rendering code or run JavaScript at all.');
+        itext('Now we\'re building a ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext(' component, and we want it to render some buttons inside the footer. In ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext('\'s template file we could do the following:');
       ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n<div class="footer">\n    {foreach $button in $buttons}\n        {call Button.render}\n            {param label: $button /}\n        {/call}\n    {/foreach}\n</div>', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map(button => {\n  return <Button label={button} />;\n});\n\nreturn <div class="footer">{buttons}</div>;', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('When Modal is rendered, the buttons also will be, at the specified position. Besides this, ');
+        ie_open('strong');
+          itext('Button');
+        ie_close('strong');
+        itext(' components will be automatically instantiated for these elements.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'accessing_sub_component_instances');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#accessing_sub_component_instances');
+          itext('Accessing Sub Component Instances');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('But what if we need to access the created instances? That\'s possible by using ');
+        ie_open('strong');
+          itext('ref');
+        ie_close('strong');
+        itext('. Let\'s add one to the previous example and see what happens:');
+      ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n{foreach $button as $buttons}\n    {call Button.render}\n        {param label: $button /}\n        {param ref: \'button\' + index($button) /}\n    {/call}\n{/foreach}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nvar buttons = this.props.buttons.map((button, index) => {\n    return <Button label={button} ref={\'button\' + index} />;\n});', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now you\'ll be able to access your sub components through your instance\'s ');
+        ie_open('code');
+          itext('refs');
+        ie_close('code');
+        itext(' property, like this:');
+      ie_close('p');
+      $templateAlias2({code: 'modal.refs.button0 // The instance for first button\nmodal.refs.button1 // The instance for second button', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10042,11 +10076,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param601}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param560}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'oJZoj.render';
+  $render.soyTemplateName = 'pnyMQ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10056,14 +10090,16 @@ return exports;
 
 });
 
-class oJZoj extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(oJZoj, templates);
+class pnyMQ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pnyMQ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -10086,8 +10122,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(oJZoj, templates);
 /* 121 */,
 /* 122 */,
 /* 123 */,
-/* 124 */,
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10115,9 +10150,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _progressiveEnhancementSoy = __webpack_require__(101);
+var _nestedComponentsSoy = __webpack_require__(99);
 
-var _progressiveEnhancementSoy2 = _interopRequireDefault(_progressiveEnhancementSoy);
+var _nestedComponentsSoy2 = _interopRequireDefault(_nestedComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10127,23 +10162,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var oJZoj = function (_Component) {
-  _inherits(oJZoj, _Component);
+var pnyMQ = function (_Component) {
+  _inherits(pnyMQ, _Component);
 
-  function oJZoj() {
-    _classCallCheck(this, oJZoj);
+  function pnyMQ() {
+    _classCallCheck(this, pnyMQ);
 
-    return _possibleConstructorReturn(this, (oJZoj.__proto__ || Object.getPrototypeOf(oJZoj)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (pnyMQ.__proto__ || Object.getPrototypeOf(pnyMQ)).apply(this, arguments));
   }
 
-  return oJZoj;
+  return pnyMQ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(oJZoj, _progressiveEnhancementSoy2.default);
+_metalSoy2.default.register(pnyMQ, _nestedComponentsSoy2.default);
 
-exports.default = oJZoj;
+exports.default = pnyMQ;
 
 /***/ })
-],[125]);
+],[124]);
