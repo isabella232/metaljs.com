@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([21],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9935,12 +9935,30 @@ exports.default = parseFromAnchor;
 /* 86 */,
 /* 87 */,
 /* 88 */,
-/* 89 */
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zvMlM", function() { return zvMlM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tFrJJ", function() { return tFrJJ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9952,15 +9970,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal_nested.soy.
+// This file was automatically generated from yeoman-generator.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace zvMlM.
+ * @fileoverview Templates in namespace tFrJJ.
  * @public
  */
 
-goog.module('zvMlM.incrementaldom');
+goog.module('tFrJJ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9994,116 +10012,96 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param247 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('In the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/modal_updates.html');
-          itext('previous section');
-        ie_close('a');
-        itext(' we finished working on our component\'s behavior.');
-      ie_close('p');
-      ie_open('p');
-        itext('But what if our ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(' header\'s markup was very similar to one that is used in other places though? Ideally we\'d move it into a separate component that can be reused. That\'s what we\'ll be doing in this section.');
-      ie_close('p');
-    ie_close('article');
+  var param789 = function() {
     ie_open('article', null, null,
-        'id', 'creating_closeheader');
+        'id', 'yeoman_generator');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#creating_closeheader');
-          itext('Creating ');
-          ie_open('strong');
-            itext('CloseHeader');
-          ie_close('strong');
+            'href', '#yeoman_generator');
+          itext('Yeoman Generator');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('First let\'s create the new component. Add a ');
-        ie_open('code');
-          itext('src/CloseHeader.js');
-        ie_close('code');
-        itext(' file to your project:');
-      ie_close('p');
-      $templateAlias2({code: '// src/CloseHeader.js\n\nimport templates from \'./CloseHeader.soy\';\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nclass CloseHeader extends Component {\n}\n\nSoy.register(CloseHeader, templates);\n\nexport default CloseHeader;', mode: 'javascript'}, null, opt_ijData);
-      $templateAlias2({code: '// src/CloseHeader.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass CloseHeader extends JSXComponent {\n    render() {\n    }\n}\n\nexport default CloseHeader;', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now let\'s prepare the template to be similar to the one used by ');
+        itext('You can organize your ');
         ie_open('strong');
-          itext('Modal');
+          itext('Metal.js');
         ie_close('strong');
-        itext(':');
-      ie_close('p');
-      $templateAlias2({code: '// src/CloseHeader.soy\n\n&#123;namespace CloseHeader&#125;\n\n&#123;template .render&#125;\n    {@param cssClass: string}\n    {@param onClick: any}\n    {@param title: string}\n\n    <header class="{$cssClass}">\n        <button onClick="{$onClick}" type="button" class="close">\n            <span>\u00D7</span>\n        </button>\n        <h4>{$title}</h4>\n    </header>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/CloseHeader.js\n\nrender() {\n    return <header class={this.props.cssClass}>\n        <button onClick={this.props.onClick} type="button" class="close">\n            <span>\u00D7</span>\n        </button>\n        <h4>{this.props.title}</h4>\n    </header>;\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Done! Our new component is ready to be used by ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'using_closeheader');
-      ie_open('h2');
+        itext(' project in any way you want, but to start out we recommend using the ');
         ie_open('a', null, null,
-            'href', '#using_closeheader');
-          itext('Using ');
-          ie_open('strong');
-            itext('CloseHeader');
-          ie_close('strong');
+            'href', 'http://npmjs.com/package/generator-metal');
+          itext('Yeoman generator');
         ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('All we have to do is to replace the header markup from ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('\'s template with a call to ');
-        ie_open('strong');
-          itext('CloseHeader');
-        ie_close('strong');
-        itext(':');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n&#123;template .render&#125;\n    {@param body: string}\n    {@param close: string}\n    {@param header: string}\n    {@param shown: bool}\n\n    <div class="modal {$shown ? \'show\': \'\'}">\n        <div class="modal-dialog">\n            <div class="modal-content">\n                {call CloseHeader.render}\n                    {param cssClass: \'modal-header\' /}\n                    {param onClick: $close /}\n                    {param title: $header /}\n                {/call}\n                <section class="modal-body">\n                    {$body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nrender() {\n    var cssClass = \'modal\';\n    if (this.props.shown) {\n        cssClass += \'show\';\n    }\n    return <div class={cssClass}>\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <CloseHeader\n                    cssClass="modal-header"\n                    onClick={this.close.bind(this)}\n                    title={this.props.header}\n                />\n                <section class="modal-body">\n                    {this.props.body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>;\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('This will not only render ');
-        ie_open('strong');
-          itext('CloseHeader');
-        ie_close('strong');
-        itext(' at the right position, but also instantiate it for you. For more details on nested components, check out the ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/nested-components.html');
-          itext('guide about it');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'next_steps');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#next_steps');
-          itext('Next Steps');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now that we have learned how to properly create a new component, it\'d good to also know how to test it. The next section will focus on that.');
+        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
       ie_close('p');
       ie_open('p');
-        ie_open('strong');
+        itext('To use it:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Install ');
           ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_testing.html');
-            itext('\u21AA Tutorial: Modal - Testing');
+              'href', 'https://nodejs.org');
+            itext('npm');
           ie_close('a');
+          itext(' v3.0.0 or newer (if you don\'t have it yet)');
+        ie_close('li');
+        ie_open('li');
+          itext('Install ');
+          ie_open('strong');
+            itext('Yeoman');
+          ie_close('strong');
+          itext(' and ');
+          ie_open('strong');
+            itext('generator-metal');
+          ie_close('strong');
+          itext(': ');
+          ie_open('code');
+            itext('[sudo] npm i -g yo generator-metal');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Open the folder that you want to use on your terminal and type: ');
+          ie_open('code');
+            itext('yo metal');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Answer the generator prompts: ');
+          ie_open('img', null, null,
+              'src', '../../images/docs/prompts.png',
+              'alt', 'Generator prompts');
+          ie_close('img');
+        ie_close('li');
+        ie_open('li');
+          itext('Wait for the generator to finish fetching dependencies');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('After those steps you\'ll get a directory tree similar to this:');
+      ie_close('p');
+      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('generator-metal');
+        ie_close('code');
+        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/building.html#gulp_metal');
+          itext('gulp-metal');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('By the way, the boilerplate zip provided by the ');
+        ie_open('a', null, null,
+            'href', '/docs/getting-started/#boilerplate');
+          itext('getting started guide');
+        ie_close('a');
+        itext(' was created using ');
+        ie_open('strong');
+          itext('generator-metal');
         ie_close('strong');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10115,46 +10113,28 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param247}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param789}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'zvMlM.render';
+  $render.soyTemplateName = 'tFrJJ.render';
 }
 
-exports.render.params = ["cssClass","onClick","title","body","close","header","shown","page","site"];
-exports.render.types = {"cssClass":"string","onClick":"any","title":"string","body":"string","close":"string","header":"string","shown":"bool","page":"any","site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class zvMlM extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zvMlM, templates);
+class tFrJJ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tFrJJ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
 /* 108 */,
 /* 109 */,
 /* 110 */,
@@ -10178,24 +10158,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(zvMlM, templates);
 /* 128 */,
 /* 129 */,
 /* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10223,9 +10186,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modal_nestedSoy = __webpack_require__(89);
+var _yeomanGeneratorSoy = __webpack_require__(107);
 
-var _modal_nestedSoy2 = _interopRequireDefault(_modal_nestedSoy);
+var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10235,23 +10198,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var zvMlM = function (_Component) {
-  _inherits(zvMlM, _Component);
+var tFrJJ = function (_Component) {
+  _inherits(tFrJJ, _Component);
 
-  function zvMlM() {
-    _classCallCheck(this, zvMlM);
+  function tFrJJ() {
+    _classCallCheck(this, tFrJJ);
 
-    return _possibleConstructorReturn(this, (zvMlM.__proto__ || Object.getPrototypeOf(zvMlM)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (tFrJJ.__proto__ || Object.getPrototypeOf(tFrJJ)).apply(this, arguments));
   }
 
-  return zvMlM;
+  return tFrJJ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(zvMlM, _modal_nestedSoy2.default);
+_metalSoy2.default.register(tFrJJ, _yeomanGeneratorSoy2.default);
 
-exports.default = zvMlM;
+exports.default = tFrJJ;
 
 /***/ })
-],[148]);
+],[131]);

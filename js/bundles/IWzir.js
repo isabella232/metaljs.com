@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([15],[
+webpackJsonppageComponent([23],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9934,19 +9934,12 @@ exports.default = parseFromAnchor;
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "kYODj", function() { return kYODj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IWzir", function() { return IWzir; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9958,15 +9951,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from importing.soy.
+// This file was automatically generated from modal_events.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace kYODj.
+ * @fileoverview Templates in namespace IWzir.
  * @public
  */
 
-goog.module('kYODj.incrementaldom');
+goog.module('IWzir.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10000,121 +9993,148 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param415 = function() {
+  var param219 = function() {
     ie_open('article');
       ie_open('p');
-        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
-      ie_close('p');
-      ie_open('p');
-        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lets get started!');
+        itext('In the ');
+        ie_open('a', null, null,
+            'href', '/docs/getting-started/modal.html');
+          itext('previous section');
+        ie_close('a');
+        itext(' we\'ve created a component that renders a ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext('. Its close button doesn\'t do anything yet though. This section will teach you how to handle DOM events on your components.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'installing_node_js_npm');
+        'id', 'inline_listeners_via_function_name');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_node_js_npm');
-          itext('Installing Node.js/NPM');
+            'href', '#inline_listeners_via_function_name');
+          itext('Inline Listeners - via Function Name');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('If you don\'t already have Node.js or npm installed, head over to the ');
-        ie_open('a', null, null,
-            'href', 'https://nodejs.org/en/download/');
-          itext('Node.js');
-        ie_close('a');
-        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
+        itext('You can add DOM event listeners easily through your templates, like this:');
       ie_close('p');
+      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
       ie_open('p');
-        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
+        itext('The above code declares that whenever the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button is clicked, the ');
+        ie_open('code');
+          itext('close');
+        ie_close('code');
+        itext(' function from the component should be called.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'finding_components');
+        'id', 'inline_listeners_via_function_reference');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#finding_components');
-          itext('Finding components');
+            'href', '#inline_listeners_via_function_reference');
+          itext('Inline Listeners - via Function Reference');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
+        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
       ie_close('p');
+      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, Soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n    {@param close: any}\n\n    // ...\n    <button onClick="{$close}" type="button" class="close">\n    // ...\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
-      ie_close('p');
-      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
-      ie_close('p');
-      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
+        itext('That will work exactly the same way as the previous example.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'installing_components');
+        'id', 'listener_implementation');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_components');
-          itext('Installing Components');
+            'href', '#listener_implementation');
+          itext('Listener Implementation');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
-      ie_close('p');
-      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('In this example, we\'re going to install the ');
+        itext('All you need to do now is to implement the ');
         ie_open('code');
-          itext('metal-position');
+          itext('close');
         ie_close('code');
-        itext(' component.');
-      ie_close('p');
-      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('Installed packages will be placed in a ');
+        itext(' function in your ');
         ie_open('code');
-          itext('node_modules');
+          itext('src/Modal.js');
         ie_close('code');
-        itext(' directory. This is created in the folder which the bower program was executed.');
+        itext(' file:');
       ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
+      $templateAlias2({code: 'close() {\n    this.dispose();\n}', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('All components have this ');
+        ie_open('code');
+          itext('dispose');
+        ie_close('code');
+        itext(' function, which basically destroys it and removes its content from the DOM. Check the guide about ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/component-lifecycle.html');
+          itext('Lifecycle functions');
+        ie_close('a');
+        itext(' for more details.');
+      ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'importing_a_component');
+        'id', 'run_the_demo');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#importing_a_component');
-          itext('Importing a Component');
+            'href', '#run_the_demo');
+          itext('Run the Demo');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('With the code already available, let\'s create a ');
+        itext('Now compile your code with ');
         ie_open('code');
-          itext('main.js');
+          itext('npm run build');
         ie_close('code');
-        itext(' file that will import the ');
-        ie_open('code');
-          itext('metal-position');
-        ie_close('code');
-        itext(' module. Note that we\'re using an ');
+        itext(' and open the demo on a browser. Clicking the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button will close the modal as expected.');
+      ie_close('p');
+      ie_open('p');
+        itext('For more details on inline listeners check ');
         ie_open('a', null, null,
-            'href', '/docs/guides/alias.html');
-          itext('alias');
+            'href', '/docs/guides/inline-events.html');
+          itext('this guide');
         ie_close('a');
-        itext(' to easily import npm files.');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'next_steps');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#next_steps');
+          itext('Next Steps');
+        ie_close('a');
+      ie_close('h2');
       ie_open('p');
-        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
+        itext('Our modal now properly closes itself when the ');
+        ie_open('strong');
+          itext('x');
+        ie_close('strong');
+        itext(' button is clicked. To do this we\'re disposing of it completely though, so we\'ll need to create a new Modal instance whenever we need to show it again.');
       ie_close('p');
-      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
+        itext('Ideally, instead of disposing it, we should just hide it instead, while also having a way to show it back. The next section will explain how to do this by having data changes update the modal accordingly.');
+      ie_close('p');
+      ie_open('p');
+        ie_open('strong');
+          ie_open('a', null, null,
+              'href', '/docs/getting-started/modal_updates.html');
+            itext('\u21AA Tutorial: Modal - Updates');
+          ie_close('a');
+        ie_close('strong');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10126,11 +10146,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param415}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param219}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'kYODj.render';
+  $render.soyTemplateName = 'IWzir.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10140,14 +10160,21 @@ return exports;
 
 });
 
-class kYODj extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(kYODj, templates);
+class IWzir extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(IWzir, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
 /* 96 */,
 /* 97 */,
 /* 98 */,
@@ -10164,56 +10191,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(kYODj, templates);
 /* 109 */,
 /* 110 */,
 /* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */,
-/* 159 */,
-/* 160 */,
-/* 161 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10241,9 +10219,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _importingSoy = __webpack_require__(95);
+var _modal_eventsSoy = __webpack_require__(88);
 
-var _importingSoy2 = _interopRequireDefault(_importingSoy);
+var _modal_eventsSoy2 = _interopRequireDefault(_modal_eventsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10253,23 +10231,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var kYODj = function (_Component) {
-  _inherits(kYODj, _Component);
+var IWzir = function (_Component) {
+  _inherits(IWzir, _Component);
 
-  function kYODj() {
-    _classCallCheck(this, kYODj);
+  function IWzir() {
+    _classCallCheck(this, IWzir);
 
-    return _possibleConstructorReturn(this, (kYODj.__proto__ || Object.getPrototypeOf(kYODj)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (IWzir.__proto__ || Object.getPrototypeOf(IWzir)).apply(this, arguments));
   }
 
-  return kYODj;
+  return IWzir;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(kYODj, _importingSoy2.default);
+_metalSoy2.default.register(IWzir, _modal_eventsSoy2.default);
 
-exports.default = kYODj;
+exports.default = IWzir;
 
 /***/ })
-],[161]);
+],[112]);

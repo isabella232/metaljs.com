@@ -7274,6 +7274,42 @@ button.close {
   content: "\E058";
   color: #9552ef; }
 
+.pill {
+  color: rgba(35, 50, 64, 0.8);
+  background: rgba(35, 50, 64, 0.05);
+  border-radius: 12px;
+  padding: 0 8px;
+  height: 24px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  .pill .pill-label {
+    font-family: "Galano", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-flex;
+    margin: 0; }
+  .pill .pill-bullet + .pill-label {
+    margin: 0 0 0 8px; }
+  .pill .pill-bullet {
+    background: rgba(35, 50, 64, 0.4);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0; }
+    .pill .pill-bullet.up {
+      background: #9552ef; }
+    .pill .pill-bullet.down {
+      background: #ff4040; }
+    .pill .pill-bullet.warn {
+      background: #ffb700; }
+
 /* ==========================================================================
    Box
    ========================================================================== */
@@ -9115,11 +9151,11 @@ button.close {
     opacity: 1; } }
 
 @keyframes rotate-360 {
-  to {
+  0% {
     transform: rotate(360deg); } }
 
 @keyframes rotate-360-inverse {
-  to {
+  100% {
     transform: rotate(-360deg); } }
 
 @keyframes slideInLeft {
@@ -9130,9 +9166,9 @@ button.close {
     transform: translate3d(0, 0, 0); } }
 
 @keyframes slideOutLeft {
-  from {
+  0% {
     transform: translate3d(0, 0, 0); }
-  to {
+  100% {
     visibility: hidden;
     transform: translate3d(-100%, 0, 0); } }
 
@@ -9144,9 +9180,9 @@ button.close {
     transform: translate3d(0, 0, 0); } }
 
 @keyframes slideOutBottom {
-  from {
+  0% {
     transform: translate3d(0, 0, 0); }
-  to {
+  100% {
     visibility: hidden;
     transform: translate3d(0, 300%, 0); } }
 
@@ -9382,6 +9418,21 @@ li a:not([class]) {
 
 .code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-corner {
   background-color: transparent; }
+
+:root {
+  font-size: 14px; }
+  :root [class*='icon-12'] {
+    font-size: 16px; }
+  :root [class*='icon-16'] {
+    font-size: 24px; }
+
+@media (min-width: 600px) and (max-width: 1800px) {
+  :root {
+    font-size: 16px; } }
+
+@media (min-width: 1800px) {
+  :root {
+    font-size: 18px; } }
 
 .header {
   padding: 75px 0 60px;
@@ -11032,16 +11083,57 @@ li a:not([class]) {
 .blog article:last-child {
   margin-bottom: calc(4rem * 1.5); }
 
-.blog .we-container {
+.social {
+  text-align: center;
+  margin-top: 96px;
+  margin-bottom: 144px; }
+  .social .social-banner {
+    margin-bottom: 12px;
+    height: 30px;
+    line-height: 30px; }
+    .social .social-banner .social-banner-title {
+      font-family: "Galano", sans-serif;
+      font-size: 1.05895rem;
+      font-weight: bold; }
+  .social .social-buttons .social-button {
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+    margin-right: 24px;
+    height: 48px;
+    width: 48px;
+    border-bottom: none;
+    border-radius: 50%; }
+    .social .social-buttons .social-button:last-child {
+      margin-right: 0; }
+    .social .social-buttons .social-button.facebook {
+      background-color: #38589a; }
+      .social .social-buttons .social-button.facebook:hover {
+        background-color: rgba(56, 88, 154, 0.8); }
+    .social .social-buttons .social-button.twitter {
+      background-color: #27aae5; }
+      .social .social-buttons .social-button.twitter:hover {
+        background-color: rgba(39, 170, 229, 0.8); }
+    .social .social-buttons .social-button.linkedin {
+      background-color: #007ab7; }
+      .social .social-buttons .social-button.linkedin:hover {
+        background-color: rgba(0, 122, 183, 0.8); }
+    .social .social-buttons .social-button span {
+      font-size: 2rem;
+      color: #FFFFFF;
+      line-height: 48px; }
+
+.we-container {
   padding: calc(4rem * 1.5) 0;
   text-align: center; }
-  .blog .we-container .we-circle {
+  .we-container .we-circle {
     width: calc(2rem * 1.5);
     height: calc(2rem * 1.5);
     border-radius: 50%;
     background: rgba(35, 50, 64, 0.1);
     display: inline-block; }
-  .blog .we-container .we {
+  .we-container .we {
     font-family: "Galano", sans-serif;
     font-weight: 700;
     font-size: 1.05895rem;

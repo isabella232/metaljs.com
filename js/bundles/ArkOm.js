@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([19],[
+webpackJsonppageComponent([18],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9937,12 +9937,22 @@ exports.default = parseFromAnchor;
 /* 88 */,
 /* 89 */,
 /* 90 */,
-/* 91 */
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mSxYl", function() { return mSxYl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArkOm", function() { return ArkOm; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9954,15 +9964,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal_updates.soy.
+// This file was automatically generated from performance.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace mSxYl.
+ * @fileoverview Templates in namespace ArkOm.
  * @public
  */
 
-goog.module('mSxYl.incrementaldom');
+goog.module('ArkOm.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9983,8 +9993,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -9996,255 +10004,64 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param302 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('In the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/modal_events.html');
-          itext('previous section');
-        ie_close('a');
-        itext(' we learned how to add inline listeners, by making the ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('\'s close button work.');
-      ie_close('p');
-      ie_open('p');
-        itext('We first implemented this feature by disposing of the entire ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(' instance when it was closed. It\'d be best to have the modal just hide itself so it could be shown again afterwards though.');
-      ie_close('p');
-    ie_close('article');
+  var param640 = function() {
     ie_open('article', null, null,
-        'id', 'state');
+        'id', 'performance');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#state');
-          itext('State');
+            'href', '#performance');
+          itext('Performance');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('We\'ve seen that it\'s possible to pass data to components via the constructor. By default this kind of data is read-only for the component though, that is, it can be received from the outside but not changed from the inside.');
-      ie_close('p');
-      ie_open('p');
-        itext('When you need to be able to change a component\'s data, as well as have that change cause its HTML contents to update, you should indicate that it\'ll be part of the component\'s state.');
-      ie_close('p');
-      ie_open('p');
-        itext('This can be done by using your component\'s ');
-        ie_open('code');
-          itext('STATE');
-        ie_close('code');
-        itext(' static variable, where you an also configure state properties, specifying initial values and validators for example.');
-      ie_close('p');
-      ie_open('p');
-        itext('So let\'s add a ');
-        ie_open('code');
-          itext('shown');
-        ie_close('code');
-        itext(' property to our ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext(' state, in ');
-        ie_open('strong');
-          itext('src/Modal.js');
-        ie_close('strong');
-        itext(':');
-      ie_close('p');
-      $templateAlias2({code: 'Modal.STATE = {\n    shown: {\n        // The default value will be: `true`.\n        value: true\n    }\n};', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('For more details about configuring state, check out ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/state.html');
-          itext('this guide');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'updating_the_template');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#updating_the_template');
-          itext('Updating the Template');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now we need to update our template to only show the modal when ');
-        ie_open('code');
-          itext('shown');
-        ie_close('code');
-        itext(' is true.');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * State properties are passed to the "render" template in the same way as\n * config properties.\n */\n&#123;template .render&#125;\n    {@param shown: bool}\n\n    <div class="modal {$shown ? \'show\': \'\'}">\n        ...\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\n/**\n * State properties are accessed from `this.state`.\n */\nrender() {\n    var cssClass = \'modal\';\n\n    if (this.state.shown) {\n        cssClass += \'show\';\n    }\n\n    return <div class={cssClass}>\n        ...\n    </div>;\n}', mode: 'jsx'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'updating_the_close_function');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#updating_the_close_function');
-          itext('Updating the ');
-          ie_open('code');
-            itext('close');
-          ie_close('code');
-          itext(' Function');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now we can change our ');
-        ie_open('code');
-          itext('close');
-        ie_close('code');
-        itext(' function to just update the state property.');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\nclose() {\n  this.shown = false;\n}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nclose() {\n  this.state.shown = false;\n}', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('State changes are automatically detected by ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(', causing the component to be rerendered. Since ');
+        itext(' was built from the first with performance in mind. We\'ve run performance tests to compare it with other libraries and got really good results that show the benefits of using it.');
+      ie_close('p');
+      ie_open('p');
+        itext('In one of the tests we made, we built a simple list widget on three different libraries: ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' uses ');
-        ie_open('a', null, null,
-            'href', 'http://google.github.io/incremental-dom/');
-          itext('Incremental DOM');
-        ie_close('a');
-        itext(', rerendering will cause minimal DOM updates. In this case, the ');
-        ie_open('code');
-          itext('shown');
-        ie_close('code');
-        itext(' CSS class will be removed from the modal element.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'run_the_demo');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#run_the_demo');
-          itext('Run the Demo');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now compile your code with ');
-        ie_open('code');
-          itext('npm run build');
-        ie_close('code');
-        itext(' and open the demo on a browser. Clicking the ');
+        itext(', ');
         ie_open('strong');
-          itext('x');
+          itext('YUI');
         ie_close('strong');
-        itext(' button will close the modal as before, but inspecting the DOM you\'ll notice that it\'s just hidden, not removed from the DOM.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'playing_with_state_data');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#playing_with_state_data');
-          itext('Playing With State Data');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('State data makes it very easy to update a component\'s contents. If you want to quickly see it working you can make some experiments on your browser\'s JavaScript console for example.');
-      ie_close('p');
-      ie_open('p');
-        itext('First let\'s hold the ');
-        ie_open('code');
-          itext('Modal(jsx)');
-        ie_close('code');
-        itext(' instance somewhere so we can access it:');
-      ie_close('p');
-      $templateAlias2({code: 'window.modal = new metal.Modal({\n    header: \'My Modal\',\n    body: \'Built using Metal.js\'\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now run the demo again, go to the browser\'s console and type: ');
-        ie_open('code');
-          itext('modal.shown = false');
-        ie_close('code');
-        itext('. You\'ll notice that the modal will be hidden as expected. If you now type ');
-        ie_open('code');
-          itext('modal.shown = true');
-        ie_close('code');
-        itext(', it will show up again.');
-      ie_close('p');
-      ie_open('p');
-        itext('If you want you can also turn ');
-        ie_open('code');
-          itext('header');
-        ie_close('code');
         itext(' and ');
-        ie_open('code');
-          itext('body');
-        ie_close('code');
-        itext(' into state properties as well. All you have to do is:');
-      ie_close('p');
-      ie_open('ol');
-        ie_open('li');
-          ie_open('p');
-            itext('Add them to ');
-            ie_open('code');
-              itext('STATE');
-            ie_close('code');
-            itext(', like this:');
-          ie_close('p');
-          $templateAlias2({code: 'Modal.STATE = {\n    body: {\n        value: \'Default body\'\n    },\n    header: {\n        value: \'Default header\'\n    },\n    shown: {\n        value: true\n    }\n};', mode: 'javascript'}, null, opt_ijData);
-        ie_close('li');
-        ie_open('li');
-          ie_open('p');
-            itext('If you\'re using JSX templates, change the calls to ');
-            ie_open('code');
-              itext('this.props');
-            ie_close('code');
-            itext(' from ');
-            ie_open('code');
-              itext('this');
-            ie_close('code');
-            itext(' instead. You will also need to change your config from ');
-            ie_open('code');
-              itext('Modal.STATE = {...}');
-            ie_close('code');
-            itext(' to ');
-            ie_open('code');
-              itext('Modal.PROPS = {...}');
-            ie_close('code');
-            itext(' like this:');
-          ie_close('p');
-          $templateAlias2({code: 'render() {\n    var cssClass = \'modal\';\n    \n    if (this.props.shown) {\n        cssClass += \'show\';\n    }\n    \n    return <div class={cssClass}>\n        <div class="modal-dialog">\n            <div class="modal-content">\n                <header class="modal-header">\n                    <button onClick={this.close.bind(this)} type="button" class="close">\n                        <span>\u00D7</span>\n                    </button>\n                    <h4>{this.props.header}</h4>\n                </header>\n                <section class="modal-body">\n                    {this.props.body}\n                </section>\n                <footer class="modal-footer">\n                    <button type="button" class="btn btn-primary">OK</button>\n                </footer>\n            </div>\n        </div>\n    </div>;\n}\n\nModal.PROPS = {\n    body: {\n        value: \'Default body\'\n    },\n    header: {\n        value: \'Default header\'\n    },\n    shown: {\n        value: true\n    }\n};', mode: 'jsx'}, null, opt_ijData);
-        ie_close('li');
-      ie_close('ol');
-      ie_open('p');
-        itext('Now if you type something like ');
-        ie_open('code');
-          itext('modal.props.header = \'New Header\'');
-        ie_close('code');
-        itext(' on the console, the contents will also be updated automatically.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'next_steps');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#next_steps');
-          itext('Next Steps');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Our modal is working as expected now. But what if you want to split it into multiple components? How would we use them together? Check it out in the next section.');
-      ie_close('p');
-      ie_open('p');
         ie_open('strong');
-          ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_nested.html');
-            itext('\u21AA Tutorial: Modal - Nested Components');
-          ie_close('a');
+          itext('React');
         ie_close('strong');
+        itext('. We then measured the time it took to render those widgets with 1000 items each on three different situations:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('strong');
+            itext('First Render -');
+          ie_close('strong');
+          itext(' Creating and rendering the list for the first time, on a blank element.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('strong');
+            itext('Decorate -');
+          ie_close('strong');
+          itext(' Creating and decorating a list that was previously rendered on the DOM.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('strong');
+            itext('Update -');
+          ie_close('strong');
+          itext(' Changing the contents of the first item of the list, causing a rerender.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The chart below shows the results we obtained on Chrome (the higher the bar, the faster it runs):');
+      ie_close('p');
+      ie_open('p');
+        ie_open('img', null, null,
+            'src', '../../images/docs/perf.png',
+            'alt', 'Performance Test - List');
+        ie_close('img');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10256,11 +10073,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param302}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param640}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'mSxYl.render';
+  $render.soyTemplateName = 'ArkOm.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10270,24 +10087,14 @@ return exports;
 
 });
 
-class mSxYl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mSxYl, templates);
+class ArkOm extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ArkOm, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -10303,35 +10110,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(mSxYl, templates);
 /* 114 */,
 /* 115 */,
 /* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10359,9 +10138,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modal_updatesSoy = __webpack_require__(91);
+var _performanceSoy = __webpack_require__(101);
 
-var _modal_updatesSoy2 = _interopRequireDefault(_modal_updatesSoy);
+var _performanceSoy2 = _interopRequireDefault(_performanceSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10371,23 +10150,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var mSxYl = function (_Component) {
-  _inherits(mSxYl, _Component);
+var ArkOm = function (_Component) {
+  _inherits(ArkOm, _Component);
 
-  function mSxYl() {
-    _classCallCheck(this, mSxYl);
+  function ArkOm() {
+    _classCallCheck(this, ArkOm);
 
-    return _possibleConstructorReturn(this, (mSxYl.__proto__ || Object.getPrototypeOf(mSxYl)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ArkOm.__proto__ || Object.getPrototypeOf(ArkOm)).apply(this, arguments));
   }
 
-  return mSxYl;
+  return ArkOm;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(mSxYl, _modal_updatesSoy2.default);
+_metalSoy2.default.register(ArkOm, _performanceSoy2.default);
 
-exports.default = mSxYl;
+exports.default = ArkOm;
 
 /***/ })
-],[145]);
+],[117]);

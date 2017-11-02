@@ -87,7 +87,7 @@
           kindTag: [],
           soyState: [],
           templates: null,
-          variables: prepend(null, 'ij'),
+          variables: null,
           scopes: null,
           indent: 0,
           quoteKind: null,
@@ -127,13 +127,6 @@
               state.soyState.pop();
             } else {
               stream.skipToEnd();
-            }
-            if (!state.scopes) {
-              var paramRe = /@param\??\s+(\S+)/g;
-              var current = stream.current();
-              for (var match; (match = paramRe.exec(current)); ) {
-                state.variables = prepend(state.variables, match[1]);
-              }
             }
             return "comment";
 
@@ -194,7 +187,6 @@
             if (stream.match(/^\/?}/)) {
               if (state.tag == "/template" || state.tag == "/deltemplate") {
                 popscope(state);
-                state.variables = prepend(null, 'ij');
                 state.indent = 0;
               } else {
                 if (state.tag == "/for" || state.tag == "/foreach") {
@@ -256,14 +248,8 @@
 
         if (stream.match(/^\/\*/)) {
           state.soyState.push("comment");
-          if (!state.scopes) {
-            state.variables = prepend(null, 'ij');
-          }
           return "comment";
         } else if (stream.match(stream.sol() ? /^\s*\/\/.*/ : /^\s+\/\/.*/)) {
-          if (!state.scopes) {
-            state.variables = prepend(null, 'ij');
-          }
           return "comment";
         } else if (stream.match(/^\{literal}/)) {
           state.indent += config.indentUnit;
@@ -288,18 +274,18 @@
           state.soyState.push("tag");
           if (state.tag == "template" || state.tag == "deltemplate") {
             state.soyState.push("templ-def");
-          } else if (state.tag == "call" || state.tag == "delcall") {
+          }
+          if (state.tag == "call" || state.tag == "delcall") {
             state.soyState.push("templ-ref");
-          } else if (state.tag == "let") {
+          }
+          if (state.tag == "let") {
             state.soyState.push("var-def");
-          } else if (state.tag == "for" || state.tag == "foreach") {
+          }
+          if (state.tag == "for" || state.tag == "foreach") {
             state.scopes = prepend(state.scopes, state.variables);
             state.soyState.push("var-def");
-          } else if (state.tag == "namespace") {
-            if (!state.scopes) {
-              state.variables = prepend(null, 'ij');
-            }
-          } else if (state.tag.match(/^@(?:param\??|inject)/)) {
+          }
+          if (state.tag.match(/^@(?:param\??|inject)/)) {
             state.soyState.push("param-def");
           }
           return "keyword";

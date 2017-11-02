@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([17],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn4 = opt_data.site.title;
-        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
+        var dyn6 = opt_data.site.title;
+        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9939,12 +9939,17 @@ exports.default = parseFromAnchor;
 /* 90 */,
 /* 91 */,
 /* 92 */,
-/* 93 */
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ydqpf", function() { return ydqpf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Qcrso", function() { return Qcrso; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9956,15 +9961,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from building.soy.
+// This file was automatically generated from isomorphic.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ydqpf.
+ * @fileoverview Templates in namespace Qcrso.
  * @public
  */
 
-goog.module('ydqpf.incrementaldom');
+goog.module('Qcrso.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9985,6 +9990,8 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
+
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -9996,122 +10003,40 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param368 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('As we mentioned before, ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' components are written in ES6, which means that we need a transpiling process before using it on a website.');
-      ie_close('p');
-      ie_open('p');
-        itext('This can be done via any tools that you prefer, like ');
-        ie_open('a', null, null,
-            'href', 'http://webpack.github.io/');
-          itext('webpack');
-        ie_close('a');
-        itext(' or ');
-        ie_open('a', null, null,
-            'href', 'http://browserify.org/');
-          itext('browserify');
-        ie_close('a');
-        itext(', but we\'ve also published a few tools of our own, which focuses on ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' projects, which we\'ll talk about here.');
-      ie_close('p');
-    ie_close('article');
+  var param520 = function() {
     ie_open('article', null, null,
-        'id', 'gulp_metal');
+        'id', 'server_rendering');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#gulp_metal');
-          itext('gulp-metal');
+            'href', '#server_rendering');
+          itext('Server Side Rendering');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('What this package offers is a a bunch of ');
-        ie_open('a', null, null,
-            'href', 'http://gulpjs.com/');
-          itext('gulp');
-        ie_close('a');
-        itext(' tasks. There are tasks that can handle not only building JavaScript, as well as Soy compilation, testing, linting and many other things.');
+        itext('In most cases Metal components will be rendered client side. Let\'s take the following component for example:');
+      ie_close('p');
+      $templateAlias2({code: 'import JSXComponent from \'metal-jsx\';\n\nclass MyComponent extends JSXComponent {\n    render() {\n        return <div>{this.props.message}</div>\n    }\n}\n\nMyComponent.PROPS = {\n    message: {\n        value: \'\'\n    }\n};\n\nexport default MyComponent;', mode: 'jsx'}, null, opt_ijData);
+      ie_open('p');
+        itext('After transpiling/bundling this component, it can be invoked in client side JavaScript:');
+      ie_close('p');
+      $templateAlias2({code: 'const component = new metal.MyComponent({\n    message: \'Hello, World!\'\n});\n\n// component.element.innerHTML === \'<div>Hello, World!</div>\'', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Rendering a component this way requires DOM manipulation, and the existence of various global variables/utilities that are provided by web browsers. Therefore there is no way to render the HTML of this component in a Node.js environment without the help of libraries, such as ');
+        ie_open('code');
+          itext('JSDom');
+        ie_close('code');
+        itext(', that emulate client functionality.');
       ie_close('p');
       ie_open('p');
-        itext('The ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/');
-          itext('tutorials');
-        ie_close('a');
-        itext(' we\'ve provided are all using it, though indirectly, through some npm scripts. To learn how to use ');
-        ie_open('strong');
-          itext('gulp-metal');
-        ie_close('strong');
-        itext(' directly take a look at its ');
-        ie_open('a', null, null,
-            'href', 'http://www.npmjs.com/package/gulp-metal');
-          itext('npm page');
-        ie_close('a');
-        itext('.');
+        itext('However, thanks to the ');
+        ie_open('code');
+          itext('Component.renderToString');
+        ie_close('code');
+        itext(' method, out of the box server side rendering of Metal components is possible in Node.js environments:');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'metal_cli');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#metal_cli');
-          itext('metal-cli');
-        ie_close('a');
-      ie_close('h2');
+      $templateAlias2({code: 'const Component = require(\'metal-component\').Component;\nconst MyComponent = require(\'./MyComponent\').MyComponent;\n\nconst htmlString = Component.renderToString(MyComponent, {\n    message: \'Hello, World!\'\n});\n\n// htmlString === \'<div>Hello, World!</div>\'', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('If you\'re not a fan of ');
-        ie_open('strong');
-          itext('gulp');
-        ie_close('strong');
-        itext(' you can still use ');
-        ie_open('a', null, null,
-            'href', 'http://www.npmjs.com/package/metal-cli');
-          itext('metal-cli');
-        ie_close('a');
-        itext(', which offers almost the same tools, but through the command line.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'examples_using_other_tools');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#examples_using_other_tools');
-          itext('Examples Using Other Tools');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('As was mentioned before, using ');
-        ie_open('strong');
-          itext('gulp-metal');
-        ie_close('strong');
-        itext(' or ');
-        ie_open('strong');
-          itext('metal-cli');
-        ie_close('strong');
-        itext(' is not required. You can use your favorite build tool with ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' as well.');
-      ie_close('p');
-      ie_open('p');
-        itext('We\'ve created a Github repository full of different examples on how to work with ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(', and among other things it has a bunch of examples showing how to use different build tools. ');
-        ie_open('a', null, null,
-            'href', 'http://github.com/metal/metal-examples');
-          itext('Check it out');
-        ie_close('a');
-        itext(', and feel free to create an issue or send a pull request for other tools that it may be missing.');
+        itext('Now all of your custom Metal components can be rendered directly to HTML on the server.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10123,11 +10048,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param368}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param520}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ydqpf.render';
+  $render.soyTemplateName = 'Qcrso.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10137,19 +10062,14 @@ return exports;
 
 });
 
-class ydqpf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ydqpf, templates);
+class Qcrso extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Qcrso, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -10172,50 +10092,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ydqpf, templates);
 /* 118 */,
 /* 119 */,
 /* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */,
-/* 159 */,
-/* 160 */,
-/* 161 */,
-/* 162 */,
-/* 163 */,
-/* 164 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10243,9 +10120,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _buildingSoy = __webpack_require__(93);
+var _isomorphicSoy = __webpack_require__(98);
 
-var _buildingSoy2 = _interopRequireDefault(_buildingSoy);
+var _isomorphicSoy2 = _interopRequireDefault(_isomorphicSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10255,23 +10132,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ydqpf = function (_Component) {
-  _inherits(ydqpf, _Component);
+var Qcrso = function (_Component) {
+  _inherits(Qcrso, _Component);
 
-  function ydqpf() {
-    _classCallCheck(this, ydqpf);
+  function Qcrso() {
+    _classCallCheck(this, Qcrso);
 
-    return _possibleConstructorReturn(this, (ydqpf.__proto__ || Object.getPrototypeOf(ydqpf)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Qcrso.__proto__ || Object.getPrototypeOf(Qcrso)).apply(this, arguments));
   }
 
-  return ydqpf;
+  return Qcrso;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ydqpf, _buildingSoy2.default);
+_metalSoy2.default.register(Qcrso, _isomorphicSoy2.default);
 
-exports.default = ydqpf;
+exports.default = Qcrso;
 
 /***/ })
-],[164]);
+],[121]);
