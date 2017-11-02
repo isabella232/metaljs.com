@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([7],[
+webpackJsonppageComponent([17],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9939,20 +9939,12 @@ exports.default = parseFromAnchor;
 /* 90 */,
 /* 91 */,
 /* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ohVhr", function() { return ohVhr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ydqpf", function() { return ydqpf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9964,15 +9956,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from progressive-enhancement.soy.
+// This file was automatically generated from building.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ohVhr.
+ * @fileoverview Templates in namespace ydqpf.
  * @public
  */
 
-goog.module('ohVhr.incrementaldom');
+goog.module('ydqpf.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10004,33 +9996,122 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param601 = function() {
-    ie_open('article', null, null,
-        'id', 'progressive_enhancement');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#progressive_enhancement');
-          itext('Progressive Enhancement');
-        ie_close('a');
-      ie_close('h2');
+  var param368 = function() {
+    ie_open('article');
       ie_open('p');
-        ie_open('a', null, null,
-            'href', 'http://en.wikipedia.org/wiki/Progressive_enhancement');
-          itext('Progressive enhancement');
-        ie_close('a');
-        itext(' is a feature that is very important for a lot of people. Knowing about this, ');
+        itext('As we mentioned before, ');
         ie_open('strong');
           itext('Metal.js');
         ie_close('strong');
-        itext(' is prepared to deal with content that already comes rendered from the server. Since Metal.js components use ');
-        ie_open('a', null, null,
-            'href', 'http://google.github.io/incremental-dom');
-          itext('Incremental DOM');
-        ie_close('a');
-        itext(' by default, rendering on an element with existing content will reuse it instead of repainting everything.');
+        itext(' components are written in ES6, which means that we need a transpiling process before using it on a website.');
       ie_close('p');
       ie_open('p');
-        itext('It\'s important to note that building components with Soy also helps with progressive enhancement in another way: by providing a faithful template that can be run by the server without having to duplicate the rendering code or run JavaScript at all.');
+        itext('This can be done via any tools that you prefer, like ');
+        ie_open('a', null, null,
+            'href', 'http://webpack.github.io/');
+          itext('webpack');
+        ie_close('a');
+        itext(' or ');
+        ie_open('a', null, null,
+            'href', 'http://browserify.org/');
+          itext('browserify');
+        ie_close('a');
+        itext(', but we\'ve also published a few tools of our own, which focuses on ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' projects, which we\'ll talk about here.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'gulp_metal');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#gulp_metal');
+          itext('gulp-metal');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('What this package offers is a a bunch of ');
+        ie_open('a', null, null,
+            'href', 'http://gulpjs.com/');
+          itext('gulp');
+        ie_close('a');
+        itext(' tasks. There are tasks that can handle not only building JavaScript, as well as Soy compilation, testing, linting and many other things.');
+      ie_close('p');
+      ie_open('p');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', '/docs/getting-started/');
+          itext('tutorials');
+        ie_close('a');
+        itext(' we\'ve provided are all using it, though indirectly, through some npm scripts. To learn how to use ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext(' directly take a look at its ');
+        ie_open('a', null, null,
+            'href', 'http://www.npmjs.com/package/gulp-metal');
+          itext('npm page');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'metal_cli');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#metal_cli');
+          itext('metal-cli');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('If you\'re not a fan of ');
+        ie_open('strong');
+          itext('gulp');
+        ie_close('strong');
+        itext(' you can still use ');
+        ie_open('a', null, null,
+            'href', 'http://www.npmjs.com/package/metal-cli');
+          itext('metal-cli');
+        ie_close('a');
+        itext(', which offers almost the same tools, but through the command line.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'examples_using_other_tools');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#examples_using_other_tools');
+          itext('Examples Using Other Tools');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('As was mentioned before, using ');
+        ie_open('strong');
+          itext('gulp-metal');
+        ie_close('strong');
+        itext(' or ');
+        ie_open('strong');
+          itext('metal-cli');
+        ie_close('strong');
+        itext(' is not required. You can use your favorite build tool with ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' as well.');
+      ie_close('p');
+      ie_open('p');
+        itext('We\'ve created a Github repository full of different examples on how to work with ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(', and among other things it has a bunch of examples showing how to use different build tools. ');
+        ie_open('a', null, null,
+            'href', 'http://github.com/metal/metal-examples');
+          itext('Check it out');
+        ie_close('a');
+        itext(', and feel free to create an issue or send a pull request for other tools that it may be missing.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10042,11 +10123,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param601}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param368}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ohVhr.render';
+  $render.soyTemplateName = 'ydqpf.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10056,14 +10137,22 @@ return exports;
 
 });
 
-class ohVhr extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ohVhr, templates);
+class ydqpf extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ydqpf, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -10119,7 +10208,14 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ohVhr, templates);
 /* 154 */,
 /* 155 */,
 /* 156 */,
-/* 157 */
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10147,9 +10243,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _progressiveEnhancementSoy = __webpack_require__(101);
+var _buildingSoy = __webpack_require__(93);
 
-var _progressiveEnhancementSoy2 = _interopRequireDefault(_progressiveEnhancementSoy);
+var _buildingSoy2 = _interopRequireDefault(_buildingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10159,23 +10255,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ohVhr = function (_Component) {
-  _inherits(ohVhr, _Component);
+var ydqpf = function (_Component) {
+  _inherits(ydqpf, _Component);
 
-  function ohVhr() {
-    _classCallCheck(this, ohVhr);
+  function ydqpf() {
+    _classCallCheck(this, ydqpf);
 
-    return _possibleConstructorReturn(this, (ohVhr.__proto__ || Object.getPrototypeOf(ohVhr)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ydqpf.__proto__ || Object.getPrototypeOf(ydqpf)).apply(this, arguments));
   }
 
-  return ohVhr;
+  return ydqpf;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ohVhr, _progressiveEnhancementSoy2.default);
+_metalSoy2.default.register(ydqpf, _buildingSoy2.default);
 
-exports.default = ohVhr;
+exports.default = ydqpf;
 
 /***/ })
-],[157]);
+],[164]);

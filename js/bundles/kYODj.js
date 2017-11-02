@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9941,20 +9941,12 @@ exports.default = parseFromAnchor;
 /* 92 */,
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BMlXI", function() { return BMlXI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "kYODj", function() { return kYODj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9966,15 +9958,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from soy-components.soy.
+// This file was automatically generated from importing.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace BMlXI.
+ * @fileoverview Templates in namespace kYODj.
  * @public
  */
 
-goog.module('BMlXI.incrementaldom');
+goog.module('kYODj.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10008,193 +10000,122 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param629 = function() {
+  var param415 = function() {
     ie_open('article');
       ie_open('p');
-        itext('For a full tutorial on how to build components using Soy templates, make sure to follow the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/modal.html');
-          itext('Modal tutorial');
-        ie_close('a');
-        itext(' section.');
+        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
       ie_close('p');
       ie_open('p');
-        itext('This guide will explain some details about the integration between ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' components and ');
-        ie_open('a', null, null,
-            'href', 'http://developers.google.com/closure/templates/');
-          itext('Soy templates');
-        ie_close('a');
-        itext('.');
+        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
       ie_close('p');
       ie_open('p');
-        itext('Note that ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' is template agnostic, so it\'s not necessary to use Soy at all. That said, we already provide a very good integration between Metal.js components and Soy, so if you like this template language you should give it a try.');
+        itext('Lets get started!');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'soy_register');
+        'id', 'installing_node_js_npm');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#soy_register');
-          itext('Soy.register');
+            'href', '#installing_node_js_npm');
+          itext('Installing Node.js/NPM');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('The only thing you need to do to use Soy templates in your ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' component is to call ');
-        ie_open('code');
-          itext('Soy.register');
-        ie_close('code');
-        itext(', passing it your component class and the Soy templates you\'re going to use, like this:');
+        itext('If you don\'t already have Node.js or npm installed, head over to the ');
+        ie_open('a', null, null,
+            'href', 'https://nodejs.org/en/download/');
+          itext('Node.js');
+        ie_close('a');
+        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
       ie_close('p');
-      $templateAlias2({code: 'import templates from \'./MyComponent.soy\';\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nclass MyComponent extends Component {\n}\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('By default, ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' will use the Soy template called ');
-        ie_open('strong');
-          itext('render');
-        ie_close('strong');
-        itext(' as the entry point for rendering. But you can tell us to use a different one if you prefer by passing the name as the last param to the ');
-        ie_open('code');
-          itext('Soy.register');
-        ie_close('code');
-        itext(' call, like this:');
+        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
       ie_close('p');
-      $templateAlias2({code: 'Soy.register(MyComponent, templates, \'templateName\');', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'template_file');
+        'id', 'finding_components');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#template_file');
-          itext('Template File');
+            'href', '#finding_components');
+          itext('Finding components');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('Make sure that your Soy file has the entry point template (');
-        ie_open('strong');
-          itext('render');
-        ie_close('strong');
-        itext(' by default), otherwise nothing will be rendered.');
+        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
       ie_close('p');
       ie_open('p');
-        itext('This main template will receive as data a combination of:');
+        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', '/docs/guides/state.html');
-            itext('State data');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', '/docs/guides/state.html#configuring_state');
-            itext('Configuration data');
-          ie_close('a');
-          itext(' (accessed through ');
-          ie_open('code');
-            itext('this.config');
-          ie_close('code');
-          itext(')');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', '/docs/guides/inline-events.html#inline_listeners_via_function_reference');
-            itext('Component functions');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('Note that by default all params declared on the component\'s main Soy template are automatically configured as state properties as well, but without any special configurations (like initial value or validators). If they\'re ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/state.html');
-          itext('manually defined');
-        ie_close('a');
-        itext(' through the ');
-        ie_open('code');
-          itext('STATE');
-        ie_close('code');
-        itext(' property they will retain the setup specified there though.');
+        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
       ie_close('p');
+      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('Any params passed to the component but not directly declared on its main Soy template will be treated as basic configuration data, meaning that changes to them will not automatically rerender the component. They can still be passed down to other templates using ');
-        ie_open('code');
-          itext('data="all"');
-        ie_close('code');
-        itext(', as well be accessed via the');
-        ie_open('code');
-          itext('config');
-        ie_close('code');
-        itext(' property in the JavaScript file.');
+        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
       ie_close('p');
-      $templateAlias2({code: '// Contains all the data received by the component.\nthis.config', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'soy_compilation');
+        'id', 'installing_components');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#soy_compilation');
-          itext('Soy Compilation');
+            'href', '#installing_components');
+          itext('Installing Components');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('For the integration between ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' and ');
-        ie_open('strong');
-          itext('soy');
-        ie_close('strong');
-        itext(' to work, the Soy files need to be compiled via one of our available build tools. That\'s because they don\'t just compile the code, but also add some information that help with the integration (like export declarations).');
+        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
       ie_close('p');
+      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('The available build tools that correctly compile Soy for ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' are:');
+        itext('In this example, we\'re going to install the ');
+        ie_open('code');
+          itext('metal-position');
+        ie_close('code');
+        itext(' component.');
       ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://npmjs.com/package/gulp-metal');
-            itext('gulp-metal');
-          ie_close('a');
-          itext(' (already included when creating project via ');
-          ie_open('a', null, null,
-              'href', '/docs/guides/yeoman-generator.html');
-            itext('generator-metal');
-          ie_close('a');
-          itext(').');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://npmjs.com/package/metal-cli');
-            itext('metal-cli');
-          ie_close('a');
-        ie_close('li');
-        ie_open('li');
-          ie_open('a', null, null,
-              'href', 'http://npmjs.com/package/metal-tools-soy');
-            itext('metal-tools-soy');
-          ie_close('a');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('Installed packages will be placed in a ');
+        ie_open('code');
+          itext('node_modules');
+        ie_close('code');
+        itext(' directory. This is created in the folder which the bower program was executed.');
+      ie_close('p');
+      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'importing_a_component');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#importing_a_component');
+          itext('Importing a Component');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('With the code already available, let\'s create a ');
+        ie_open('code');
+          itext('main.js');
+        ie_close('code');
+        itext(' file that will import the ');
+        ie_open('code');
+          itext('metal-position');
+        ie_close('code');
+        itext(' module. Note that we\'re using an ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/alias.html');
+          itext('alias');
+        ie_close('a');
+        itext(' to easily import npm files.');
+      ie_close('p');
+      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
+      ie_close('p');
+      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
+      ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10205,11 +10126,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param629}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param415}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'BMlXI.render';
+  $render.soyTemplateName = 'kYODj.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10219,14 +10140,22 @@ return exports;
 
 });
 
-class BMlXI extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(BMlXI, templates);
+class kYODj extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(kYODj, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -10270,7 +10199,21 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(BMlXI, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10298,9 +10241,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _soyComponentsSoy = __webpack_require__(103);
+var _importingSoy = __webpack_require__(95);
 
-var _soyComponentsSoy2 = _interopRequireDefault(_soyComponentsSoy);
+var _importingSoy2 = _interopRequireDefault(_importingSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10310,23 +10253,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var BMlXI = function (_Component) {
-  _inherits(BMlXI, _Component);
+var kYODj = function (_Component) {
+  _inherits(kYODj, _Component);
 
-  function BMlXI() {
-    _classCallCheck(this, BMlXI);
+  function kYODj() {
+    _classCallCheck(this, kYODj);
 
-    return _possibleConstructorReturn(this, (BMlXI.__proto__ || Object.getPrototypeOf(BMlXI)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (kYODj.__proto__ || Object.getPrototypeOf(kYODj)).apply(this, arguments));
   }
 
-  return BMlXI;
+  return kYODj;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(BMlXI, _soyComponentsSoy2.default);
+_metalSoy2.default.register(kYODj, _importingSoy2.default);
 
-exports.default = BMlXI;
+exports.default = kYODj;
 
 /***/ })
-],[147]);
+],[161]);

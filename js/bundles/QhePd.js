@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([18],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9938,25 +9938,12 @@ exports.default = parseFromAnchor;
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bgdcl", function() { return bgdcl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QhePd", function() { return QhePd; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9968,15 +9955,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from yeoman-generator.soy.
+// This file was automatically generated from alias.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace bgdcl.
+ * @fileoverview Templates in namespace QhePd.
  * @public
  */
 
-goog.module('bgdcl.incrementaldom');
+goog.module('QhePd.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10010,97 +9997,39 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param687 = function() {
+  var param349 = function() {
     ie_open('article', null, null,
-        'id', 'yeoman_generator');
+        'id', 'alias');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#yeoman_generator');
-          itext('Yeoman Generator');
+            'href', '#alias');
+          itext('Alias');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('You can organize your ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' project in any way you want, but to start out we recommend using the ');
+        itext('A straightforward way to import npm dependencies into your module is to use their relative paths, like we do for any other code. For example:');
+      ie_close('p');
+      $templateAlias2({code: 'import core from \'../node_modules/metal/src/core\';', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Having to supply the relative path to node_modules is not cool though and, besides that, it may cause problems when a module doing that is imported later as an npm dependency of another project, since the paths will change.');
+      ie_close('p');
+      ie_open('p');
+        itext('Knowing that, Metal.js allows importing npm dependencies like you would from a regular node module, just by referencing their names. Note that this will only work when using Metal.js\'s ');
         ie_open('a', null, null,
-            'href', 'http://npmjs.com/package/generator-metal');
-          itext('Yeoman generator');
+            'href', '/docs/guides/building.html');
+          itext('build tools');
         ie_close('a');
-        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
-      ie_close('p');
-      ie_open('p');
-        itext('To use it:');
-      ie_close('p');
-      ie_open('ul');
-        ie_open('li');
-          itext('Install ');
-          ie_open('a', null, null,
-              'href', 'https://nodejs.org');
-            itext('npm');
-          ie_close('a');
-          itext(' v3.0.0 or newer (if you don\'t have it yet)');
-        ie_close('li');
-        ie_open('li');
-          itext('Install ');
-          ie_open('strong');
-            itext('Yeoman');
-          ie_close('strong');
-          itext(' and ');
-          ie_open('strong');
-            itext('generator-metal');
-          ie_close('strong');
-          itext(': ');
-          ie_open('code');
-            itext('[sudo] npm i -g yo generator-metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Open the folder that you want to use on your terminal and type: ');
-          ie_open('code');
-            itext('yo metal');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Answer the generator prompts: ');
-          ie_open('img', null, null,
-              'src', '../../images/docs/prompts.png',
-              'alt', 'Generator prompts');
-          ie_close('img');
-        ie_close('li');
-        ie_open('li');
-          itext('Wait for the generator to finish fetching dependencies');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('After those steps you\'ll get a directory tree similar to this:');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 metal-modal\n    \u251C\u2500\u2500 demos\n    \u2502   \u2514\u2500\u2500 index.html\n    \u251C\u2500\u2500 node_modules\n    \u251C\u2500\u2500 package.json\n    \u251C\u2500\u2500 src\n    \u2502   \u251C\u2500\u2500 Modal.js\n    \u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n    \u2502   \u2514\u2500\u2500 modal.scss\n    \u2514\u2500\u2500 test\n        \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
-        ie_open('code');
-          itext('generator-metal');
-        ie_close('code');
-        itext(' will already include some npm scripts to help you build and test your code, as well as many gulp tasks via ');
+        itext(' or adding a similar logic to your build process yourself (though we provide a ');
         ie_open('a', null, null,
-            'href', '/docs/guides/building.html#gulp_metal');
-          itext('gulp-metal');
+            'href', 'https://npmjs.com/package/babel-preset-metal');
+          itext('babel preset');
         ie_close('a');
-        itext('.');
+        itext(' with this logic that you can use separately too).');
       ie_close('p');
       ie_open('p');
-        itext('By the way, the boilerplate zip provided by the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/#boilerplate');
-          itext('getting started guide');
-        ie_close('a');
-        itext(' was created using ');
-        ie_open('strong');
-          itext('generator-metal');
-        ie_close('strong');
-        itext('.');
+        itext('With aliases, the previous example can be rewritten like this:');
       ie_close('p');
+      $templateAlias2({code: 'import core from \'metal\';', mode: 'javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -10111,11 +10040,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param687}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param349}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'bgdcl.render';
+  $render.soyTemplateName = 'QhePd.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10125,14 +10054,27 @@ return exports;
 
 });
 
-class bgdcl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bgdcl, templates);
+class QhePd extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QhePd, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -10180,7 +10122,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(bgdcl, templates);
 /* 150 */,
 /* 151 */,
 /* 152 */,
-/* 153 */
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10208,9 +10153,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _yeomanGeneratorSoy = __webpack_require__(105);
+var _aliasSoy = __webpack_require__(92);
 
-var _yeomanGeneratorSoy2 = _interopRequireDefault(_yeomanGeneratorSoy);
+var _aliasSoy2 = _interopRequireDefault(_aliasSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10220,23 +10165,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var bgdcl = function (_Component) {
-  _inherits(bgdcl, _Component);
+var QhePd = function (_Component) {
+  _inherits(QhePd, _Component);
 
-  function bgdcl() {
-    _classCallCheck(this, bgdcl);
+  function QhePd() {
+    _classCallCheck(this, QhePd);
 
-    return _possibleConstructorReturn(this, (bgdcl.__proto__ || Object.getPrototypeOf(bgdcl)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (QhePd.__proto__ || Object.getPrototypeOf(QhePd)).apply(this, arguments));
   }
 
-  return bgdcl;
+  return QhePd;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(bgdcl, _yeomanGeneratorSoy2.default);
+_metalSoy2.default.register(QhePd, _aliasSoy2.default);
 
-exports.default = bgdcl;
+exports.default = QhePd;
 
 /***/ })
-],[153]);
+],[156]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([20],[
+webpackJsonppageComponent([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9934,12 +9934,25 @@ exports.default = parseFromAnchor;
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RVaXV", function() { return RVaXV; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VESVG", function() { return VESVG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9951,15 +9964,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from modal_events.soy.
+// This file was automatically generated from performance.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace RVaXV.
+ * @fileoverview Templates in namespace VESVG.
  * @public
  */
 
-goog.module('RVaXV.incrementaldom');
+goog.module('VESVG.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9980,8 +9993,6 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
-
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -9993,148 +10004,64 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param219 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('In the ');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started/modal.html');
-          itext('previous section');
-        ie_close('a');
-        itext(' we\'ve created a component that renders a ');
-        ie_open('strong');
-          itext('Modal');
-        ie_close('strong');
-        itext('. Its close button doesn\'t do anything yet though. This section will teach you how to handle DOM events on your components.');
-      ie_close('p');
-    ie_close('article');
+  var param640 = function() {
     ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_name');
+        'id', 'performance');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_name');
-          itext('Inline Listeners - via Function Name');
+            'href', '#performance');
+          itext('Performance');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('You can add DOM event listeners easily through your templates, like this:');
-      ie_close('p');
-      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
-      ie_open('p');
-        itext('The above code declares that whenever the ');
         ie_open('strong');
-          itext('x');
+          itext('Metal.js');
         ie_close('strong');
-        itext(' button is clicked, the ');
-        ie_open('code');
-          itext('close');
-        ie_close('code');
-        itext(' function from the component should be called.');
+        itext(' was built from the first with performance in mind. We\'ve run performance tests to compare it with other libraries and got really good results that show the benefits of using it.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_reference');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_reference');
-          itext('Inline Listeners - via Function Reference');
-        ie_close('a');
-      ie_close('h2');
       ie_open('p');
-        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, Soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n    {@param close: any}\n\n    // ...\n    <button onClick="{$close}" type="button" class="close">\n    // ...\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('That will work exactly the same way as the previous example.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'listener_implementation');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#listener_implementation');
-          itext('Listener Implementation');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('All you need to do now is to implement the ');
-        ie_open('code');
-          itext('close');
-        ie_close('code');
-        itext(' function in your ');
-        ie_open('code');
-          itext('src/Modal.js');
-        ie_close('code');
-        itext(' file:');
-      ie_close('p');
-      $templateAlias2({code: 'close() {\n    this.dispose();\n}', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('All components have this ');
-        ie_open('code');
-          itext('dispose');
-        ie_close('code');
-        itext(' function, which basically destroys it and removes its content from the DOM. Check the guide about ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/component-lifecycle.html');
-          itext('Lifecycle functions');
-        ie_close('a');
-        itext(' for more details.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'run_the_demo');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#run_the_demo');
-          itext('Run the Demo');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Now compile your code with ');
-        ie_open('code');
-          itext('npm run build');
-        ie_close('code');
-        itext(' and open the demo on a browser. Clicking the ');
+        itext('In one of the tests we made, we built a simple list widget on three different libraries: ');
         ie_open('strong');
-          itext('x');
+          itext('Metal.js');
         ie_close('strong');
-        itext(' button will close the modal as expected.');
-      ie_close('p');
-      ie_open('p');
-        itext('For more details on inline listeners check ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/inline-events.html');
-          itext('this guide');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'next_steps');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#next_steps');
-          itext('Next Steps');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Our modal now properly closes itself when the ');
+        itext(', ');
         ie_open('strong');
-          itext('x');
+          itext('YUI');
         ie_close('strong');
-        itext(' button is clicked. To do this we\'re disposing of it completely though, so we\'ll need to create a new Modal instance whenever we need to show it again.');
-      ie_close('p');
-      ie_open('p');
-        itext('Ideally, instead of disposing it, we should just hide it instead, while also having a way to show it back. The next section will explain how to do this by having data changes update the modal accordingly.');
-      ie_close('p');
-      ie_open('p');
+        itext(' and ');
         ie_open('strong');
-          ie_open('a', null, null,
-              'href', '/docs/getting-started/modal_updates.html');
-            itext('\u21AA Tutorial: Modal - Updates');
-          ie_close('a');
+          itext('React');
         ie_close('strong');
+        itext('. We then measured the time it took to render those widgets with 1000 items each on three different situations:');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          ie_open('strong');
+            itext('First Render -');
+          ie_close('strong');
+          itext(' Creating and rendering the list for the first time, on a blank element.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('strong');
+            itext('Decorate -');
+          ie_close('strong');
+          itext(' Creating and decorating a list that was previously rendered on the DOM.');
+        ie_close('li');
+        ie_open('li');
+          ie_open('strong');
+            itext('Update -');
+          ie_close('strong');
+          itext(' Changing the contents of the first item of the list, causing a rerender.');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The chart below shows the results we obtained on Chrome (the higher the bar, the faster it runs):');
+      ie_close('p');
+      ie_open('p');
+        ie_open('img', null, null,
+            'src', '../../images/docs/perf.png',
+            'alt', 'Performance Test - List');
+        ie_close('img');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10146,11 +10073,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param219}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param640}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'RVaXV.render';
+  $render.soyTemplateName = 'VESVG.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10160,27 +10087,14 @@ return exports;
 
 });
 
-class RVaXV extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(RVaXV, templates);
+class VESVG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VESVG, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
@@ -10220,7 +10134,24 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(RVaXV, templates);
 /* 138 */,
 /* 139 */,
 /* 140 */,
-/* 141 */
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10248,9 +10179,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _modal_eventsSoy = __webpack_require__(88);
+var _performanceSoy = __webpack_require__(101);
 
-var _modal_eventsSoy2 = _interopRequireDefault(_modal_eventsSoy);
+var _performanceSoy2 = _interopRequireDefault(_performanceSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10260,23 +10191,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RVaXV = function (_Component) {
-  _inherits(RVaXV, _Component);
+var VESVG = function (_Component) {
+  _inherits(VESVG, _Component);
 
-  function RVaXV() {
-    _classCallCheck(this, RVaXV);
+  function VESVG() {
+    _classCallCheck(this, VESVG);
 
-    return _possibleConstructorReturn(this, (RVaXV.__proto__ || Object.getPrototypeOf(RVaXV)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (VESVG.__proto__ || Object.getPrototypeOf(VESVG)).apply(this, arguments));
   }
 
-  return RVaXV;
+  return VESVG;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(RVaXV, _modal_eventsSoy2.default);
+_metalSoy2.default.register(VESVG, _performanceSoy2.default);
 
-exports.default = RVaXV;
+exports.default = VESVG;
 
 /***/ })
-],[141]);
+],[158]);

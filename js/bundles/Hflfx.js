@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([15],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9939,12 +9939,25 @@ exports.default = parseFromAnchor;
 /* 90 */,
 /* 91 */,
 /* 92 */,
-/* 93 */
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ceiMZ", function() { return ceiMZ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hflfx", function() { return Hflfx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9956,15 +9969,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from building.soy.
+// This file was automatically generated from web-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace ceiMZ.
+ * @fileoverview Templates in namespace Hflfx.
  * @public
  */
 
-goog.module('ceiMZ.incrementaldom');
+goog.module('Hflfx.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -9985,6 +9998,8 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
+
 var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
@@ -9996,122 +10011,117 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param368 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('As we mentioned before, ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' components are written in ES6, which means that we need a transpiling process before using it on a website.');
-      ie_close('p');
-      ie_open('p');
-        itext('This can be done via any tools that you prefer, like ');
-        ie_open('a', null, null,
-            'href', 'http://webpack.github.io/');
-          itext('webpack');
-        ie_close('a');
-        itext(' or ');
-        ie_open('a', null, null,
-            'href', 'http://browserify.org/');
-          itext('browserify');
-        ie_close('a');
-        itext(', but we\'ve also published a few tools of our own, which focuses on ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' projects, which we\'ll talk about here.');
-      ie_close('p');
-    ie_close('article');
+  var param735 = function() {
     ie_open('article', null, null,
-        'id', 'gulp_metal');
+        'id', 'web_components');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#gulp_metal');
-          itext('gulp-metal');
+            'href', '#web_components');
+          itext('Web Components');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('What this package offers is a a bunch of ');
-        ie_open('a', null, null,
-            'href', 'http://gulpjs.com/');
-          itext('gulp');
-        ie_close('a');
-        itext(' tasks. There are tasks that can handle not only building JavaScript, as well as Soy compilation, testing, linting and many other things.');
+        itext('Metal components are generally invoked in one of three ways:');
       ie_close('p');
+      ie_open('ol');
+        ie_open('li');
+          itext('JavaScript');
+        ie_close('li');
+      ie_close('ol');
+      $templateAlias2({code: 'new metal.MyComponent({\n    title: \'Hello, World!\'\n}, \'#element\');', mode: 'javascript'}, null, opt_ijData);
+      ie_open('ol', null, null,
+          'start', '2');
+        ie_open('li');
+          itext('Soy');
+        ie_close('li');
+      ie_close('ol');
+      $templateAlias2({code: '{call MyComponent.render}\n    {param title: "Hello, World!" /}\n{/call}', mode: 'soy'}, null, opt_ijData);
+      ie_open('ol', null, null,
+          'start', '3');
+        ie_open('li');
+          itext('JSX');
+        ie_close('li');
+      ie_close('ol');
+      $templateAlias2({code: '<MyComponent title="Hello, World" />', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('The ');
+        itext('However, with the help of the ');
         ie_open('a', null, null,
-            'href', '/docs/getting-started/');
-          itext('tutorials');
+            'href', 'https://www.npmjs.com/package/metal-web-component');
+          itext('metal-web-component');
         ie_close('a');
-        itext(' we\'ve provided are all using it, though indirectly, through some npm scripts. To learn how to use ');
-        ie_open('strong');
-          itext('gulp-metal');
-        ie_close('strong');
-        itext(' directly take a look at its ');
+        itext(' package, Metal components can be invoked as ');
         ie_open('a', null, null,
-            'href', 'http://www.npmjs.com/package/gulp-metal');
-          itext('npm page');
+            'href', 'https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements');
+          itext('Custom Elements');
         ie_close('a');
-        itext('.');
+        itext(' in plain HTML.');
       ie_close('p');
+      $templateAlias2({code: '<my-component title="Hello, World"></my-component>', mode: 'xml'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'metal_cli');
+        'id', 'install');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#metal_cli');
-          itext('metal-cli');
+            'href', '#install');
+          itext('Install');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('If you\'re not a fan of ');
-        ie_open('strong');
-          itext('gulp');
-        ie_close('strong');
-        itext(' you can still use ');
+        itext('First you must install the ');
+        ie_open('code');
+          itext('metal-web-component');
+        ie_close('code');
+        itext(' package:');
+      ie_close('p');
+      $templateAlias2({code: 'npm i --save metal-web-component', mode: 'bash'}, null, opt_ijData);
+      ie_open('p');
+        itext('Currently, web components don\'t work on every browser, so a polyfill must be used. Include the ');
         ie_open('a', null, null,
-            'href', 'http://www.npmjs.com/package/metal-cli');
-          itext('metal-cli');
+            'href', 'https://www.webcomponents.org/polyfills');
+          itext('webcomponents-lite polyfill');
         ie_close('a');
-        itext(', which offers almost the same tools, but through the command line.');
+        itext(' if you intend to use web components on Firefox, Edge, or IE11.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'examples_using_other_tools');
+        'id', 'define_web_components');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#examples_using_other_tools');
-          itext('Examples Using Other Tools');
+            'href', '#define_web_components');
+          itext('Define web components');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('As was mentioned before, using ');
-        ie_open('strong');
-          itext('gulp-metal');
-        ie_close('strong');
-        itext(' or ');
-        ie_open('strong');
-          itext('metal-cli');
-        ie_close('strong');
-        itext(' is not required. You can use your favorite build tool with ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(' as well.');
+        itext('This package exposes a single helper function that can be used to wrap any Metal component in a web component. It receives two arguments: the tag name you want the web component to receive, and the constructor of the Metal component:');
       ie_close('p');
+      $templateAlias2({code: 'import JSXComponent from \'metal-jsx\';\nimport defineWebComponent from \'metal-web-component\';\n\nclass MyComponent extends JSXComponent {\n    render() {\n        return <h1>{this.props.message}</h1>\n    }\n}\n\nMyComponent.PROPS = {\n    message: {\n        value: \'\'\n    }\n};\n\ndefineWebComponent(\'my-component\', MyComponent);', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('We\'ve created a Github repository full of different examples on how to work with ');
-        ie_open('strong');
-          itext('Metal.js');
-        ie_close('strong');
-        itext(', and among other things it has a bunch of examples showing how to use different build tools. ');
+        itext('Now that the web component is defined, it can be invoked in plain html:');
+      ie_close('p');
+      $templateAlias2({code: '<my-component message="This is a web component"></my-component>', mode: 'xml'}, null, opt_ijData);
+      ie_open('p');
+        itext('This results in the following HTML on the page:');
+      ie_close('p');
+      $templateAlias2({code: '<h1>This is a web component</h1>', mode: 'xml'}, null, opt_ijData);
+      ie_open('p');
+        itext('If you would like the component\'s markup to be rendered using the Shadow DOM, simply set the ');
+        ie_open('code');
+          itext('useshadowdom');
+        ie_close('code');
+        itext(' attribute to ');
+        ie_open('code');
+          itext('true');
+        ie_close('code');
+        itext(' when calling the web component:');
+      ie_close('p');
+      $templateAlias2({code: '<my-component message="This is a web component" useshadowdom="true"></my-component>', mode: 'xml'}, null, opt_ijData);
+      ie_open('p');
+        itext('This means that any styling on the page will not cascade to your component\'s markup. See ');
         ie_open('a', null, null,
-            'href', 'http://github.com/metal/metal-examples');
-          itext('Check it out');
+            'href', 'https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM');
+          itext('MDN\'s documentation');
         ie_close('a');
-        itext(', and feel free to create an issue or send a pull request for other tools that it may be missing.');
+        itext(' for more info.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10123,11 +10133,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param368}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param735}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'ceiMZ.render';
+  $render.soyTemplateName = 'Hflfx.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10137,27 +10147,14 @@ return exports;
 
 });
 
-class ceiMZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(ceiMZ, templates);
+class Hflfx extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Hflfx, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -10233,9 +10230,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _buildingSoy = __webpack_require__(93);
+var _webComponentsSoy = __webpack_require__(106);
 
-var _buildingSoy2 = _interopRequireDefault(_buildingSoy);
+var _webComponentsSoy2 = _interopRequireDefault(_webComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10245,23 +10242,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ceiMZ = function (_Component) {
-  _inherits(ceiMZ, _Component);
+var Hflfx = function (_Component) {
+  _inherits(Hflfx, _Component);
 
-  function ceiMZ() {
-    _classCallCheck(this, ceiMZ);
+  function Hflfx() {
+    _classCallCheck(this, Hflfx);
 
-    return _possibleConstructorReturn(this, (ceiMZ.__proto__ || Object.getPrototypeOf(ceiMZ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Hflfx.__proto__ || Object.getPrototypeOf(Hflfx)).apply(this, arguments));
   }
 
-  return ceiMZ;
+  return Hflfx;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(ceiMZ, _buildingSoy2.default);
+_metalSoy2.default.register(Hflfx, _webComponentsSoy2.default);
 
-exports.default = ceiMZ;
+exports.default = Hflfx;
 
 /***/ })
 ],[154]);

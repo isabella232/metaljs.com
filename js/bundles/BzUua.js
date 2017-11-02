@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([2],[
+webpackJsonppageComponent([16],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -9940,26 +9940,12 @@ exports.default = parseFromAnchor;
 /* 91 */,
 /* 92 */,
 /* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsIndex", function() { return pageDocsIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BzUua", function() { return BzUua; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9971,15 +9957,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from component-lifecycle.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageDocsIndex.
+ * @fileoverview Templates in namespace BzUua.
  * @public
  */
 
-goog.module('pageDocsIndex.incrementaldom');
+goog.module('BzUua.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10000,11 +9986,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('guide.incrementaldom', 'render');
 
 
 /**
@@ -10015,157 +9999,124 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'main');
-    ie_open('main', null, null,
-        'class', 'content');
-      ie_open('div', null, null,
-          'class', 'docs');
-        $templateAlias1(soy.$$assignDefaults({elementClasses: 'topbar-docs'}, opt_data), null, opt_ijData);
-        $templateAlias2({section: opt_data.site.index.children['docs']}, null, opt_ijData);
-        $topics(opt_data, null, opt_ijData);
-      ie_close('div');
-    ie_close('main');
-  ie_close('div');
+  var param377 = function() {
+    ie_open('article', null, null,
+        'id', 'component_lifecycle');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#component_lifecycle');
+          itext('Component Lifecycle');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('Components built with Metal.js provide lifecycle methods that can be called when needed. The following example lists all available lifecycle methods, in the order in which they\'re called');
+      ie_close('p');
+      $templateAlias2({code: 'class MyComponent extends Component {\n    /**\n     * Called when the component is first created,\n     * but before it\'s first rendered.\n     */\n    created() {\n    }\n\n    /**\n     * Called whenever the component is rendered.\n     * @param {boolean} firstRender Flag indicating if\n     * this was the component\'s first render.\n     */\n    rendered(firstRender) {\n    }\n\n    /**\n     * Called before the component is about to attach\n     * to the DOM.\n     */\n    willAttach() {\n    }\n\n    /**\n     * Called when the component is attached to the\n     * DOM. The component will automatically be\n     * attached when first rendered, but can also\n     * be attached (without rerendering the\n     * component) by calling the `attach` method\n     * directly. This is a good place to attach event\n     * listeners, since the component is available\n     * in the page.\n     */\n    attached() {\n    }\n\n    /**\n     * Soy components only.\n     *\n     * Called when state data is about to be passed\n     * to the component\'s renderer.\n     * @param {!object} changes object literal with\n     * info on state changes.\n     */\n    willReceiveState(changes) {\n    }\n\n    /**\n     * JSX components only.\n     *\n     * Called when props data is about to be passed to\n     * the component\'s renderer.\n     * @param {!object} propsChanges object literal\n     * with info on props changes.\n     */\n    willReceiveProps(propsChanges) {\n    }\n\n    /**\n     * Called when the renderer is about to rerender\n     * the component. If it returns false it will not\n     * rerender.\n     * @param {!object} changes object literal with\n     * info on state changes.\n     * @param {?object} propsChanges object literal\n     * with info on props changes.\n     * Note: `propsChanges` is only applicable for\n     * JSX components.\n     */\n    shouldUpdate(changes, propsChanges) {\n        return true;\n    }\n\n    /**\n     * Called before the component will rerender.\n     * @param {!object} changes object literal with\n     * info on state changes.\n     * @param {?object} propsChanges object literal\n     * with info on props changes.\n     * Note: `propsChanges` is only applicable for\n     * JSX components.\n     */\n    willUpdate(changes, propsChanges) {\n    }\n\n    /**\n     * Called before the component is about to detach\n     * from the DOM.\n     */\n    willDetach() {\n    }\n\n    /**\n     * Called when the component is detached from the\n     * DOM. The component will automatically be\n     * detached when disposed, but can also be\n     * detached (without disposing the component)\n     * by calling the `detach` method directly. This\n     * is a good place to detach event listeners,\n     * since the component is not available in the\n     * page anymore.\n     */\n    detached() {\n    }\n\n    /**\n     * Called when the component is disposed. This\n     * should contain any necessary cleanup, like\n     * detaching any remaining events and disposing\n     * of sub components and local variables.\n     */\n    disposed() {\n    }\n\n    /**\n     * Called when the component is about to render.\n     * It takes the component state as an argument\n     * and you can massage the data before it is passed\n     * down to the template.\n     * This is only available for Soy Components.\n     */\n    prepareStateForRender(states) {\n        return Object.assign({}, states);\n    }\n}', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'will_receive_state');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#will_receive_state');
+          itext('willReceiveState - Soy');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('willReceiveState');
+        ie_close('code');
+        itext(' lifecycle method allows for hooking into the state lifecycle of Soy components. Let\'s take the following component for example.');
+      ie_close('p');
+      $templateAlias2({code: 'import Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nimport templates from \'./MySoyComponent.soy\';\n\nclass MySoyComponent extends Component {\n    willReceiveState(changes) {\n        if (changes.foo && changes.foo.newVal !== changes.foo.prevVal) {\n            // This will available in the next render\n            this.bar = \'bar1\';\n        }\n    }\n}\n\nMySoyComponent.STATE = {\n    foo: {\n        value: \'foo\'\n    },\n\n    bar: {\n        value: \'bar\'\n    }\n};\n\nSoy.register(MySoyComponent, templates);\nexport default MySoyComponent;', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '&#123;namespace MySoyComponent&#125;\n\n/**\n *\n */\n&#123;template. render&#125;\n    {@param foo: string}\n    {@param bar: string}\n\n    <div>{$foo}:{$bar}</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('If we render this component and change the value of the ');
+        ie_open('code');
+          itext('foo');
+        ie_close('code');
+        itext(' state, the');
+        ie_open('code');
+          itext('willReceiveState');
+        ie_close('code');
+        itext(' method will be invoked before the component renders allowing us to also set the value of other state values that will also be passed to the next render.');
+      ie_close('p');
+      $templateAlias2({code: 'import MySoyComponent from \'./MySoyComponent\';\n\nconst component = new MySoyComponnet();\n\ncomponent.foo = \'foo1\';\n\ncomponent.once(\'rendered\', function() {\n    console.log(component.element.innerHTML);\n\n    // component.element.innerHTML === \'foo1:bar1\';\n});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'will_receive_props');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#will_receive_props');
+          itext('willReceiveProps - JSX');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('willReceiveProps');
+        ie_close('code');
+        itext(' lifecycle method allows for hooking into the props lifecycle of JSX components. Let\'s take the following JSX component for example.');
+      ie_close('p');
+      $templateAlias2({code: 'import JSXComponent from \'metal-jsx\';\n\nclass MyJSXComponent extends JSXComponent {\n    render() {\n        return <div>{this.props.foo}:{this.state.bar}</div>\n    }\n\n    willReceiveProps(changes) {\n        if (changes.foo && changes.foo.newVal !== changes.foo.prevVal) {\n            // This will available in the next render\n            this.state.bar = \'bar1\';\n        }\n    }\n}\n\nMyJSXComponent.STATE = {\n    bar: {\n        value: \'bar\'\n    }\n};\n\nMyJSXComponent.PROPS = {\n    foo: {\n        value: \'foo\'\n    }\n};\n\nexport default MyJSXComponent;', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('If we render this component and change the value of the ');
+        ie_open('code');
+          itext('foo');
+        ie_close('code');
+        itext(' prop, the');
+        ie_open('code');
+          itext('willReceiveProps');
+        ie_close('code');
+        itext(' method will be invoked before the component renders allowing us to also set the value of internal state values that will also be passed to the next render.');
+      ie_close('p');
+      $templateAlias2({code: 'import MyJSXComponent from \'./MyJSXComponent\';\n\nconst component = new MyJSXComponent();\n\ncomponent.props.foo = \'foo1\';\n\ncomponent.once(\'rendered\', function() {\n    console.log(component.element.innerHTML);\n\n    // component.element.innerHTML === \'foo1:bar1\';\n});', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
+  };
+  $templateAlias1(soy.$$assignDefaults({content: param377}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageDocsIndex.render';
+  $render.soyTemplateName = 'BzUua.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $topics(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'sidebar-offset');
-    ie_open('div', null, null,
-        'class', 'container-hybrid docs-home-top');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'col-xs-16');
-          ie_open('h1', null, null,
-              'class', 'docs-home-top-title');
-            itext('Docs');
-          ie_close('h1');
-          ie_open('p', null, null,
-              'class', 'docs-home-top-description');
-            itext('Start learning how to leverage the power of ');
-            var dyn7 = opt_data.site.title;
-            if (typeof dyn7 == 'function') dyn7(); else if (dyn7 != null) itext(dyn7);
-            itext('.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'container-hybrid docs-home-top-form');
-          ie_open('form', null, null,
-              'action', '/docs/search.html',
-              'method', 'GET',
-              'enctype', 'multipart/form-data');
-            ie_open('div', null, null,
-                'class', 'row');
-              ie_open('div', null, null,
-                  'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
-                ie_open('div', null, null,
-                    'class', 'search');
-                  $templateAlias3({maxResults: 3, path: '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
-                ie_close('div');
-              ie_close('div');
-            ie_close('div');
-          ie_close('form');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-    ie_open('div', null, null,
-        'class', 'docs-home-topics');
-      ie_open('div', null, null,
-          'class', 'container-hybrid');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-xs-14 col-xs-offset-1 ');
-            ie_open('section', null, null,
-                'class', 'docs-home-middle');
-              ie_open('h2', null, null,
-                  'class', 'docs-home-middle-subtitle');
-                itext('Get started right away with Quick Start Tutorals, or dig into the details with Guides.');
-              ie_close('h2');
-              ie_open('p', null, null,
-                  'class', 'docs-home-middle-description');
-                itext('Each guide provides step by step coverage for that core feature.');
-              ie_close('p');
-            ie_close('section');
-          ie_close('div');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-md-12 col-md-offset-2 col-xs-16');
-            ie_open('div', null, null,
-                'class', 'row');
-              var childIdList138 = opt_data.page.childIds;
-              var childIdListLen138 = childIdList138.length;
-              for (var childIdIndex138 = 0; childIdIndex138 < childIdListLen138; childIdIndex138++) {
-                var childIdData138 = childIdList138[childIdIndex138];
-                var topic__soy128 = opt_data.page.children[childIdData138];
-                if (! topic__soy128.hidden) {
-                  ie_open('div', null, null,
-                      'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-                    ie_open('a', null, null,
-                        'class', 'topic radial-out',
-                        'href', topic__soy128.url);
-                      ie_open('div', null, null,
-                          'class', 'topic-icon');
-                        ie_void('span', null, null,
-                            'class', 'icon-16-' + topic__soy128.icon);
-                      ie_close('div');
-                      ie_open('h3', null, null,
-                          'class', 'topic-title');
-                        var dyn8 = topic__soy128.title;
-                        if (typeof dyn8 == 'function') dyn8(); else if (dyn8 != null) itext(dyn8);
-                      ie_close('h3');
-                    ie_close('a');
-                  ie_close('div');
-                }
-              }
-            ie_close('div');
-          ie_close('div');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.topics = $topics;
-if (goog.DEBUG) {
-  $topics.soyTemplateName = 'pageDocsIndex.topics';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.topics.params = ["page","site"];
-exports.topics.types = {"page":"any","site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageDocsIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templates);
+class BzUua extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(BzUua, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -10207,22 +10158,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templa
 /* 147 */,
 /* 148 */,
 /* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */,
-/* 159 */,
-/* 160 */,
-/* 161 */,
-/* 162 */,
-/* 163 */,
-/* 164 */,
-/* 165 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10250,9 +10186,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _indexSoy = __webpack_require__(108);
+var _componentLifecycleSoy = __webpack_require__(94);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _componentLifecycleSoy2 = _interopRequireDefault(_componentLifecycleSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10262,23 +10198,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsIndex = function (_Component) {
-  _inherits(pageDocsIndex, _Component);
+var BzUua = function (_Component) {
+  _inherits(BzUua, _Component);
 
-  function pageDocsIndex() {
-    _classCallCheck(this, pageDocsIndex);
+  function BzUua() {
+    _classCallCheck(this, BzUua);
 
-    return _possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (BzUua.__proto__ || Object.getPrototypeOf(BzUua)).apply(this, arguments));
   }
 
-  return pageDocsIndex;
+  return BzUua;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsIndex, _indexSoy2.default);
+_metalSoy2.default.register(BzUua, _componentLifecycleSoy2.default);
 
-exports.default = pageDocsIndex;
+exports.default = BzUua;
 
 /***/ })
-],[165]);
+],[150]);

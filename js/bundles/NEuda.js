@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([24],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9932,21 +9932,12 @@ exports.default = parseFromAnchor;
 /* 83 */,
 /* 84 */,
 /* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LRxEl", function() { return LRxEl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NEuda", function() { return NEuda; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9958,15 +9949,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from importing.soy.
+// This file was automatically generated from index.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace LRxEl.
+ * @fileoverview Templates in namespace NEuda.
  * @public
  */
 
-goog.module('LRxEl.incrementaldom');
+goog.module('NEuda.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10000,121 +9991,262 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param391 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('There are now more libraries and frameworks available for front-end development than ever before. It\'s not uncommon to have five or more of these libraries involved in a single project. But keeping track of all these libraries and making sure they\'re up-to-date can be tricky. To solve this we can use npm, a package manager that makes it easy to manage all your application\'s dependencies.');
-      ie_close('p');
-      ie_open('p');
-        itext('In this guide you are going to learn how to get up and running with npm. You\'ll start by installing the npm command-line utility and then go on to learn about the various commands that are available for managing Metal.js components.');
-      ie_close('p');
-      ie_open('p');
-        itext('Lets get started!');
-      ie_close('p');
-    ie_close('article');
+  var param158 = function() {
     ie_open('article', null, null,
-        'id', 'installing_node_js_npm');
+        'id', 'getting_started');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_node_js_npm');
-          itext('Installing Node.js/NPM');
+            'href', '#getting_started');
+          itext('Getting Started');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('If you don\'t already have Node.js or npm installed, head over to the ');
+        itext('There are many different ways to build components using Metal.js. You can use the built-in integrations with ');
         ie_open('a', null, null,
-            'href', 'https://nodejs.org/en/download/');
-          itext('Node.js');
+            'href', 'http://developers.google.com/closure/templates/');
+          itext('Soy');
         ie_close('a');
-        itext(' website and download the relevant copy of Node.js for your system. The npm program is included with the install of Node.js.');
+        itext(' or ');
+        ie_open('a', null, null,
+            'href', 'https://facebook.github.io/jsx/');
+          itext('JSX');
+        ie_close('a');
+        itext(' templates, or even build your own template abstraction on top of Metal.js and use it instead. You can build the ES6 code using ');
+        ie_open('strong');
+          itext('Babel');
+        ie_close('strong');
+        itext(', ');
+        ie_open('strong');
+          itext('Traceur');
+        ie_close('strong');
+        itext(' or any other transpiler. You can test using ');
+        ie_open('strong');
+          itext('Karma');
+        ie_close('strong');
+        itext(', ');
+        ie_open('strong');
+          itext('Jasmine');
+        ie_close('strong');
+        itext(' or any other test framework, and can use any directory structure for your project. To sum it up, you can customize everything to your own needs. The world is your oyster.');
       ie_close('p');
       ie_open('p');
-        itext('Now that you have npm installed, we can start looking at the commands that are used to manage packages.');
+        itext('This guide will focus on a quick and easy way to get started with Metal.js. But if you are excited to try it out as soon as possible you can just play around with this ');
+        ie_open('a', null, null,
+            'href', 'https://jsfiddle.net/metaljs/y1tqa7vz/');
+          itext('JSFiddle');
+        ie_close('a');
+        itext('.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'finding_components');
+        'id', 'boilerplate');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#finding_components');
-          itext('Finding components');
+            'href', '#boilerplate');
+          itext('Boilerplate');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('There are two different ways that you can find npm packages. Either using the online component directory, or using the command line utility.');
+        itext('You can organize your ');
+        ie_open('strong');
+          itext('Metal.js');
+        ie_close('strong');
+        itext(' project in any way you want, but to start out we recommend using the ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/yeoman-generator.html');
+          itext('Yeoman Generator');
+        ie_close('a');
+        itext(' we\'ve created, which prepares both the project structure as well as a basic development workflow for you.');
       ie_close('p');
       ie_open('p');
-        itext('To search for packages on the command line you use the search command. This should be followed by your search query.');
+        itext('You can use it if you wish, but to makes things even simpler we\'re providing a zip with the boilerplate that the generator would create for this tutorial, so you can just download it here:');
       ie_close('p');
-      $templateAlias2({code: 'npm search <query>', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('For example to search for packages that contain the word \u2018metal\u2019 you could do the following:');
+        ie_open('a', null, null,
+            'href', '/downloads/boilerplate.zip',
+            'class', 'btn btn-accent',
+            'data-senna-off', 'true');
+          itext('Download Metal.js Boilerplate (with Soy)');
+        ie_close('a');
       ie_close('p');
-      $templateAlias2({code: 'npm search metal', mode: 'shell'}, null, opt_ijData);
       ie_open('p');
-        itext('This command would return a whole bunch of results, with information about each matched module so you can pick the one you wish.');
+        ie_open('a', null, null,
+            'href', '/downloads/boilerplate-jsx.zip',
+            'class', 'btn btn-accent',
+            'data-senna-off', 'true');
+          itext('Download Metal.js Boilerplate (with JSX)');
+        ie_close('a');
+      ie_close('p');
+      ie_open('p');
+        itext('Note that this zip you\'ve downloaded contains not only the starting boilerplate, but also a folder for each step of this tutorial guide, so that you can either code along with us or just check out the final code for each step.');
+      ie_close('p');
+      ie_open('p');
+        itext('Now that you have the boilerplate, you just need to:');
+      ie_close('p');
+      ie_open('ol');
+        ie_open('li');
+          ie_open('p');
+            itext('Install ');
+            ie_open('a', null, null,
+                'href', 'https://nodejs.org');
+              itext('npm');
+            ie_close('a');
+            itext(' v3.0.0 or newer (if you don\'t have it yet).');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            ie_open('strong');
+              itext('For Soy users only');
+            ie_close('strong');
+            itext(': Install ');
+            ie_open('a', null, null,
+                'href', 'http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html');
+              itext('Java');
+            ie_close('a');
+            itext(' version 8 or newer (if you don\'t have it yet).');
+          ie_close('p');
+        ie_close('li');
+        ie_open('li');
+          ie_open('p');
+            itext('Enter the ');
+            ie_open('code');
+              itext('1. Hello World/');
+            ie_close('code');
+            itext(' folder in your terminal and install its npm dependencies, by typing:');
+          ie_close('p');
+          $templateAlias2({code: '[sudo] npm install', mode: 'shell'}, null, opt_ijData);
+        ie_close('li');
+      ie_close('ol');
+      ie_open('p');
+        itext('Once the dependency installation ends, you\'ll get a directory tree similar to this:');
+      ie_close('p');
+      $templateAlias2({code: '\u251C\u2500\u2500 demos\n\u2502   \u2514\u2500\u2500 index.html\n\u251C\u2500\u2500 node_modules\n\u251C\u2500\u2500 package.json\n\u251C\u2500\u2500 src\n\u2502   \u251C\u2500\u2500 Modal.js\n\u2502   \u251C\u2500\u2500 Modal.soy // Only if Soy was chosen\n\u2502   \u2514\u2500\u2500 modal.scss\n\u2514\u2500\u2500 test\n    \u2514\u2500\u2500 Modal.js', mode: 'text'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'build');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#build');
+          itext('Build');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('If you open the generated ');
+        ie_open('strong');
+          itext('src/Modal.js');
+        ie_close('strong');
+        itext(' file you may notice that it\'s using ');
+        ie_open('a', null, null,
+            'href', 'https://babeljs.io/docs/learn-es2015/');
+          itext(' ES6');
+        ie_close('a');
+        itext(' syntax:');
+      ie_close('p');
+      $templateAlias2({code: 'class Modal extends ...', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('That means that it\'ll need to go through a build process, since browsers haven\'t fully implemented all ES6 features yet.');
+      ie_close('p');
+      ie_open('p');
+        ie_open('strong');
+          itext('generator-metal');
+        ie_close('strong');
+        itext(' already prepares some useful scripts that you can use, including a build script. By default, this script will build everything into global variables. To use it, simply type:');
+      ie_close('p');
+      $templateAlias2({code: 'npm run build', mode: 'shell'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'demo_page');
+      ie_open('h2');
+        ie_open('a', null, null,
+            'href', '#demo_page');
+          itext('Demo Page');
+        ie_close('a');
+      ie_close('h2');
+      ie_open('p');
+        itext('Now that the code was built, just open the generated ');
+        ie_open('code');
+          itext('demos/index.html');
+        ie_close('code');
+        itext(' file on your browser. It should display a nice ');
+        ie_open('strong');
+          itext('Hello World');
+        ie_close('strong');
+        itext(' message, like this:');
+      ie_close('p');
+      ie_open('p');
+        ie_open('img', null, null,
+            'src', '../../images/docs/hello_world.png',
+            'alt', 'Hello World screenshot');
+        ie_close('img');
+      ie_close('p');
+      ie_open('p');
+        itext('If you look at the contents of ');
+        ie_open('code');
+          itext('demos/index.html');
+        ie_close('code');
+        itext(', you\'ll see how the component is being rendered. In this example, it\'s simply being instantiated directly by calling ');
+        ie_open('code');
+          itext('new metal.Modal();');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('By default this will append the component to the document\'s body. If you want though, you can specify where it should be rendered. Check the guide about ');
+        ie_open('a', null, null,
+            'href', '/docs/guides/rendering-components.html');
+          itext('rendering components');
+        ie_close('a');
+        itext(' to find out how.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'installing_components');
+        'id', 'hello_world');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#installing_components');
-          itext('Installing Components');
+            'href', '#hello_world');
+          itext('Hello World');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('To add a new npm package to your project you use the install command. This should be passed the name of the package you wish to install.');
+        itext('As you\'ve noticed, the generated project automatically renders ');
+        ie_open('strong');
+          itext('Hello World');
+        ie_close('strong');
+        itext(' for you. Curious to see how that\'s done? It\'s simple, just take a look at the generated template:');
       ie_close('p');
-      $templateAlias2({code: 'npm install <package>', mode: 'shell'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.soy\n\n&#123;namespace Modal&#125;\n\n/**\n * This renders the component\'s whole content.\n * Note: has to be called ".render".\n */\n&#123;template .render&#125;\n    <div>Hello World</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '// src/Modal.js\n\nimport JSXComponent from \'metal-jsx\';\n\nclass Modal extends JSXComponent {\n    render() {\n        return <div>Hello World</div>;\n    }\n}\n\nexport default Modal;', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('In this example, we\'re going to install the ');
-        ie_open('code');
-          itext('metal-position');
-        ie_close('code');
-        itext(' component.');
+        itext('You can replace the default content with any other to change what your component renders. Just make sure to build the code again after making your changes.');
       ie_close('p');
-      $templateAlias2({code: 'npm install metal-position', mode: 'shell'}, null, opt_ijData);
-      ie_open('p');
-        itext('Installed packages will be placed in a ');
-        ie_open('code');
-          itext('node_modules');
-        ie_close('code');
-        itext(' directory. This is created in the folder which the bower program was executed.');
-      ie_close('p');
-      $templateAlias2({code: '\u2514\u2500\u2500 node_modules\n    \u251C\u2500\u2500 metal\n    \u251C\u2500\u2500 metal-position', mode: 'text'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'importing_a_component');
+        'id', 'next_steps');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#importing_a_component');
-          itext('Importing a Component');
+            'href', '#next_steps');
+          itext('Next Steps');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('With the code already available, let\'s create a ');
-        ie_open('code');
-          itext('main.js');
-        ie_close('code');
-        itext(' file that will import the ');
-        ie_open('code');
-          itext('metal-position');
-        ie_close('code');
-        itext(' module. Note that we\'re using an ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/alias.html');
-          itext('alias');
-        ie_close('a');
-        itext(' to easily import npm files.');
+        itext('Now that you have gone through running a simple ');
+        ie_open('strong');
+          itext('Hello World');
+        ie_close('strong');
+        itext(' component, let\'s actually turn it into a ');
+        ie_open('strong');
+          itext('Modal');
+        ie_close('strong');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: 'import position from \'metal-position\';', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('This means that you can now call any function from that module, in this example we\'ll get the viewport height.');
-      ie_close('p');
-      $templateAlias2({code: 'var viewportHeight = position.getClientHeight(window);\n\nconsole.log(viewportHeight);', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Metal.js components are written in ES6 (a.k.a ECMAScript 2015), so you can also use ES6 on your code like we did on the example. Since ES6 isn\'t fully implemented on browsers yet though, either a polyfill or a build process is necessary before using Metal on a website.');
+        ie_open('strong');
+          ie_open('a', null, null,
+              'href', '/docs/getting-started/modal.html');
+            itext('\u21AA Tutorial: Modal');
+          ie_close('a');
+        ie_close('strong');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10126,11 +10258,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param391}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param158}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'LRxEl.render';
+  $render.soyTemplateName = 'NEuda.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10140,14 +10272,23 @@ return exports;
 
 });
 
-class LRxEl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LRxEl, templates);
+class NEuda extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NEuda, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
 /* 96 */,
 /* 97 */,
 /* 98 */,
@@ -10196,14 +10337,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(LRxEl, templates);
 /* 141 */,
 /* 142 */,
 /* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10231,9 +10365,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _importingSoy = __webpack_require__(95);
+var _indexSoy = __webpack_require__(86);
 
-var _importingSoy2 = _interopRequireDefault(_importingSoy);
+var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10243,23 +10377,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LRxEl = function (_Component) {
-  _inherits(LRxEl, _Component);
+var NEuda = function (_Component) {
+  _inherits(NEuda, _Component);
 
-  function LRxEl() {
-    _classCallCheck(this, LRxEl);
+  function NEuda() {
+    _classCallCheck(this, NEuda);
 
-    return _possibleConstructorReturn(this, (LRxEl.__proto__ || Object.getPrototypeOf(LRxEl)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NEuda.__proto__ || Object.getPrototypeOf(NEuda)).apply(this, arguments));
   }
 
-  return LRxEl;
+  return NEuda;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(LRxEl, _importingSoy2.default);
+_metalSoy2.default.register(NEuda, _indexSoy2.default);
 
-exports.default = LRxEl;
+exports.default = NEuda;
 
 /***/ })
-],[151]);
+],[144]);

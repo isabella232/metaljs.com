@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([11],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2512,8 +2512,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
       ie_close('img');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn6 = opt_data.site.title;
-        if (typeof dyn6 == 'function') dyn6(); else if (dyn6 != null) itext(dyn6);
+        var dyn4 = opt_data.site.title;
+        if (typeof dyn4 == 'function') dyn4(); else if (dyn4 != null) itext(dyn4);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -9943,12 +9943,13 @@ exports.default = parseFromAnchor;
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */
+/* 97 */,
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dxsGl", function() { return dxsGl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DTiUt", function() { return DTiUt; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -9960,15 +9961,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from inline-events.soy.
+// This file was automatically generated from isomorphic.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace dxsGl.
+ * @fileoverview Templates in namespace DTiUt.
  * @public
  */
 
-goog.module('dxsGl.incrementaldom');
+goog.module('DTiUt.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -10002,132 +10003,40 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param441 = function() {
-    ie_open('article');
-      ie_open('p');
-        itext('Another feature Metal.js has that can be very useful is the ability to declare events inside templates, directly on the desired element. Besides being simple and intuitive, this feature allows Metal.js to handle attaching events itself, and so this can be done in the best way possible, with ');
-        ie_open('a', null, null,
-            'href', 'https://learn.jquery.com/events/event-delegation/');
-          itext('delegates');
-        ie_close('a');
-        itext(' for example, without the user having worry about that at all. These events are also automatically detached when the component is disposed.');
-      ie_close('p');
-    ie_close('article');
+  var param520 = function() {
     ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_name');
+        'id', 'server_rendering');
       ie_open('h2');
         ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_name');
-          itext('Inline Listeners - via Function Name');
+            'href', '#server_rendering');
+          itext('Server Side Rendering');
         ie_close('a');
       ie_close('h2');
       ie_open('p');
-        itext('You can add DOM event listeners easily through your templates, like this:');
+        itext('In most cases Metal components will be rendered client side. Let\'s take the following component for example:');
       ie_close('p');
-      $templateAlias2({code: '<button onClick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
+      $templateAlias2({code: 'import JSXComponent from \'metal-jsx\';\n\nclass MyComponent extends JSXComponent {\n    render() {\n        return <div>{this.props.message}</div>\n    }\n}\n\nMyComponent.PROPS = {\n    message: {\n        value: \'\'\n    }\n};\n\nexport default MyComponent;', mode: 'jsx'}, null, opt_ijData);
       ie_open('p');
-        itext('The above code declares that whenever the ');
-        ie_open('strong');
-          itext('x');
-        ie_close('strong');
-        itext(' button is clicked, the ');
+        itext('After transpiling/bundling this component, it can be invoked in client side JavaScript:');
+      ie_close('p');
+      $templateAlias2({code: 'const component = new metal.MyComponent({\n    message: \'Hello, World!\'\n});\n\n// component.element.innerHTML === \'<div>Hello, World!</div>\'', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Rendering a component this way requires DOM manipulation, and the existence of various global variables/utilities that are provided by web browsers. Therefore there is no way to render the HTML of this component in a Node.js environment without the help of libraries, such as ');
         ie_open('code');
-          itext('close');
+          itext('JSDom');
         ie_close('code');
-        itext(' function from the component should be called.');
+        itext(', that emulate client functionality.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_via_function_reference');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_via_function_reference');
-          itext('Inline Listeners - via Function Reference');
-        ie_close('a');
-      ie_close('h2');
       ie_open('p');
-        itext('If you prefer though, you can also pass the actual function reference (instead of just its name) as an inline listener.');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n/**\n * In the "render" template, soy params that match a\n * component\'s function name will be that function\n * (automatically bound to the component instance).\n */\n&#123;template .render&#125;\n  {@param close: any}\n\n  // ...\n  <button onClick="{$close}" type="button" class="close">\n  // ...\n&#123;/template}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\n<button onClick={this.close.bind(this)} type="button" class="close">', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('That will work exactly the same way as the previous example.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_nested_components');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_nested_components');
-          itext('Inline Listeners - Nested Components');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('When using ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/nested-components.html');
-          itext('nested components');
-        ie_close('a');
-        itext(' it\'s also possible to inline events by using the ');
-        ie_open('strong');
-          itext('events');
-        ie_close('strong');
-        itext(' property:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{call Button.render}\n  {param events: [\'click\': [\'selector\': \'button\', \'fn\': \'close\']] /}\n  {param label: \'Ok\' /}\n{/call}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar events = {click: {\n  selector: \'button\',\n  fn: \'close\'\n}};\n\n<Button events={events} label="Ok" />', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('This will cause the ');
+        itext('However, thanks to the ');
         ie_open('code');
-          itext('close');
+          itext('Component.renderToString');
         ie_close('code');
-        itext(' function from the sub component to be called whenever a click event triggers for the elements that match the given selector.');
+        itext(' method, out of the box server side rendering of Metal components is possible in Node.js environments:');
       ie_close('p');
+      $templateAlias2({code: 'const Component = require(\'metal-component\').Component;\nconst MyComponent = require(\'./MyComponent\').MyComponent;\n\nconst htmlString = Component.renderToString(MyComponent, {\n    message: \'Hello, World!\'\n});\n\n// htmlString === \'<div>Hello, World!</div>\'', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('In case you want to listen to the event with a function from the parent component, just pass the function reference instead of a string, like this:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{call Button.render}\n  {param events: [\'click\': [\'selector\': \'button\', \'fn\': $close]] /}\n  {param label: \'Ok\' /}\n{/call}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar events = {click: {\n  selector: \'button\',\n  fn: this.close.bind(this)\n}};\n\n<Button events={events} label="Ok" />', mode: 'jsx'}, null, opt_ijData);
-      ie_open('p');
-        itext('Besides DOM events, you can also listen to custom events from the sub component in this same way:');
-      ie_close('p');
-      $templateAlias2({code: '// src/Modal.soy\n\n{call Button.render}\n  {param events: [\'labelChanged\': $handleLabelChanged] /}\n  {param label: \'Ok\' /}\n{/call}', mode: 'soy'}, null, opt_ijData);
-      $templateAlias2({code: '// src/Modal.js\n\nvar events = {labelChanged: this.handleLabelChanged.bind(this)};\n\n<Button events={events} label="Ok" />', mode: 'jsx'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'inline_listeners_alternative_usage');
-      ie_open('h2');
-        ie_open('a', null, null,
-            'href', '#inline_listeners_alternative_usage');
-          itext('Inline Listeners - Alternative Usage');
-        ie_close('a');
-      ie_close('h2');
-      ie_open('p');
-        itext('Besides the ');
-        ie_open('code');
-          itext('on[EventName]');
-        ie_close('code');
-        itext(' format you can also use ');
-        ie_open('code');
-          itext('data-on[eventname]');
-        ie_close('code');
-        itext(' for adding inline listeners. For example:');
-      ie_close('p');
-      $templateAlias2({code: '<button data-onclick="close" type="button" class="close">', mode: 'text/html'}, null, opt_ijData);
-      ie_open('p');
-        itext('Note that this format is supported mainly to enable doing ');
-        ie_open('a', null, null,
-            'href', '/docs/guides/progressive-enhancement.html');
-          itext('progressive enhancement');
-        ie_close('a');
-        itext(', when running Soy templates via Java for example. When templates using the ');
-        ie_open('code');
-          itext('on[EventName]');
-        ie_close('code');
-        itext(' format run in Java they will output elements with these as actual attributes, which can cause errors in the browser. In JavaScript these are used as element properties instead, so this problem doesn\'t occur.');
-      ie_close('p');
-      ie_open('p');
-        itext('So feel free to use the format you like best, or that better fits your needs.');
+        itext('Now all of your custom Metal components can be rendered directly to HTML on the server.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -10139,11 +10048,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param441}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param520}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'dxsGl.render';
+  $render.soyTemplateName = 'DTiUt.render';
 }
 
 exports.render.params = ["page","site"];
@@ -10153,15 +10062,14 @@ return exports;
 
 });
 
-class dxsGl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dxsGl, templates);
+class DTiUt extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(DTiUt, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
@@ -10214,11 +10122,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dxsGl, templates);
 /* 148 */,
 /* 149 */,
 /* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10246,9 +10150,9 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-var _inlineEventsSoy = __webpack_require__(97);
+var _isomorphicSoy = __webpack_require__(98);
 
-var _inlineEventsSoy2 = _interopRequireDefault(_inlineEventsSoy);
+var _isomorphicSoy2 = _interopRequireDefault(_isomorphicSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10258,23 +10162,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var dxsGl = function (_Component) {
-  _inherits(dxsGl, _Component);
+var DTiUt = function (_Component) {
+  _inherits(DTiUt, _Component);
 
-  function dxsGl() {
-    _classCallCheck(this, dxsGl);
+  function DTiUt() {
+    _classCallCheck(this, DTiUt);
 
-    return _possibleConstructorReturn(this, (dxsGl.__proto__ || Object.getPrototypeOf(dxsGl)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (DTiUt.__proto__ || Object.getPrototypeOf(DTiUt)).apply(this, arguments));
   }
 
-  return dxsGl;
+  return DTiUt;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(dxsGl, _inlineEventsSoy2.default);
+_metalSoy2.default.register(DTiUt, _isomorphicSoy2.default);
 
-exports.default = dxsGl;
+exports.default = DTiUt;
 
 /***/ })
-],[155]);
+],[151]);
