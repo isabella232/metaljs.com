@@ -12,7 +12,7 @@
 			<div class="tutorial">
 				{if $page}
 					{call .sidebar}
-						{param page: $site.index.children['tutorials'].children[$page.parentId] /}
+						{param page: $site.index.children.docs.children['tutorials'].children[$page.parentId] /}
 					{/call}
 					{call .tutorials data="all"}
 						{param content: $content /}
@@ -36,7 +36,7 @@
 
 		<div class="container">
 			<h6 class="tutorial-title">
-				{$site.index.children['tutorials'].children[$page.parentId].tutorialTitle}
+				{$site.index.children.docs.children['tutorials'].children[$page.parentId].tutorialTitle}
 			</h6>
 			{call TutorialTimer.render /}
 			<div class="container-blog card">
@@ -56,7 +56,7 @@
  */
 {template .footerButtons}
 	<div class="tutorial-page-nav">
-		{let $tutorialObject: $site.index.children['tutorials'].children[$page.parentId] /}
+		{let $tutorialObject: $site.index.children.docs.children['tutorials'].children[$page.parentId] /}
 		{if $page.weight < length($tutorialObject.childIds)}
 			{if $page.buttonTitle}
 				{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
