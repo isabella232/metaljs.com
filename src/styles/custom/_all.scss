@@ -18,7 +18,7 @@
 	margin-left: 0;
 }
 
-.topbar, .guide:not(.content) .topbar {
+.topbar, .guide:not(.content) .topbar, .tutorial .sidebar-offset .topbar {
 	background-color: $primary;
 }
 
@@ -131,4 +131,12 @@
 
 .tutorial .container img {
 	max-width: 100%;
+}
+
+.topbar-list-icons .topbar-item {
+	margin: 0 20px;
+}
+
+.topbar-list-icons .topbar-item:last-child {
+	margin: 0;
 }
