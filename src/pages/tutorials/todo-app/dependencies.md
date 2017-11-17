@@ -28,13 +28,16 @@ npm dependencies.
 cd metal-todo-app && npm install
 ```
 
+The boilerplate that you will be building off of is located in the **src/jsx** directory.
+You can also view the finished product in the **src/jsx/final** directory.
+
 ### Building
 
-In order to test drive the boilerplate, you'll need to run the provided build
-script.
+In order to test drive the boilerplate located in the **src/jsx** directory,
+you'll need to run the provided build script:
 
 ```text/x-sh
-npm run build
+npm run build:jsx
 ```
 
 This will run babel + webpack to transpile and bundle the JavaScript into
@@ -42,6 +45,12 @@ something consumable by web browsers.
 
 Everything you'll be writing in this tutorial will be using ES6 syntax, if
 you're unfamiliar with it, take a look at [this guide](#) first.
+
+To build the finished product, run the following script:
+
+```text/x-sh
+npm run build:jsx:final
+```
 
 ### Demo
 
