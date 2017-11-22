@@ -95,3 +95,38 @@ class TodoApp extends JSXComponent {
 At this point you should have an event handler that fires every time a todo
 item is clicked on. Next you will use this data to update the state
 in `TodoApp`.
+
+### Alternative to custom events
+
+Alternatively, functions can be passed from parents to children to achieve
+similar functionality. In this method a child must declare a PROP that will
+house the function from the parent.
+
+```text/jsx
+class Parent extends JSXComponent {
+	render() {
+		return (
+			<Child onChange={this.handleChange.bind(this)} />
+		);
+	}
+
+	handleChange(event) {
+		// Logic
+	}
+}
+
+class Child extends JSXComponent {
+	...
+
+	someMethod() {
+		this.props.onChange({
+			// Payload
+		});
+	}
+}
+
+Child.PROPS = {
+	onChange: {
+	}
+}
+```
