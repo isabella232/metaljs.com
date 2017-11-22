@@ -17,6 +17,8 @@ First, go ahead and add a couple of event listeners, one for the form
 submission (onsubmit), and the other for when the input value changes (onkeyup).
 
 ```text/jsx
+// TodoForm.js
+
 class TodoForm extends JSXComponent {
 	render() {
 		return (
@@ -47,6 +49,8 @@ Now you can use the `value` property from STATE to keep track of the changes
 made to the input value.
 
 ```text/jsx
+// TodoForm.js
+
 class TodoForm extends JSXComponent {
 	render() {
 		return (
@@ -78,16 +82,22 @@ You can also emit a custom event when the form is submitted, similarly to
 what `TodoItem` does to notify the parent component that something happened.
 
 ```text/jsx
-handleSubmit(event) {
-	event.preventDefault();
+// TodoForm.js
 
-	if (this.state.value) {
-		this.emit('todoAdd', {
-			title: this.state.value
-		});
+class TodoForm extends JSXComponent {
+	...
 
-		// Clears the input value
-		this.state.value = '';
+	handleSubmit(event) {
+		event.preventDefault();
+
+		if (this.state.value) {
+			this.emit('todoAdd', {
+				title: this.state.value
+			});
+
+			// Clears the input value
+			this.state.value = '';
+		}
 	}
 }
 ```
@@ -96,6 +106,8 @@ Then in the `TodoApp` component, you can listen to this event and add a new
 todo.
 
 ```text/jsx
+// TodoApp.js
+
 class TodoApp extends JSXComponent {
 	render() {
 		return (

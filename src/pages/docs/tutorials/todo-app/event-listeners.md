@@ -15,9 +15,11 @@ goal is to be able to click the todos to mark them as completed, so let's start
 with adding a click event listener to the list items.
 
 ```text/jsx
+// TodoItem.js
+
 class TodoItem extends JSXComponent {
 	render() {
-		let elementClasses = `todo-item${this.props.todo.done ?
+		const elementClasses = `todo-item${this.props.todo.done ?
 			' todo-item-done' : ''}`;
 
 		return (
@@ -44,10 +46,16 @@ This can be done by emitting a custom event with the info needed to make the
 change. In this case we'll use the index value from PROPS.
 
 ```text/jsx
-handleClick(event) {
-	this.emit('todoClick', {
-		index: this.props.index
-	});
+// TodoItem.js
+
+class TodoItem extends JSXComponent {
+	...
+
+	handleClick(event) {
+		this.emit('todoClick', {
+			index: this.props.index
+		});
+	}
 }
 ```
 
@@ -55,6 +63,8 @@ Now that the `TodoItem` is emitting an event, you must add a listener from the
 parent component `TodoApp`.
 
 ```text/jsx
+// TodoApp.js
+
 class TodoApp extends JSXComponent {
 	render() {
 		return (

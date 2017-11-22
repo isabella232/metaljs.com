@@ -14,11 +14,13 @@ First let's prepare the `TodoItem` for consuming the data being passed
 from `TodoApp`.
 
 ```text/jsx
+// TodoItem.js
+
 class TodoItem extends JSXComponent {
 	render() {
 		// Conditionally adding the 'todo-item-done' class if
 		// the todo is done
-		let elementClasses = `todo-item${this.props.todo.done ?
+		const elementClasses = `todo-item${this.props.todo.done ?
 			' todo-item-done' : ''}`;
 
 		return (
@@ -37,6 +39,8 @@ consume it, you need to iterate over the todos and pass them to the child
 components.
 
 ```text/jsx
+// TodoApp.js
+
 class TodoApp extends JSXComponent {
 	render() {
 		return (

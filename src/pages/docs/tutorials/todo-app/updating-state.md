@@ -13,25 +13,37 @@ You are now ready to update the state in `TodoApp`. From the last step you added
 an event listener.
 
 ```text/jsx
-handleTodoClick(event) {
-	alert(event.index);
+// TodoApp.js
+
+class TodoApp extends JSXComponent {
+	...
+
+	handleTodoClick(event) {
+		alert(event.index);
+	}
 }
 ```
 
 Now all you need to do is update the state so that the template rerenders.
 
 ```text/jsx
-handleTodoClick(event) {
-	this.toggleTodo(event.index);
-}
+// TodoApp.js
 
-toggleTodo(clickedIndex) {
-	this.state.todos = this.state.todos.map((todo, index) => {
-		if (clickedIndex === index) {
-			todo.done = !todo.done;
-		}
-		return todo;
-	});
+class TodoApp extends JSXComponent {
+	...
+
+	handleTodoClick(event) {
+		this.toggleTodo(event.index);
+	}
+
+	toggleTodo(clickedIndex) {
+		this.state.todos = this.state.todos.map((todo, index) => {
+			if (clickedIndex === index) {
+				todo.done = !todo.done;
+			}
+			return todo;
+		});
+	}
 }
 ```
 

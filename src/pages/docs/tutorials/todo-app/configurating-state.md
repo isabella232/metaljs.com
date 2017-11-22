@@ -27,6 +27,12 @@ Let's configure the `TodoApp` component to store an array of todos with a
 default value.
 
 ```text/javascript
+// TodoApp.js
+
+class TodoApp extends JSXComponent {
+	...
+}
+
 TodoApp.STATE = {
 	todos: {
 		// Default value
@@ -45,13 +51,17 @@ TodoApp.STATE = {
 ```
 
 Now that there is a default value set, you can access the value in the render
-function using `this.props`.
+function using `this.state`.
 
 ```text/javascript
-render() {
-	return (
-		<div>Todo: {this.props.todos[0].title}</div>
-	);
+// TodoApp.js
+
+class TodoApp extends JSXComponent {
+	render() {
+		return (
+			<div>Todo: {this.state.todos[0].title}</div>
+		);
+	}
 }
 ```
 
@@ -70,6 +80,12 @@ The `TodoItem` component will need two PROPS, one for keeping track of it's
 index inside the list, and one for containing the todo data itself.
 
 ```text/jsx
+// TodoItem.js
+
+class TodoItem extends JSXComponent {
+	...
+}
+
 TodoItem.PROPS = {
 	index: {
 		value: null
@@ -91,6 +107,12 @@ The `TodoForm` only needs one property that will only ever be set internally,
 therefore it's set on `STATE`.
 
 ```text/jsx
+// TodoForm.js
+
+class TodoForm extends JSXComponent {
+	...
+}
+
 TodoForm.STATE = {
 	value: {
 		value: ''
