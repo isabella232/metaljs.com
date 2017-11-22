@@ -18,14 +18,14 @@ a recent version of [Node.js/npm](https://nodejs.org/).
 Start by cloning the boilerplate respository.
 
 ```text/x-sh
-git clone https://github.com/Robert-Frampton/metal-todo-app.git
+git clone https://github.com/Robert-Frampton/metal-tutorial-todo.git
 ```
 
 Then navigate to the root of the project in your terminal and install the local
 npm dependencies.
 
 ```text/x-sh
-cd metal-todo-app && npm install
+cd metal-tutorial-todo && npm install
 ```
 
 The boilerplate that you will be building off of is located in the **src/jsx** directory.

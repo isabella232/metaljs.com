@@ -39,6 +39,6 @@ updating DOM elements.
 
 In this tutorial we'll be making a simple Todo App that let's you mark items as
 completed, and add new items to the list. If you would like to see the finished
-product check out the [metal-todo-app](https://github.com/Robert-Frampton/metal-todo-app) repository.
+product check out the [metal-tutorial-todo](https://github.com/Robert-Frampton/metal-tutorial-todo) repository.
 
 ![Finished Todo App](/images/tutorials/todo-app/finished_todo_app.png "Finished Todo App")
