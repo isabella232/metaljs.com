@@ -18,7 +18,7 @@ a recent version of [Node.js/npm](https://nodejs.org/).
 Start by cloning the boilerplate respository.
 
 ```text/x-sh
-git clone https://github.com/Robert-Frampton/metal-tutorial-todo.git
+git clone https://github.com/metal/metal-tutorial-todo.git
 ```
 
 Then navigate to the root of the project in your terminal and install the local
