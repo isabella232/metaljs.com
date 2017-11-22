@@ -38,7 +38,12 @@ class TodoItem extends JSXComponent {
 }
 ```
 
-Now you should see an alert with the title of the clicked todo. Now you must
+Notice that the `handleClick` method has been bound to `this`. This is because
+you'll need to access instance properties inside the function. However, any
+JavaScript function can be passed as a handler, it doesn't have to be a method
+of the current class.
+
+Now you should see an alert with the title of the clicked todo. Next you must
 notify `TodoApp` that a todo was marked as completed so that it can update
 the data.
 
