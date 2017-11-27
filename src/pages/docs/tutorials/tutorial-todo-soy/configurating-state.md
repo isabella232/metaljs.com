@@ -29,7 +29,7 @@ default value.
 ```text/javascript
 // TodoApp.js
 
-class TodoApp extends JSXComponent {
+class TodoApp extends Component {
 	...
 }
 
@@ -50,19 +50,20 @@ TodoApp.STATE = {
 };
 ```
 
-Now that there is a default value set, you can access the value in the render
-function using `this.state`.
+Now that there is a default value set, you can access the value in the Soy
+template after defining it as a soy `param`.
 
-```text/javascript
-// TodoApp.js
+```soy
+&#123;namespace TodoApp&#125;
 
-class TodoApp extends JSXComponent {
-	render() {
-		return (
-			<div>Todo: {this.state.todos[0].title}</div>
-		);
-	}
-}
+/**
+ * This renders the component's whole content.
+ */
+&#123;template .render&#125;
+	{@param? todos: ?}
+
+	<div>Todo: {$todos[0].title}</div>
+&#123;/template&#125;
 ```
 
 Which would result in the following markup.
@@ -76,17 +77,18 @@ in a minute.
 
 ### Item
 
-The `TodoItem` component will need two PROPS, one for keeping track of it's
-index inside the list, and one for containing the todo data itself.
+The `TodoItem` component will need two properties defined in STATE, one for
+keeping track of it's index inside the list, and one for containing the todo
+data itself.
 
-```text/jsx
+```text/javascript
 // TodoItem.js
 
-class TodoItem extends JSXComponent {
+class TodoItem extends Component {
 	...
 }
 
-TodoItem.PROPS = {
+TodoItem.STATE = {
 	index: {
 		value: null
 	},
@@ -97,19 +99,22 @@ TodoItem.PROPS = {
 };
 ```
 
+These STATE properties will act as read-only for the `TodoItem` component, as
+the values will always be defined by the parent component and passed down.
+
 Remember that PROPS are used for external data, or data that is passed to the
 component from a parent. Therefore these values will be read-only for
 the `TodoItem` component.
 
 ### Form
 
-The `TodoForm` only needs one property that will only ever be set internally,
-therefore it's set on `STATE`.
+The `TodoForm` only needs one property that will eventually be used to keep
+track of the value of it's input.
 
-```text/jsx
+```text/javascript
 // TodoForm.js
 
-class TodoForm extends JSXComponent {
+class TodoForm extends Component {
 	...
 }
 

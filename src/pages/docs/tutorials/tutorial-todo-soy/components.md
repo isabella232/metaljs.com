@@ -12,22 +12,25 @@ weight: 3
 
 In the `metal-tutorial-todo` boilerplate, there are already three components defined
 to help get you started. Each component is defined as an ES6 class that extends
-from Metal's `JSXComponent` class.
+from Metal's `Component` class.
 
-```text/jsx
-class TodoApp extends JSXComponent {
+```text/javascript
+class TodoApp extends Component {
 }
 ```
 
-Each component has a render function where the JSX template is defined. This
-will create the HTML you see in the demo page.
+Each component registers a Soy template to be used for rendering the component's
+HTML. This is done by the `Soy.register` method.
 
-```text/jsx
-class TodoApp extends JSXComponent {
-	return (
-		<div>Hello, World</div>
-	);
+```text/javascript
+import templates from './TodoApp.soy.js';
+import Component from 'metal-component';
+import Soy from 'metal-soy';
+
+class TodoApp extends Component {
 }
+Soy.register(TodoApp, templates);
+
 ```
 
 The `TodoApp` component will be the root level component. It will handle storing

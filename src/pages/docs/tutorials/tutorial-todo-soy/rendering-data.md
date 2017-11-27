@@ -13,52 +13,56 @@ weight: 5
 First let's prepare the `TodoItem` for consuming the data being passed
 from `TodoApp`.
 
-```text/jsx
-// TodoItem.js
+```soy
+&#123;namespace TodoItem&#125;
 
-class TodoItem extends JSXComponent {
-	render() {
+/**
+ * This renders the component's whole content.
+ */
+&#123;template .render&#125;
+	{@param todo: ?}
+
+	{let $elementClasses kind="text"}
+		todo-item
 		// Conditionally adding the 'todo-item-done' class if
 		// the todo is done
-		const elementClasses = `todo-item${this.props.todo.done ?
-			' todo-item-done' : ''}`;
+		{if $todo.done}
+			{sp}todo-item-done
+		{/if}
+	{/let}
 
-		return (
-			<li
-				class={elementClasses}
-			>
-				{this.props.todo.title}
-			</li>
-		);
-	}
-}
+	<li
+		class="{$elementClasses}"
+	>
+		{$todo.title}
+	</li>
+&#123;/template&#125;
 ```
 
 Now that you have some data that needs rendering, and the `TodoItem` is ready to
 consume it, you need to iterate over the todos and pass them to the child
 components.
 
-```text/jsx
-// TodoApp.js
+```soy
+&#123;namespace TodoApp&#125;
 
-class TodoApp extends JSXComponent {
-	render() {
-		return (
-			<div class="todo-app">
-				<ul>
-					{this.state.todos.map((todo, index) => {
-						return (
-							<TodoItem
-								index={index}
-								todo={todo}
-							/>
-						);
-					})}
-				</ul>
-			</div>
-		);
-	}
-}
+/**
+ * This renders the component's whole content.
+ */
+&#123;template .render&#125;
+	{@param? todos: ?}
+
+	<div class="todo-app">
+		<ul>
+			{foreach $todo in $todos}
+				{call TodoItem.render}
+					{param index: index($todo) /}
+					{param todo: $todo /}
+				{/call}
+			{/foreach}
+		</ul>
+	</div>
+&#123;/template&#125;
 ```
 
 This will result in the following markup.

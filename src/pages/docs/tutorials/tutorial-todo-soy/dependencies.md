@@ -13,6 +13,9 @@ weight: 2
 In order to follow along with this tutorial, you'll need [Git](https://git-scm.com/), and
 a recent version of [Node.js/npm](https://nodejs.org/).
 
+In addition, you'll need the [Java Runtime Environment](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) (JRE)
+installed in order to compile the `.soy` files.
+
 ### Todo Boilerplate
 
 Start by cloning the boilerplate respository.
@@ -28,16 +31,16 @@ npm dependencies.
 cd metal-tutorial-todo && npm install
 ```
 
-The boilerplate that you will be building off of is located in the **src/jsx** directory.
-You can also view the finished product in the **src/jsx/final** directory.
+The boilerplate that you will be building off of is located in the **src/soy** directory.
+You can also view the finished product in the **src/soy/final** directory.
 
 ### Building
 
-In order to test drive the boilerplate located in the **src/jsx** directory,
+In order to test drive the boilerplate located in the **src/soy** directory,
 you'll need to run the provided build script:
 
 ```text/x-sh
-npm run build:jsx
+npm run build:soy
 ```
 
 This will run babel + webpack to transpile and bundle the JavaScript into
@@ -49,7 +52,7 @@ you're unfamiliar with it, take a look at [this guide](#) first.
 To build the finished product, run the following script:
 
 ```text/x-sh
-npm run build:jsx:final
+npm run build:soy:final
 ```
 
 ### Demo
