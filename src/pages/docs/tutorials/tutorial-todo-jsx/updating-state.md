@@ -1,6 +1,7 @@
 ---
 title: "Updating State"
 description: "Foo bar."
+buttonTitle: "I updated the state"
 parentId: "tutorial-todo-jsx"
 layout: "tutorial"
 time: 90
