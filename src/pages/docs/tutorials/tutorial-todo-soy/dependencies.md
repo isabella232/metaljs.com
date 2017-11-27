@@ -2,7 +2,7 @@
 title: "Dependencies"
 description: "Installing dependencies of Metal.js."
 buttonTitle: "I installed the dependencies"
-parentId: "todo-app"
+parentId: "tutorial-todo-soy"
 layout: "tutorial"
 time: 90
 weight: 2

@@ -2,7 +2,7 @@
 title: "Event Listeners"
 description: "Foo bar."
 buttonTitle: "I added the event listeners"
-parentId: "todo-app"
+parentId: "tutorial-todo-soy"
 layout: "tutorial"
 time: 90
 weight: 6

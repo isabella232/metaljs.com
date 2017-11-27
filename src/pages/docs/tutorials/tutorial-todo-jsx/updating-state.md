@@ -1,7 +1,7 @@
 ---
 title: "Updating State"
 description: "Foo bar."
-parentId: "todo-app"
+parentId: "tutorial-todo-jsx"
 layout: "tutorial"
 time: 90
 weight: 7

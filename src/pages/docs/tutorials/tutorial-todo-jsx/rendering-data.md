@@ -2,7 +2,7 @@
 title: "Rendering Data"
 description: "Foo bar."
 buttonTitle: "I rendered the todo items"
-parentId: "todo-app"
+parentId: "tutorial-todo-jsx"
 layout: "tutorial"
 time: 90
 weight: 5

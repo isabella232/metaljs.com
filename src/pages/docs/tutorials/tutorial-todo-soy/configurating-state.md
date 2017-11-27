@@ -2,7 +2,7 @@
 title: "Configuring State"
 description: "How to configure state and props for Metal.js components."
 buttonTitle: "I configured the state"
-parentId: "todo-app"
+parentId: "tutorial-todo-soy"
 layout: "tutorial"
 time: 90
 weight: 4

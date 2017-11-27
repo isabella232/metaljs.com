@@ -2,7 +2,7 @@
 title: "Before We Start"
 description: "Explanation of what Metal.js is intended for, and what you'll make in this tutorial."
 buttonTitle: "Let's get started"
-parentId: "todo-app"
+parentId: "tutorial-todo-jsx"
 layout: "tutorial"
 time: 90
 weight: 1

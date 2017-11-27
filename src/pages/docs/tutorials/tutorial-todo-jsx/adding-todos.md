@@ -1,7 +1,7 @@
 ---
 title: "Adding Todos"
 description: "Foo bar."
-parentId: "todo-app"
+parentId: "tutorial-todo-jsx"
 layout: "tutorial"
 time: 90
 weight: 8

@@ -2,7 +2,7 @@
 title: "Components"
 description: "asdf"
 buttonTitle: "Next"
-parentId: "todo-app"
+parentId: "tutorial-todo-jsx"
 layout: "tutorial"
 time: 90
 weight: 3
