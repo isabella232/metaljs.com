@@ -222,6 +222,7 @@ you can use instead.
 There are a few additional helpers we also provide for JSX.
 
 #### `this.otherProps()`
+
 Used for passing non-named props directly through to the child component.
 
 ```javascript
@@ -246,7 +247,8 @@ MyComponent.PROPS = {
 ```
 
 #### `<DangerouslySetHTML />`
-Component used for rendering a string as HTML
+
+Component used for rendering a string as HTML.
 
 ```javascript
 import JSXComponent, {DangerouslySetHTML} from 'metal-jsx';
@@ -271,7 +273,8 @@ class MyComponent extends JSXComponent {
 ```
 
 #### `<Fragment />`
-Component used to return an array of elements
+
+Component used to return an array of elements.
 
 ```javascript
 import JSXComponent, {Fragment} from 'metal-jsx';
